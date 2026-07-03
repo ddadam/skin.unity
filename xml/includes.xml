@@ -875,7 +875,7 @@
 				<height>45</height>
 				<label>1036</label>
 				<font></font>
-				<onclick>ActivateWindow(Favourites)</onclick>
+				<onclick>ActivateWindow(favouritesbrowser)</onclick>
 				<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
 				<texturenofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texturenofocus>
 				<onleft>920</onleft>

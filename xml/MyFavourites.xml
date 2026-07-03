@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<views>50</views>
+	<controls>
+		<control type="group">
+			<!--backgrounds-->
+			<control type="group">
+				<include>CommonBackground</include>
+			</control>
+			<!--content-->
+			<control type="group">
+				<include>Window_OpenClose_Animation</include>
+				<include>CommonRootView</include>
+				<include>FullWidthList</include>
+			</control>
+			<!--general window furniture-->
+			<control type="group">
+				<include>Clock</include>
+				<include>CommonPageCount</include>
+				<include>CommonNowPlaying</include>
+				<include>ScrollOffsetLabel</include>
+			</control>
+			<!--breadcrumb-->
+			<include content="DynamicLeftBreadcrumb">
+				<param name="breadcrumb1-label" value="$LOCALIZE[1036]" />
+			</include>
+			<!--dialog fade-->
+			<include>BehindDialogFadeOut</include>
+		</control>
+	</controls>
+</window>

@@ -16,6 +16,7 @@
 		<item control="308">$ADDON[script.skinshortcuts 32028]</item>
 	</contextmenu>
 
+
 	<!-- Widgets -->
 	<widget-groupings>
 		<shortcut label="31133" type="32053" icon="DefaultFile.png" widget="addon" widgetType="none" widgetTarget="include">skinshortcuts-submenu</shortcut>
@@ -83,5 +84,15 @@
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="episodes">Poster</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="seasons">Poster</propertyfallback>
 	<propertyfallback property="widgetLayout">Square</propertyfallback>
+	
+<override action="ActivateWindow(Favourites)">
+    <action>ActivateWindow(favouritesbrowser)</action>
+</override>
+<override action="ActivateWindow(Favorites)">
+    <action>ActivateWindow(favouritesbrowser)</action>
+</override>
+<override action="ActivateWindow(favourites)">
+    <action>ActivateWindow(favouritesbrowser)</action>
+</override>
 	
 </overrides>
