@@ -171,8 +171,6 @@
 							<altlabel>13353</altlabel>
 							<usealttexture>library.isscanningvideo</usealttexture>
 						</control>
-						<!--now playing controls-->
-						<include>CommonNowPlaying_Controls</include>
 					</control>
 				</control>
 			</control>
