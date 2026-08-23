@@ -81,7 +81,7 @@
 					<align>center</align>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>accent.dark</focusedcolor>
+					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
 					<include>ButtonCommonValues</include>
 					<onclick>Skin.SetString(theme.surface,light)</onclick>
 					<onclick>Skin.SetString(temp.color.primary, FFFFFFFF)</onclick>
@@ -98,7 +98,7 @@
 					<align>center</align>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>accent.dark</focusedcolor>
+					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
 					<include>ButtonCommonValues</include>
 					<onclick>Skin.SetString(theme.surface,dark)</onclick>
 					<onclick>Skin.SetString(temp.color.primary, FF4BBEFC)</onclick>
@@ -275,7 +275,7 @@
 							<top>0</top>
 							<width>60</width>
 							<height>60</height>
-							<texture colordiffuse="text.primary">buttons/buttoncircleborder.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.text)]">buttons/buttoncircleborder.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
 						<!--button circle animation-->
@@ -284,7 +284,7 @@
 							<top>-1</top>
 							<width>62</width>
 							<height>62</height>
-							<texture colordiffuse="accent">buttons/buttoncircle.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">buttons/buttoncircle.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 							<animation effect="zoom" start="0" end="100" time="250" center="auto">Visible</animation>
 						</control>
@@ -299,11 +299,11 @@
 							<align>left</align>
 							<textoffsetx>60</textoffsetx>
 							<textwidth>160</textwidth>
-							<textcolor>text.primary</textcolor>
-							<focusedcolor>text.primary</focusedcolor>
-							<disabledcolor>text.primary</disabledcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<focusedcolor>$INFO[Skin.String(color.text)]</focusedcolor>
+							<disabledcolor>$INFO[Skin.String(color.text)]</disabledcolor>
 							<texturefocus border="58,0,0,0" colordiffuse="white">buttons/yesbuttonf.png</texturefocus>
-							<texturenofocus border="58,0,0,0" colordiffuse="text.primary">buttons/yesbutton.png</texturenofocus>
+							<texturenofocus border="58,0,0,0" colordiffuse="$INFO[Skin.String(color.text)]">buttons/yesbutton.png</texturenofocus>
 							<label>186</label>
 							<onclick>Skin.SetString(color.primary, $INFO[Skin.String(temp.color.primary)])</onclick>
 							<onclick>Skin.SetString(color.tertiary, $INFO[Skin.String(temp.color.tertiary)])</onclick>
@@ -314,8 +314,6 @@
 							<onclick>Skin.SetString(color.900, $INFO[Skin.String(temp.color.900)])</onclick>
 							<onclick>Skin.SetString(color.400, $INFO[Skin.String(temp.color.400)])</onclick>
 							<onclick>Skin.SetString(color.alt, $INFO[Skin.String(temp.color.alt)])</onclick>
-							<onclick>Skin.SetString(colors,custom)</onclick>
-							<onclick>ReloadSkin()</onclick>
 							<onclick>Dialog.Close(all)</onclick>
 							<onup>103</onup>
 							<ondown>9010</ondown>

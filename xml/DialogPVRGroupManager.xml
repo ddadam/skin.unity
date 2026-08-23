@@ -116,7 +116,7 @@
 							<font>button</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent.dark</textcolor>
+							<textcolor>$INFO[Skin.String(color.900)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
@@ -131,7 +131,7 @@
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<alttexturefocus colordiffuse="white">backgrounds/white.png</alttexturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>accent.dark</focusedcolor>
+					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
 					<include>ButtonCommonValues</include>
 					<label>19174</label>
 					<altlabel>19173</altlabel>
@@ -172,7 +172,7 @@
 							<font>button.bold</font>
 							<textoffsetx>5</textoffsetx>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						</control>
 						<control type="list" id="11">
 							<top>80</top>
@@ -200,7 +200,7 @@
 									<top>0</top>
 									<width>400</width>
 									<height>60</height>
-									<texture colordiffuse="accent">backgrounds/white.png</texture>
+									<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 									<visible>Control.HasFocus(11)</visible>
 								</control>
 								<control type="label">
@@ -240,7 +240,7 @@
 						<bottom>70</bottom>
 						<width>1</width>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="text.disabled">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.disabled)]">backgrounds/white.png</texture>
 					</control>
 					<!--Visible Channels-->
 					<control type="group">
@@ -254,7 +254,7 @@
 							<font>button.bold</font>
 							<textoffsetx>5</textoffsetx>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						</control>
 						<control type="list" id="12">
 							<left>0</left>
@@ -283,7 +283,7 @@
 									<top>0</top>
 									<width>400</width>
 									<height>60</height>
-									<texture colordiffuse="accent">backgrounds/white.png</texture>
+									<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 									<visible>Control.HasFocus(12)</visible>
 								</control>
 								<control type="label">

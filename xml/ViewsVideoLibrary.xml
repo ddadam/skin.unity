@@ -49,10 +49,10 @@
 						<width>362</width>
 						<height>538</height>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="surface.secondary">backgrounds/poster shadow small.png</bordertexture>
+						<bordertexture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/poster shadow small.png</bordertexture>
 					</control>
 					<!--thumb (fallback)-->
 					<control type="image">
@@ -61,7 +61,7 @@
 						<width>352</width>
 						<height>528</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$VAR[PosterThumb]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$VAR[PosterThumb]</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--thumb (no fallback)-->
@@ -73,7 +73,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="surface.secondary">backgrounds/poster shadow small.png</bordertexture>
+						<bordertexture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/poster shadow small.png</bordertexture>
 						<visible>!String.Contains(ListItem.Icon,Default) | !String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--overlay background-->
@@ -82,7 +82,7 @@
 						<top>5</top>
 						<width>45</width>
 						<height>45</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
 					<!--watched icon-->
@@ -115,7 +115,7 @@
 						<texture colordiffuse="quaternary">backgrounds/white.png</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+						<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 					</control>
 					<!--thumb (fallback)-->
 					<control type="image">
@@ -124,7 +124,7 @@
 						<width>352</width>
 						<height>528</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$VAR[PosterThumb]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$VAR[PosterThumb]</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--thumb (no fallback)-->
@@ -136,7 +136,7 @@
 						<aspectratio>stretch</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+						<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 						<visible>!String.Contains(ListItem.Icon,Default) | !String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--info background-->
@@ -145,7 +145,7 @@
 						<top>413</top>
 						<width>280</width>
 						<height>120</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 					</control>
 					<!--main label-->
 					<control type="textbox">
@@ -154,8 +154,8 @@
 						<width>250</width>
 						<height>78</height>
 						<font>breadcrumb</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -166,8 +166,8 @@
 						<width>244</width>
 						<height>24</height>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Rating]$INFO[ListItem.Year, • ,]$INFO[ListItem.Duration, • ,]</label>
 					</control>
@@ -177,7 +177,7 @@
 						<top>5</top>
 						<width>45</width>
 						<height>45</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
 					<!--watched icon-->
@@ -186,7 +186,7 @@
 						<top>7</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">$INFO[ListItem.Overlay]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<!--resumable icon-->
@@ -195,7 +195,7 @@
 						<top>7</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">OverlayWatching.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
@@ -266,7 +266,7 @@
 							<width>181</width>
 							<height>266</height>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 							<bordersize>5</bordersize>
 							<bordertexture>backgrounds/poster shadow small l.png</bordertexture>
 							<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
@@ -278,7 +278,7 @@
 							<width>171</width>
 							<height>256</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="accent" background="true">$VAR[PosterThumb]</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$VAR[PosterThumb]</texture>
 							<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 						</control>
 						<!--thumb (no fallback)-->
@@ -299,7 +299,7 @@
 							<top>5</top>
 							<width>35</width>
 							<height>35</height>
-							<texture colordiffuse="accent">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 						</control>
 						<!--watched icon-->
@@ -331,7 +331,7 @@
 							<aspectratio>stretch</aspectratio>
 							<texture colordiffuse="quaternary">backgrounds/white.png</texture>
 							<bordersize>5</bordersize>
-							<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+							<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 							<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 						</control>
 						<!--thumb (fallback)-->
@@ -341,7 +341,7 @@
 							<width>171</width>
 							<height>256</height>
 							<aspectratio>keep</aspectratio>
-							<texture colordiffuse="accent" background="true">$VAR[PosterThumb]</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$VAR[PosterThumb]</texture>
 							<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 						</control>
 						<!--thumb (no fallback)-->
@@ -353,7 +353,7 @@
 							<aspectratio>stretch</aspectratio>
 							<texture background="true">$VAR[PosterThumb]</texture>
 							<bordersize>5</bordersize>
-							<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+							<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 							<visible>!String.Contains(ListItem.Icon,Default) | !String.Contains(ListItem.Art(poster),Default)</visible>
 						</control>
 						<!--overlay background-->
@@ -362,7 +362,7 @@
 							<top>5</top>
 							<width>35</width>
 							<height>35</height>
-							<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 						</control>
 						<!--watched icon-->
@@ -371,7 +371,7 @@
 							<top>7</top>
 							<width>34</width>
 							<height>30</height>
-							<texture colordiffuse="accent">$INFO[ListItem.Overlay]</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[ListItem.Overlay]</texture>
 							<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 						</control>
 						<!--resumable icon-->
@@ -380,7 +380,7 @@
 							<top>7</top>
 							<width>34</width>
 							<height>30</height>
-							<texture colordiffuse="accent">OverlayWatching.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">OverlayWatching.png</texture>
 							<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 						</control>
 					</focusedlayout>
@@ -409,7 +409,7 @@
 					<top>-10</top>
 					<bottom>261</bottom>
 					<width>1220</width>
-					<texture colordiffuse="surface.secondary">backgrounds/poster wrap 2 bg.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/poster wrap 2 bg.png</texture>
 				</control>
 				<!--title-->
 				<control type="label">
@@ -418,7 +418,7 @@
 					<width>1140</width>
 					<height>30</height>
 					<font>info.title</font>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -438,7 +438,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[562]</label>
 						</control>
@@ -450,7 +450,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Year]</label>
 						</control>
@@ -466,7 +466,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[2050]</label>
 						</control>
@@ -478,7 +478,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
@@ -494,7 +494,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[31068]</label>
 						</control>
@@ -506,7 +506,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Mpaa]</label>
 						</control>
@@ -522,7 +522,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[563]</label>
 						</control>
@@ -534,7 +534,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.RatingAndVotes]</label>
 						</control>
@@ -550,7 +550,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[515]</label>
 						</control>
@@ -562,7 +562,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Genre]</label>
 						</control>
@@ -578,7 +578,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[20339]</label>
 						</control>
@@ -590,7 +590,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Director]</label>
 						</control>
@@ -606,7 +606,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[20417]</label>
 						</control>
@@ -618,7 +618,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Writer]</label>
 						</control>
@@ -634,7 +634,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[572]</label>
 						</control>
@@ -646,7 +646,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Studio]</label>
 						</control>
@@ -666,7 +666,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[562]</label>
 						</control>
@@ -678,7 +678,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Year]</label>
 						</control>
@@ -694,7 +694,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[31322]</label>
 						</control>
@@ -706,7 +706,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Premiered]</label>
 						</control>
@@ -722,7 +722,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[31068]</label>
 						</control>
@@ -734,7 +734,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Mpaa]</label>
 						</control>
@@ -750,7 +750,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[563]</label>
 						</control>
@@ -762,7 +762,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.RatingAndVotes]</label>
 						</control>
@@ -778,7 +778,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[515]</label>
 						</control>
@@ -790,7 +790,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Genre]</label>
 						</control>
@@ -806,7 +806,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[572]</label>
 						</control>
@@ -818,7 +818,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Studio]</label>
 						</control>
@@ -834,7 +834,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[20360]</label>
 						</control>
@@ -846,7 +846,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.episode]</label>
 						</control>
@@ -862,7 +862,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[16101]</label>
 						</control>
@@ -874,7 +874,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 						</control>
@@ -890,7 +890,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>accent</textcolor>
+							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$LOCALIZE[31067]</label>
 						</control>
@@ -902,7 +902,7 @@
 							<font>secondary.info</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Path]</label>
 						</control>
@@ -914,7 +914,7 @@
 					<top>90</top>
 					<bottom>300</bottom>
 					<width>1</width>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--plot-->
 				<control type="textbox">
@@ -924,7 +924,7 @@
 					<width>665</width>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -977,7 +977,7 @@
 						<height>60</height>
 						<font>label</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -990,7 +990,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1004,7 +1004,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1057,7 +1057,7 @@
 						<top>0</top>
 						<width>1000</width>
 						<height>60</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--background strip-->
@@ -1066,7 +1066,7 @@
 						<top>0</top>
 						<width>4</width>
 						<height>60</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--main label-->
@@ -1076,8 +1076,8 @@
 						<width>990</width>
 						<height>60</height>
 						<font>label</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1089,8 +1089,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1103,8 +1103,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1137,7 +1137,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">$INFO[ListItem.Overlay]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<!--resumable icon-->
@@ -1146,7 +1146,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">OverlayWatching.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
@@ -1170,7 +1170,7 @@
 					<top>-20</top>
 					<width>550</width>
 					<height>730</height>
-					<texture colordiffuse="surface.secondary">backgrounds/info bg.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/info bg.png</texture>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -1178,7 +1178,7 @@
 					<top>287</top>
 					<width>510</width>
 					<height>60</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--fanart shadow-->
 				<control type="image">
@@ -1205,7 +1205,7 @@
 					<width>510</width>
 					<height>287</height>
 					<aspectratio>scale</aspectratio>
-					<texture background="true" colordiffuse="accent">$VAR[MediaInfoViewFanart]</texture>
+					<texture background="true" colordiffuse="$INFO[Skin.String(color.500)]">$VAR[MediaInfoViewFanart]</texture>
 					<visible>$EXP[MediaInfoViewFanartFallback]</visible>
 				</control>
 				<!--fanart (no fallback)-->
@@ -1216,7 +1216,7 @@
 					<height>287</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$VAR[MediaInfoViewFanart]</texture>
-					<bordertexture colordiffuse="surface.secondary">backgrounds/white.png</bordertexture>
+					<bordertexture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</bordertexture>
 					<bordersize>0</bordersize>
 					<visible>!$EXP[MediaInfoViewFanartFallback]</visible>
 				</control>
@@ -1241,7 +1241,7 @@
 					<height>268</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -1254,7 +1254,7 @@
 					<height>338</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -1309,7 +1309,7 @@
 						<height>60</height>
 						<font>label</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1322,7 +1322,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1336,7 +1336,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1389,7 +1389,7 @@
 						<top>0</top>
 						<width>850</width>
 						<height>60</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--background strip-->
@@ -1398,7 +1398,7 @@
 						<top>0</top>
 						<width>4</width>
 						<height>60</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--main label-->
@@ -1408,8 +1408,8 @@
 						<width>990</width>
 						<height>60</height>
 						<font>label</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -1421,8 +1421,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1435,8 +1435,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -1469,7 +1469,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">$INFO[ListItem.Overlay]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<!--resumable icon-->
@@ -1478,7 +1478,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">OverlayWatching.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
@@ -1507,7 +1507,7 @@
 						<top>-10</top>
 						<width>480</width>
 						<height>710</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
@@ -1519,7 +1519,7 @@
 						<width>460</width>
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--poster-->
@@ -1544,7 +1544,7 @@
 						<top>-20</top>
 						<width>496</width>
 						<height>730</height>
-						<texture colordiffuse="surface.secondary">backgrounds/info bg.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/info bg.png</texture>
 					</control>
 					<!--info strip background-->
 					<control type="image">
@@ -1552,7 +1552,7 @@
 						<top>0</top>
 						<width>460</width>
 						<height>130</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<!--secondary label-->
 					<control type="label">
@@ -1601,7 +1601,7 @@
 						<height>533</height>
 						<font>label</font>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1631,7 +1631,7 @@
 						<top>-10</top>
 						<width>480</width>
 						<height>365</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/episode shadow.png</bordertexture>
 						<bordersize>10</bordersize>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
@@ -1643,7 +1643,7 @@
 						<width>460</width>
 						<height>345</height>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--poster-->
@@ -1668,7 +1668,7 @@
 						<top>-20</top>
 						<width>496</width>
 						<height>730</height>
-						<texture colordiffuse="surface.secondary">backgrounds/info bg.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/info bg.png</texture>
 					</control>
 					<!--info strip background-->
 					<control type="image">
@@ -1676,7 +1676,7 @@
 						<top>0</top>
 						<width>460</width>
 						<height>130</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<!--secondary label-->
 					<control type="label">
@@ -1725,7 +1725,7 @@
 						<height>498</height>
 						<font>label</font>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1753,7 +1753,7 @@
 						<top>-10</top>
 						<width>480</width>
 						<height>710</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
 						<visible>String.Contains(ListItem.Icon,Default)</visible>
@@ -1765,7 +1765,7 @@
 						<width>460</width>
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster-->
@@ -1790,7 +1790,7 @@
 						<top>-20</top>
 						<width>496</width>
 						<height>730</height>
-						<texture colordiffuse="surface.secondary">backgrounds/info bg.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/info bg.png</texture>
 					</control>
 					<!--info strip background-->
 					<control type="image">
@@ -1798,7 +1798,7 @@
 						<top>0</top>
 						<width>460</width>
 						<height>60</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<!--secondary label-->
 					<control type="label">
@@ -1821,7 +1821,7 @@
 						<height>593</height>
 						<font>label</font>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -1849,7 +1849,7 @@
 						<top>-10</top>
 						<width>480</width>
 						<height>710</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
@@ -1861,7 +1861,7 @@
 						<width>460</width>
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
-						<texture colordiffuse="accent" background="true">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.Contains(ListItem.Icon,Default) + String.Contains(ListItem.Art(poster),Default)</visible>
 					</control>
 					<!--poster-->
@@ -1886,7 +1886,7 @@
 						<top>-20</top>
 						<width>496</width>
 						<height>730</height>
-						<texture colordiffuse="surface.secondary">backgrounds/info bg.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/info bg.png</texture>
 					</control>
 					<!--info strip background-->
 					<control type="image">
@@ -1894,7 +1894,7 @@
 						<top>0</top>
 						<width>460</width>
 						<height>130</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<!--secondary label-->
 					<control type="label">
@@ -1943,7 +1943,7 @@
 						<height>498</height>
 						<font>label</font>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -2005,7 +2005,7 @@
 						<height>60</height>
 						<font>label</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -2018,7 +2018,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -2032,7 +2032,7 @@
 						<height>60</height>
 						<font>secondary.info</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -2085,7 +2085,7 @@
 						<top>0</top>
 						<width>1000</width>
 						<height>60</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--background strip-->
@@ -2094,7 +2094,7 @@
 						<top>0</top>
 						<width>4</width>
 						<height>60</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
 					<!--main label-->
@@ -2104,8 +2104,8 @@
 						<width>990</width>
 						<height>60</height>
 						<font>label</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -2117,8 +2117,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -2131,8 +2131,8 @@
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -2165,7 +2165,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">$INFO[ListItem.Overlay]</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
 					<!--resumable icon-->
@@ -2174,7 +2174,7 @@
 						<top>10</top>
 						<width>45</width>
 						<height>40</height>
-						<texture colordiffuse="accent">OverlayWatching.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
 				</focusedlayout>
@@ -2200,7 +2200,7 @@
 					<top>-10</top>
 					<width>1004</width>
 					<height>710</height>
-					<texture colordiffuse="surface.secondary">backgrounds/media info 3 bg.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/media info 3 bg.png</texture>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -2208,7 +2208,7 @@
 					<top>402</top>
 					<width>984</width>
 					<height>60</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--info strip shadow-->
 				<control type="image">
@@ -2235,7 +2235,7 @@
 					<width>711</width>
 					<height>400</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" colordiffuse="accent">$VAR[MediaInfoViewFanart]</texture>
+					<texture background="true" colordiffuse="$INFO[Skin.String(color.500)]">$VAR[MediaInfoViewFanart]</texture>
 					<visible>$EXP[MediaInfoViewFanartFallback]</visible>
 				</control>
 				<!--fanart (no fallback)-->
@@ -2255,7 +2255,7 @@
 					<width>267</width>
 					<height>400</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="accent">DefaultFolder.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">DefaultFolder.png</texture>
 					<visible>$EXP[MediaInfoViewPosterFallback]</visible>
 				</control>
 				<!--thumb (no fallback)-->
@@ -2290,7 +2290,7 @@
 					<height>168</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>Container.Content(Movies) | Container.Content(Episodes)</visible>
@@ -2303,7 +2303,7 @@
 					<height>203</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>

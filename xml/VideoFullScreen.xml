@@ -44,7 +44,7 @@
 				<control type="image" id="1">
 					<width>1140</width>
 					<height>190</height>
-					<texture colordiffuse="surface.secondary">backgrounds/np info bg.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/np info bg.png</texture>
 					<animation effect="zoom" start="0,0,1140,190" end="0,0,1140,290" center="0,-5" time="200" condition="[VideoPlayer.Content(Files) | !String.IsEmpty(VideoPlayer.Plot)] + Player.ShowInfo">Conditional</animation>
 				</control>
 				<!--title bg-->
@@ -53,7 +53,7 @@
 					<top>6</top>
 					<width>1120</width>
 					<height>70</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image" id="1">
@@ -89,7 +89,7 @@
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<label>$VAR[Tagline]</label>
 						<visible>VideoPlayer.Content(Movies)</visible>
 					</control>
@@ -101,7 +101,7 @@
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<label>$INFO[VideoPlayer.ChannelNumberLabel]:  $INFO[VideoPlayer.ChannelName]</label>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -113,7 +113,7 @@
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<label>$INFO[Player.FileNameAndPath]</label>
 						<visible>VideoPlayer.Content(Files) + Player.ShowInfo + !VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -131,7 +131,7 @@
 						<height>108</height>
 						<font>label</font>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						<label>$INFO[VideoPlayer.Plot]</label>
 						<autoscroll time="1500" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Player.ShowInfo</visible>
@@ -150,7 +150,7 @@
 						<width>1090</width>
 						<height>8</height>
 						<info>Player.ProgressCache</info>
-						<midtexture colordiffuse="accent.dark">backgrounds/white.png</midtexture>
+						<midtexture colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</midtexture>
 					</control>
 					<!--progress-->
 					<control type="progress" id="1">

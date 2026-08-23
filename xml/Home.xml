@@ -4,7 +4,7 @@
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onload>
 	<onload condition="Skin.HasSetting(StopVideoOnBack) + !Player.HasAudio">PlayerControl(Stop)</onload>
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onunload>Skin.SetString(SkinShortcut.BackgroundPath,$INFO[Container(9000).ListItem.Property(background)])</onunload>
+	<onunload condition="!String.IsEqual(Skin.String(SkinShortcut.BackgroundPath),Container(9000).ListItem.Property(background))">Skin.SetString(SkinShortcut.BackgroundPath,$INFO[Container(9000).ListItem.Property(background)])</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
@@ -57,7 +57,7 @@
 						<height>181</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="accent">backgrounds/square shadow small.png</bordertexture>
+						<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/square shadow small.png</bordertexture>
 						<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
 					</control>
 					<!--labels-->
@@ -333,7 +333,7 @@
 							<top>0</top>
 							<width>776</width>
 							<height>45</height>
-							<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 							<animation effect="zoom" start="60,0,776,45" end="608,0,228,45" time="500" condition="!Player.HasMedia">conditional</animation>
 						</control>
 						<!--background strip-->
@@ -342,11 +342,11 @@
 							<top>0</top>
 							<width>4</width>
 							<height>45</height>
-							<texture colordiffuse="accent">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						</control>
 						<!--global search button-->
 						<control type="radiobutton" id="608">
-							<colordiffuse>surface.secondary</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(color.tertiary)]</colordiffuse>
 							<left>65</left>
 							<top>5</top>
 							<height>35</height>
@@ -357,17 +357,17 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>breadcrumb.tertiary</font>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<texturefocus colordiffuse="accent">backgrounds/white.png</texturefocus>
-							<texturenofocus colordiffuse="border">button-border-search.png</texturenofocus>
+							<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="$INFO[Skin.String(color.border)]">button-border-search.png</texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>137</label>
 							<onclick>RunScript(script.globalsearch)</onclick>
 							<textureradioonfocus colordiffuse="white">icon_search.png</textureradioonfocus>
-							<textureradioonnofocus colordiffuse="text.primary">icon_search.png</textureradioonnofocus>
+							<textureradioonnofocus colordiffuse="$INFO[Skin.String(color.text)]">icon_search.png</textureradioonnofocus>
 							<textureradioofffocus colordiffuse="white">icon_search.png</textureradioofffocus>
-							<textureradiooffnofocus colordiffuse="text.primary">icon_search.png</textureradiooffnofocus>
+							<textureradiooffnofocus colordiffuse="$INFO[Skin.String(color.text)]">icon_search.png</textureradiooffnofocus>
 							<onleft>607</onleft>
 							<onright>601</onright>
 							<onup>9007</onup>
@@ -396,7 +396,7 @@
 								<top>0</top>
 								<width>308</width>
 								<height>45</height>
-								<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 							</control>
 							<!--background strip-->
 							<control type="image">
@@ -404,7 +404,7 @@
 								<top>0</top>
 								<width>4</width>
 								<height>45</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 								<visible>!System.AddonIsEnabled(script.globalsearch)</visible>
 							</control>
 							<control type="group">
@@ -417,8 +417,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDPrevTrackNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDPrevTrackNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPrevTrackNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPrevTrackNF.png</texturenofocus>
 									<onleft>608</onleft>
 									<onright>602</onright>
 									<onup>9007</onup>
@@ -431,8 +431,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDRewindNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDRewindNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDRewindNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDRewindNF.png</texturenofocus>
 									<onleft>601</onleft>
 									<onright>603</onright>
 									<onup>9007</onup>
@@ -445,11 +445,11 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDPauseNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPauseNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPauseNF.png</texturenofocus>
 									<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-									<alttexturefocus colordiffuse="accent">OSDPlayNF.png</alttexturefocus>
-									<alttexturenofocus colordiffuse="text.primary">OSDPlayNF.png</alttexturenofocus>
+									<alttexturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPlayNF.png</alttexturefocus>
+									<alttexturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPlayNF.png</alttexturenofocus>
 									<onleft>602</onleft>
 									<onright>604</onright>
 									<onup>9007</onup>
@@ -462,8 +462,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDStopNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDStopNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDStopNF.png</texturenofocus>
 									<onleft>603</onleft>
 									<onright>605</onright>
 									<onup>9007</onup>
@@ -477,8 +477,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDForwardNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDForwardNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDForwardNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDForwardNF.png</texturenofocus>
 									<onleft>604</onleft>
 									<onright>606</onright>
 									<onup>9007</onup>
@@ -491,8 +491,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDNextTrackNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDNextTrackNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDNextTrackNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDNextTrackNF.png</texturenofocus>
 									<onleft>605</onleft>
 									<onright>607</onright>
 									<onup>9007</onup>
@@ -510,8 +510,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDChannelUPNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDChannelUPNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDChannelUPNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDChannelUPNF.png</texturenofocus>
 									<onleft>608</onleft>
 									<onright>602</onright>
 									<onup>9007</onup>
@@ -524,8 +524,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDChannelDownNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDChannelDownNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDChannelDownNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDChannelDownNF.png</texturenofocus>
 									<onleft>601</onleft>
 									<onright>603</onright>
 									<onup>9007</onup>
@@ -538,8 +538,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDStopNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDStopNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDStopNF.png</texturenofocus>
 									<onleft>602</onleft>
 									<onright>604</onright>
 									<onup>9007</onup>
@@ -553,11 +553,11 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDPauseNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPauseNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPauseNF.png</texturenofocus>
 									<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-									<alttexturefocus colordiffuse="accent">OSDPlayNF.png</alttexturefocus>
-									<alttexturenofocus colordiffuse="text.primary">OSDPlayNF.png</alttexturenofocus>
+									<alttexturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPlayNF.png</alttexturefocus>
+									<alttexturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPlayNF.png</alttexturenofocus>
 									<onleft>603</onleft>
 									<onright>606</onright>
 									<onup>9007</onup>
@@ -572,8 +572,8 @@
 									<width>25</width>
 									<height>25</height>
 									<label></label>
-									<texturefocus colordiffuse="accent">OSDRecordOffNF.png</texturefocus>
-									<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
+									<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDRecordOffNF.png</texturefocus>
+									<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDRecordOffNF.png</texturenofocus>
 									<onleft>604</onleft>
 									<onright>607</onright>
 									<onup>9007</onup>
@@ -588,11 +588,11 @@
 							<top>0</top>
 							<width>240</width>
 							<height>45</height>
-							<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						</control>
 						<!--fullscreen button-->
 						<control type="radiobutton" id="607">
-							<colordiffuse>surface.secondary</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(color.tertiary)]</colordiffuse>
 							<left>591</left>
 							<top>5</top>
 							<height>35</height>
@@ -603,17 +603,17 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>breadcrumb.tertiary</font>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<focusedcolor>white</focusedcolor>
-							<texturefocus colordiffuse="accent">backgrounds/white.png</texturefocus>
-							<texturenofocus colordiffuse="border">button-border-fullscreen.png</texturenofocus>
+							<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="$INFO[Skin.String(color.border)]">button-border-fullscreen.png</texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>31008</label>
 							<onclick>fullscreen</onclick>
-							<textureradioonfocus colordiffuse="surface.secondary">GoFullscreen.png</textureradioonfocus>
-							<textureradioonnofocus colordiffuse="text.primary">GoFullscreen.png</textureradioonnofocus>
-							<textureradioofffocus colordiffuse="surface.secondary">GoFullscreen.png</textureradioofffocus>
-							<textureradiooffnofocus colordiffuse="text.primary">GoFullscreen.png</textureradiooffnofocus>
+							<textureradioonfocus colordiffuse="$INFO[Skin.String(color.tertiary)]">GoFullscreen.png</textureradioonfocus>
+							<textureradioonnofocus colordiffuse="$INFO[Skin.String(color.text)]">GoFullscreen.png</textureradioonnofocus>
+							<textureradioofffocus colordiffuse="$INFO[Skin.String(color.tertiary)]">GoFullscreen.png</textureradioofffocus>
+							<textureradiooffnofocus colordiffuse="$INFO[Skin.String(color.text)]">GoFullscreen.png</textureradiooffnofocus>
 							<onleft>606</onleft>
 							<onright>608</onright>
 							<onup>9007</onup>
@@ -642,7 +642,7 @@
 						<top>10</top>
 						<width>1800</width>
 						<height>92</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 					</control>
 					<!--main menu-->
 					<control type="fixedlist" id="9000">
@@ -667,7 +667,7 @@
 								<top>15</top>
 								<width>1</width>
 								<height>62</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 							</control>
 							<!--label-->
 							<control type="label">
@@ -676,7 +676,7 @@
 								<width>340</width>
 								<height>92</height>
 								<font>main.menu</font>
-								<textcolor>text.primary</textcolor>
+								<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -687,7 +687,7 @@
 								<top>15</top>
 								<width>1</width>
 								<height>62</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout height="90" width="360">
@@ -696,7 +696,7 @@
 								<top>15</top>
 								<width>1</width>
 								<height>62</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 							</control>
 							<control type="label">
 								<left>10</left>
@@ -704,7 +704,7 @@
 								<width>340</width>
 								<height>92</height>
 								<font>main.menu</font>
-								<textcolor>text.primary</textcolor>
+								<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -715,7 +715,7 @@
 								<top>0</top>
 								<width>361</width>
 								<height>92</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 								<visible>Control.HasFocus(9000)</visible>
 							</control>
 							<control type="label">
@@ -736,7 +736,7 @@
 								<top>15</top>
 								<width>1</width>
 								<height>62</height>
-								<texture colordiffuse="accent">backgrounds/white.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 							</control>
 						</focusedlayout>
 						<content>
@@ -749,7 +749,7 @@
 						<top>10</top>
 						<width>192</width>
 						<height>92</height>
-						<texture colordiffuse="surface.secondary">SideFade.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">SideFade.png</texture>
 					</control>
 					<!--right side fade-->
 					<control type="image">
@@ -757,7 +757,7 @@
 						<top>10</top>
 						<width>192</width>
 						<height>92</height>
-						<texture colordiffuse="surface.secondary" flipx="true">SideFade.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]" flipx="true">SideFade.png</texture>
 					</control>
 					<!--background strip left-->
 					<control type="image">
@@ -765,7 +765,7 @@
 						<top>10</top>
 						<width>4</width>
 						<height>92</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<!--background strip right-->
 					<control type="image">
@@ -773,7 +773,7 @@
 						<top>10</top>
 						<width>4</width>
 						<height>92</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 				</control>
 			</control>
@@ -870,14 +870,14 @@
 				<control type="image">
 					<width>100%</width>
 					<height>34</height>
-					<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 				</control>
 				<!--rss background strip-->
 				<control type="image">
 					<right>0</right>
 					<width>4</width>
 					<height>34</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--rss feed-->
 				<control type="rss">
@@ -887,9 +887,9 @@
 					<width>99%</width>
 					<font>breadcrumb.secondary</font>
 					<urlset>1</urlset>
-					<textcolor>accent</textcolor>
-					<titlecolor>accent</titlecolor>
-					<headlinecolor>text.primary</headlinecolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+					<titlecolor>$INFO[Skin.String(color.500)]</titlecolor>
+					<headlinecolor>$INFO[Skin.String(color.text)]</headlinecolor>
 				</control>
 			</control>
 		</control>
@@ -907,7 +907,7 @@
 					<top>0</top>
 					<width>735</width>
 					<height>135</height>
-					<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 				</control>
 				<!--background strip-->
 				<control type="image">
@@ -915,7 +915,7 @@
 					<top>0</top>
 					<width>4</width>
 					<height>135</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<control type="image">
 					<left>600</left>
@@ -931,7 +931,7 @@
 					<width>38</width>
 					<height>38</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="accent">PVR-HasTimer.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">PVR-HasTimer.png</texture>
 				</control>
 				<control type="label">
 					<description>Next Timer Header label</description>
@@ -942,7 +942,7 @@
 					<label>$LOCALIZE[19157]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>accent</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 				</control>
 				<control type="label">
 					<description>NextRecordingDateTime</description>
@@ -975,7 +975,7 @@
 					<top>0</top>
 					<width>735</width>
 					<height>135</height>
-					<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 				</control>
 				<!--background strip-->
 				<control type="image">
@@ -983,7 +983,7 @@
 					<top>0</top>
 					<width>4</width>
 					<height>135</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<control type="image">
 					<left>600</left>
@@ -999,7 +999,7 @@
 					<width>45</width>
 					<height>45</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="accent">PVR-IsRecording.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">PVR-IsRecording.png</texture>
 				</control>
 				<control type="label">
 					<description>Is Recording Header label</description>
@@ -1010,7 +1010,7 @@
 					<label>$LOCALIZE[19158]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>accent</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 				</control>
 				<control type="label">
 					<description>NextRecordingDateTime</description>
@@ -1048,7 +1048,7 @@
 				<top>0</top>
 				<width>485</width>
 				<height>90</height>
-				<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+				<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 			</control>
 			<!--breadcrumb strip-->
 			<control type="image">
@@ -1056,7 +1056,7 @@
 				<top>0</top>
 				<width>4</width>
 				<height>90</height>
-				<texture colordiffuse="accent">backgrounds/white.png</texture>
+				<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 			</control>
 			<control type="image">
 				<description>Weather image</description>
@@ -1076,7 +1076,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<textcolor>text.primary</textcolor>
+				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<label>$INFO[Window(Weather).Property(Location)]</label>
 			</control>
 			<control type="grouplist">
@@ -1094,7 +1094,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font28_title</font>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[Window(Weather).Property(Current.Temperature)]</label>
 				</control>
 				<control type="label">
@@ -1104,7 +1104,7 @@
 					<font>font10</font>
 					<aligny>center</aligny>
 					<label>$INFO[System.TemperatureUnits]</label>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 				</control>
 				<control type="label">
@@ -1114,7 +1114,7 @@
 					<font>font10</font>
 					<aligny>center</aligny>
 					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-					<textcolor>accent</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 				</control>
 			</control>
 		</control>

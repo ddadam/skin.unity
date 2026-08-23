@@ -68,7 +68,7 @@
 							<top>0</top>
 							<width>355</width>
 							<height>60</height>
-							<texture colordiffuse="accent">backgrounds/white.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<left>15</left>

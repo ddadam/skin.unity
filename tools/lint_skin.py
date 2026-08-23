@@ -74,7 +74,7 @@ for f, s in corpus_by_file.items():
 
 # 3) includes
 defined = set(re.findall(r"<include[ ]+name=.([^\x22]+).", full_corpus))
-used_plain = set(re.findall(r"<include>([^<>]+)</include>", full_corpus))
+used_plain = set(re.findall(r"<include(?:\s[^>]*)?>([^<>]+)</include>", full_corpus))
 used_content = set(re.findall(r"<include[ ]+content=.([^\x22]+).", full_corpus))
 used = {u for u in (used_plain | used_content) if "$PARAM" not in u and not u.startswith("skinshortcuts-")}
 for u in sorted(used - defined):
@@ -142,6 +142,43 @@ for f, s in corpus_by_file.items():
     if dupes:
         warns.append("duplicate control ids in %s: %s (ok if mutually exclusive)"
                      % (f.relative_to(BASE), ", ".join(dupes)))
+
+# 8) regression guards - keep the completed optimisations in place
+#    background pruning: async loading (background="true") is reserved for
+#    dynamic art ($INFO/$VAR content); static UI textures load inline.
+#    NOTE: colours intentionally stay as per-frame $INFO[Skin.String(...)]
+#    lookups - Kodi parses <color> definitions as raw hex only and never reads
+#    a skin string to select theme files, so named-colour themes cannot work.
+REGRESSION_FILES = [f for f in corpus_by_file if f.parts[0] in ("xml", "shortcuts")]
+STATIC_ASYNC_RE = re.compile(
+    r"<(texture|imagepath)\b[^>\n]*?\s+background=\"true\"[^>\n]*>([^<>\n]*)</\1>",
+    re.IGNORECASE,
+)
+for f in REGRESSION_FILES:
+    s = corpus_by_file[f]
+    rel = str(f.relative_to(BASE))
+    for m in STATIC_ASYNC_RE.finditer(s):
+        if any(ch in m.group(2) for ch in "$[{"):
+            continue
+        ln = s.count(NL, 0, m.start()) + 1
+        errors.append("background=\"true\" on static texture (async loading is for dynamic art only): %s:%d"
+                      % (rel, ln))
+
+#    c) colour mechanism: semantic theme names must never be referenced -
+#       core parses <color> definitions as raw hex and ignores skin strings,
+#       so a named reference silently renders the static red default
+SEMANTIC_COLOURS = ("accent.dark", "accent.light", "surface.primary", "surface.secondary",
+                    "text.disabled", "text.primary", "accent.alt", "accent", "border")
+for f in REGRESSION_FILES:
+    s = corpus_by_file[f]
+    rel = str(f.relative_to(BASE))
+    for name in SEMANTIC_COLOURS:
+        for token in ('="%s"' % name, ">%s<" % name):
+            idx = s.find(token)
+            while idx != -1:
+                errors.append("static named colour '%s' (use $INFO[Skin.String(...)] lookups): %s:%d"
+                              % (name, rel, s.count(NL, 0, idx) + 1))
+                idx = s.find(token, idx + 1)
 
 print("== Unity skin lint: %d errors, %d warnings, %d infos ==" % (len(errors), len(warns), len(infos)))
 for e in errors:

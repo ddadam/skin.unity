@@ -21,10 +21,14 @@
 	<color name="pink">FFFA04DA</color>
 	<color name="orange">FFFAA604</color>
 
-	<!-- Unity theme colours.
-	     Defaults below match the "Red / Light" theme.
-	     Kodi loads colours/<value of the skin string "colors">.xml over these,
-	     allowing static (load-time resolved) theme switching - see colors/*.xml -->
+	<!-- Unity accent palette.
+	     NOTE: these named definitions are inert fallbacks - the live colours
+	     are inline $INFO[Skin.String(...)] lookups in xml/*.xml, resolved per
+	     frame so picker/theme picks apply instantly. Kodi parses <color>
+	     values as raw hex only and switches themes solely via its own GUI
+	     setting (lookandfeel.colortheme); it never loads theme files based
+	     on a skin string, so the bundled colors/<theme>.xml files stay
+	     inactive until native integration lands. -->
 	<color name="accent">FFE51C23</color>
 	<color name="accent.dark">FF850A04</color>
 	<color name="accent.light">FFE84E40</color>

@@ -104,7 +104,7 @@
 						<width>325</width>
 						<height>60</height>
 						<font>button</font>
-						<textcolor>accent.dark</textcolor>
+						<textcolor>$INFO[Skin.String(color.900)]</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -152,7 +152,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31106</label>
@@ -208,7 +208,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>20343</label>
@@ -225,7 +225,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>512</label>
@@ -247,7 +247,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31030</label>
@@ -286,7 +286,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31101</label>
@@ -317,7 +317,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>$ADDON[script.skinshortcuts 32071]</label>
@@ -347,7 +347,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31134</label>
@@ -386,7 +386,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31135</label>
@@ -425,7 +425,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31136</label>
@@ -464,7 +464,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31118</label>
@@ -532,7 +532,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31102</label>
@@ -568,7 +568,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>2</label>
@@ -585,7 +585,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31106</label>
@@ -648,7 +648,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[166] $LOCALIZE[24000]</label>
@@ -724,7 +724,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31102</label>

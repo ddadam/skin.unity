@@ -77,8 +77,8 @@
 						<font>label</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>accent</selectedcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+						<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -89,7 +89,7 @@
 						<top>0</top>
 						<width>850</width>
 						<height>60</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(10)">Conditional</animation>
 					</control>
 					<!--label-->
@@ -102,7 +102,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
-						<selectedcolor>accent.alt</selectedcolor>
+						<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>

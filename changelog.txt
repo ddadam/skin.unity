@@ -7,7 +7,11 @@
 [FIXED] RDS info dialog fallbacks now use core string #161 like upstream
 [CODED] tools/lint_skin.py validates XML, texture paths/case, includes, fonts, colours and strings; GitHub Action runs it on every push
 [CODED] tools/: generate_color_themes.py, migrate_colors.py, phase2_background.py, phase3_osd.py, audit_media.py
+[FIXED] Colour selection regression: accent/theme picks had no effect - restored dynamic inline colour lookups (instant response, no reload); preset/custom theme files remain bundled but are inactive pending native integration
 [FIXED] Fanart_Fallback_Music_Small.png filename case mismatch (texture failed to load on Linux/LibreELEC)
+[CODED] Lint: conditional <include> tags now count as usage; permanent regression guards lock in the colour migration and async-background rules
+[EFFICIENCY] Home.xml skips redundant BackgroundPath settings writes when leaving the home menu
+[FIXED] Removed stray build artifacts (xml/Custom_Col duplicate, invalid xml/Timers.xml)
 
 [B]07/16/2022 - 0.21.2-Beta [/B]
 [Experimental] Bumped script.skinshortcuts to 2.0.3

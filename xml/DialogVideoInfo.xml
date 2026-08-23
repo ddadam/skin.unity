@@ -31,7 +31,7 @@
 				<control type="image">
 					<width>1390</width>
 					<height>100%</height>
-					<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 				</control>
 				<!--windowed trailer-->
 				<control type="group">
@@ -137,14 +137,14 @@
 				<control type="image">
 					<width>1390</width>
 					<height>150</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--button background-->
 				<control type="image">
 					<top>150</top>
 					<width>1390</width>
 					<height>80</height>
-					<texture colordiffuse="accent.dark">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</texture>
 					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15) | Control.HasFocus(9003) | Control.HasFocus(105)">Conditional</animation>
 				</control>
 				<!--title shadow-->
@@ -264,7 +264,7 @@
 						<param name="button-texture" value="playbutton" />
 						<param name="button-alttexture" value="browsebutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="208" />
 						<param name="button-altlabel" value="1024" />
@@ -281,7 +281,7 @@
 						<param name="button-visible" value="!String.IsEmpty(ListItem.Trailer) + Skin.HasSetting(HideWindowedTrailer)" />
 						<param name="button-texture" value="trailerbutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="20410" />
 						<param name="button-onup" value="9003" />
@@ -296,7 +296,7 @@
 						<param name="button-visible" value="!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(HideWindowedTrailer)" />
 						<param name="button-texture" value="trailerbutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="20410" />
 						<param name="button-onclick" value="PlayMedia($INFO[ListItem.Trailer],1)" />
@@ -312,7 +312,7 @@
 						<param name="button-visible" value="Control.IsEnabled(6)" />
 						<param name="button-texture" value="refreshbutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="184" />
 						<param name="button-onup" value="9003" />
@@ -326,7 +326,7 @@
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="artbutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="13511" />
 						<param name="button-onup" value="9003" />
@@ -341,7 +341,7 @@
 						<param name="button-visible" value="Control.IsEnabled(7)" />
 						<param name="button-texture" value="ratingbutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="38023" />
 						<param name="button-onup" value="9003" />
@@ -356,7 +356,7 @@
 						<param name="button-visible">Skin.HasSetting(ActivateTvTunes) + System.AddonIsEnabled(script.tvtunes) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + String.IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</param>
 						<param name="button-texture" value="tunebutton" />
 						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="accent.dark" />
+						<param name="button-coloralt" value="$INFO[Skin.String(color.900)]" />
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="31127" />
 						<param name="button-onclick" value="RunScript(script.tvtunes,mode=solo)" />
@@ -449,7 +449,7 @@
 								<font>secondary.info</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>accent</textcolor>
+								<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -461,8 +461,8 @@
 								<font>secondary.info</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>text.primary</textcolor>
-								<selectedcolor>text.primary</selectedcolor>
+								<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+								<selectedcolor>$INFO[Skin.String(color.text)]</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
@@ -473,7 +473,7 @@
 								<width>20</width>
 								<height>20</height>
 								<visible>Control.HasFocus(49)</visible>
-								<texture colordiffuse="accent">buttons/buttoncircle.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">buttons/buttoncircle.png</texture>
 							</control>
 							<control type="label">
 								<left>30</left>
@@ -483,7 +483,7 @@
 								<font>secondary.info</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>accent</textcolor>
+								<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -495,8 +495,8 @@
 								<font>secondary.info</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>text.primary</textcolor>
-								<selectedcolor>text.primary</selectedcolor>
+								<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+								<selectedcolor>$INFO[Skin.String(color.text)]</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</focusedlayout>
@@ -585,7 +585,7 @@
 						<width>750</width>
 						<height>1</height>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 				</control>
 				<!--plot-->
@@ -596,7 +596,7 @@
 					<height>368</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<pagecontrol>61</pagecontrol>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="3000" repeat="15000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
@@ -625,7 +625,7 @@
 								<width>170</width>
 								<height>210</height>
 								<aspectratio>scale</aspectratio>
-								<texture colordiffuse="accent">DefaultActor.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">DefaultActor.png</texture>
 								<visible>String.IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<!--thumb (not fallback)-->
@@ -683,7 +683,7 @@
 								<height>220</height>
 								<texture colordiffuse="quaternary">backgrounds/white.png</texture>
 								<bordersize>5</bordersize>
-								<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+								<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 								<visible>String.IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<!--thumb (fallback)-->
@@ -693,7 +693,7 @@
 								<width>170</width>
 								<height>210</height>
 								<aspectratio>scale</aspectratio>
-								<texture colordiffuse="accent">DefaultActor.png</texture>
+								<texture colordiffuse="$INFO[Skin.String(color.500)]">DefaultActor.png</texture>
 								<visible>String.IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<!--thumb (not fallback)-->
@@ -705,7 +705,7 @@
 								<aspectratio>scale</aspectratio>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<bordersize>5</bordersize>
-								<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+								<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 								<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<!--label background-->
@@ -784,7 +784,7 @@
 								<width>190</width>
 								<height>230</height>
 								<texture background="true">$INFO[ListItem.Art(poster)]</texture>
-								<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
+								<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
 								<bordersize>5</bordersize>
 								<aspectratio aligny="center">keep</aspectratio>
 							</control>

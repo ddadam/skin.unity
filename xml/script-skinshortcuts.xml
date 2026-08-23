@@ -96,7 +96,7 @@
 							<width>325</width>
 							<height>60</height>
 							<font>button</font>
-							<textcolor>accent.dark</textcolor>
+							<textcolor>$INFO[Skin.String(color.900)]</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>

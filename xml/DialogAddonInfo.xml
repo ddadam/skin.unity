@@ -68,7 +68,7 @@
 					<aligny>center</aligny>
 					<font>secondary.info.big</font>
 					<label>[B]$INFO[ListItem.AddonName][/B]</label>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="group">
@@ -84,7 +84,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					</control>
 					<control type="label">
 						<description>Type Value</description>
@@ -108,7 +108,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					</control>
 					<control type="label">
 						<description>Author Value</description>
@@ -132,7 +132,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					</control>
 					<control type="label">
 						<description>Version Value</description>
@@ -156,7 +156,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					</control>
 					<control type="fadelabel">
 						<description>Summary Value</description>
@@ -176,7 +176,7 @@
 						<top>240</top>
 						<width>830</width>
 						<height>1</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 					</control>
 					<control type="label">
 						<description>Description txt</description>
@@ -188,7 +188,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
-						<textcolor>accent</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					</control>
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
@@ -202,7 +202,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>label</font>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						</control>
 						<control type="textbox" id="400">
 							<description>Description</description>
@@ -212,7 +212,7 @@
 							<height>333</height>
 							<font>label</font>
 							<align>justify</align>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<label>$INFO[ListItem.AddonDescription]</label>
 							<pagecontrol>60</pagecontrol>
 						</control>
@@ -244,7 +244,7 @@
 							<height>100</height>
 							<font>label</font>
 							<align>left</align>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<label>$INFO[ListItem.AddonDisclaimer]</label>
 							<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 						</control>
@@ -261,7 +261,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>label</font>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 						</control>
 						<control type="textbox" id="401">
 							<description>Description</description>
@@ -271,7 +271,7 @@
 							<height>435</height>
 							<font>label</font>
 							<align>justify</align>
-							<textcolor>text.primary</textcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<label>$INFO[ListItem.AddonDescription]</label>
 							<pagecontrol>61</pagecontrol>
 						</control>
@@ -305,9 +305,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="button" id="10">
 						<description>Addon Dependencies</description>
@@ -317,9 +317,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="button" id="8">
 						<description>Update Addon button</description>
@@ -329,9 +329,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="radiobutton" id="13">
 						<description>Auto-update button</description>
@@ -339,16 +339,16 @@
 						<height>64</height>
 						<label>21340</label>
 						<align>center</align>
-						<textureradioonfocus colordiffuse="accent.dark">radiobutton-focus.png</textureradioonfocus>
+						<textureradioonfocus colordiffuse="$INFO[Skin.String(color.900)]">radiobutton-focus.png</textureradioonfocus>
 						<textureradioonnofocus colordiffuse="white">radiobutton-focus.png</textureradioonnofocus>
-						<textureradioondisabled colordiffuse="accent.light">radiobutton-focus.png</textureradioondisabled>
-						<textureradioofffocus colordiffuse="accent.dark">radiobutton-nofocus.png</textureradioofffocus>
+						<textureradioondisabled colordiffuse="$INFO[Skin.String(color.400)]">radiobutton-focus.png</textureradioondisabled>
+						<textureradioofffocus colordiffuse="$INFO[Skin.String(color.900)]">radiobutton-nofocus.png</textureradioofffocus>
 						<textureradiooffnofocus colordiffuse="white">radiobutton-nofocus.png</textureradiooffnofocus>
-						<textureradiooffdisabled colordiffuse="accent.light">radiobutton-nofocus.png</textureradiooffdisabled>
+						<textureradiooffdisabled colordiffuse="$INFO[Skin.String(color.400)]">radiobutton-nofocus.png</textureradiooffdisabled>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="button" id="12">
 						<description>Launch Addon button</description>
@@ -358,9 +358,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="button" id="6">
 						<description>Install/UnInstall Addon button</description>
@@ -370,9 +370,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 					<control type="button" id="7">
 						<description>Enable/Disable Addon button</description>
@@ -382,9 +382,9 @@
 						<align>center</align>
 						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 						<textcolor>white</textcolor>
-						<focusedcolor>accent.dark</focusedcolor>
-						<selectedcolor>accent.dark</selectedcolor>
-						<disabledcolor>accent.light</disabledcolor>
+						<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+						<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
+						<disabledcolor>$INFO[Skin.String(color.400)]</disabledcolor>
 					</control>
 				</control>
 				<control type="group">
@@ -397,7 +397,7 @@
 						<top>0</top>
 						<width>1210</width>
 						<height>130</height>
-						<texture colordiffuse="surface.primary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.primary)]">backgrounds/white.png</texture>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -413,7 +413,7 @@
 						<top>20</top>
 						<width>90</width>
 						<height>90</height>
-						<texture colordiffuse="text.primary">DefaultIconError.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.text)]">DefaultIconError.png</texture>
 					</control>
 					<control type="label">
 						<description>header label</description>
@@ -425,7 +425,7 @@
 						<label>24096</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					</control>
 					<control type="textbox">
 						<description>Reason label</description>
@@ -436,7 +436,7 @@
 						<font>kai.secondary</font>
 						<label>$INFO[ListItem.AddonBroken]</label>
 						<align>left</align>
-						<textcolor>text.primary</textcolor>
+						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					</control>
 				</control>
 			</control>

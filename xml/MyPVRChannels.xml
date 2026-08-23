@@ -29,7 +29,7 @@
 					<top>-10</top>
 					<width>1004</width>
 					<height>710</height>
-					<texture colordiffuse="surface.secondary">backgrounds/media info 3 bg.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/media info 3 bg.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
@@ -101,7 +101,7 @@
 					<top>402</top>
 					<width>984</width>
 					<height>60</height>
-					<texture colordiffuse="accent">backgrounds/white.png</texture>
+					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 				</control>
 				<!--fanart shadow-->
 				<control type="image">
@@ -133,7 +133,7 @@
 					<height>168</height>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>text.primary</textcolor>
+					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -145,7 +145,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font10_title</font>
-					<textcolor>accent</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<label>$INFO[Container(50).ListItem.StartTime]</label>
 				</control>
@@ -166,7 +166,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font10_title</font>
-					<textcolor>accent</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<label>$INFO[Container(50).ListItem.EndTime]</label>
 				</control>
@@ -223,7 +223,7 @@
 							<height>45</height>
 							<font>channel</font>
 							<textcolor>white</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
@@ -233,7 +233,7 @@
 							<top>45</top>
 							<width>30</width>
 							<height>30</height>
-							<texture colordiffuse="accent">PVR-IsRecording.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">PVR-IsRecording.png</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -245,7 +245,7 @@
 							<height>30</height>
 							<font>label</font>
 							<textcolor>white</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -258,7 +258,7 @@
 							<height>30</height>
 							<font>secondary.info</font>
 							<textcolor>white</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
@@ -273,7 +273,7 @@
 							<height>30</height>
 							<font>secondary.info</font>
 							<textcolor>white</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
@@ -287,7 +287,7 @@
 							<top>70</top>
 							<width>420</width>
 							<height>7</height>
-							<midtexture colordiffuse="surface.secondary">backgrounds/white.png</midtexture>
+							<midtexture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</midtexture>
 							<info>ListItem.Progress</info>
 							<visible>ListItem.HasEpg</visible>
 						</control>
@@ -311,7 +311,7 @@
 						<top>0</top>
 						<width>600</width>
 						<height>90</height>
-						<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
 					<!--focused bg nib-->
@@ -320,7 +320,7 @@
 						<top>0</top>
 						<width>4</width>
 						<height>90</height>
-						<texture colordiffuse="accent">backgrounds/white.png</texture>
+						<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
 					<control type="group">
@@ -333,8 +333,8 @@
 							<width>60</width>
 							<height>45</height>
 							<font>channel</font>
-							<textcolor>text.primary</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
@@ -344,7 +344,7 @@
 							<top>45</top>
 							<width>30</width>
 							<height>30</height>
-							<texture colordiffuse="accent">PVR-IsRecording.png</texture>
+							<texture colordiffuse="$INFO[Skin.String(color.500)]">PVR-IsRecording.png</texture>
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -355,8 +355,8 @@
 							<width>525</width>
 							<height>30</height>
 							<font>label</font>
-							<textcolor>text.primary</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -368,8 +368,8 @@
 							<width>525</width>
 							<height>30</height>
 							<font>secondary.info</font>
-							<textcolor>text.primary</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
@@ -382,8 +382,8 @@
 							<width>420</width>
 							<height>30</height>
 							<font>secondary.info</font>
-							<textcolor>text.primary</textcolor>
-							<selectedcolor>accent</selectedcolor>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
