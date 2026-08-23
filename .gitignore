@@ -42,3 +42,5 @@ debug/*
 
 # Skin shortcuts menu
 */script-skinshortcuts-includes.xml
+skin.estuary-master.zip
+dist/

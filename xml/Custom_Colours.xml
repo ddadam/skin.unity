@@ -70,13 +70,17 @@
 					<align>center</align>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+					<focusedcolor>accent.dark</focusedcolor>
 					<include>ButtonCommonValues</include>
-					<onclick>Skin.SetString(color.primary, FFFFFFFF)</onclick>
-					<onclick>Skin.SetString(color.tertiary, FFF1F1F1)</onclick>
-					<onclick>Skin.SetString(color.disabled, AABBBBBB)</onclick>
-					<onclick>Skin.SetString(color.text, FF666666)</onclick>
-					<onclick>Skin.SetString(color.border, FFCCCCCC)</onclick>
+					<onclick>Skin.SetString(theme.surface,light)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.primary, FFFFFFFF)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.tertiary, FFF1F1F1)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.disabled, AABBBBBB)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.text, FF666666)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.border, FFCCCCCC)</onclick>
+					<onclick condition="!String.IsEqual(Skin.String(colors),custom) + String.IsEmpty(Skin.String(theme.accent))">Skin.ClearSetting(colors)</onclick>
+					<onclick condition="!String.IsEqual(Skin.String(colors),custom) + !String.IsEmpty(Skin.String(theme.accent))">Skin.SetString(colors,$INFO[Skin.String(theme.accent)]-light)</onclick>
+					<onclick>ReloadSkin()</onclick>
 				</control>
 				<!--dark theme-->
 				<control type="button" id="811">
@@ -86,13 +90,17 @@
 					<align>center</align>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+					<focusedcolor>accent.dark</focusedcolor>
 					<include>ButtonCommonValues</include>
-					<onclick>Skin.SetString(color.primary, FF4BBEFC)</onclick>
-					<onclick>Skin.SetString(color.tertiary, FF444444)</onclick>
-					<onclick>Skin.SetString(color.disabled, AA606060)</onclick>
-					<onclick>Skin.SetString(color.text, FFEEEEEE)</onclick>
-					<onclick>Skin.SetString(color.border, FF555555)</onclick>
+					<onclick>Skin.SetString(theme.surface,dark)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.primary, FF4BBEFC)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.tertiary, FF444444)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.disabled, AA606060)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.text, FFEEEEEE)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(colors),custom)">Skin.SetString(color.border, FF555555)</onclick>
+					<onclick condition="!String.IsEqual(Skin.String(colors),custom) + String.IsEmpty(Skin.String(theme.accent))">Skin.SetString(colors,Default-dark)</onclick>
+					<onclick condition="!String.IsEqual(Skin.String(colors),custom) + !String.IsEmpty(Skin.String(theme.accent))">Skin.SetString(colors,$INFO[Skin.String(theme.accent)]-dark)</onclick>
+					<onclick>ReloadSkin()</onclick>
 				</control>
 			</control>
 			<control type="group">
@@ -148,7 +156,7 @@
 							<width>325</width>
 							<height>370</height>
 							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<bordertexture colordiffuse="$INFO[Skin.String(color.text)]">backgrounds/white.png</bordertexture>
+							<bordertexture colordiffuse="text.primary">backgrounds/white.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
 						<!--label-->
@@ -164,172 +172,248 @@
 						<item id="1">
 							<!--Red-->
 							<label>31921</label>
+							<onclick>Skin.SetString(theme.accent,Red)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Red-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Red-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFE51C23)</onclick>
 							<onclick>Skin.SetString(color.900, FF850A04)</onclick>
 							<onclick>Skin.SetString(color.400, FFE84E40)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Red.png</thumb>
 						</item>
 						<item id="2">
 							<!--Pink-->
 							<label>31922</label>
+							<onclick>Skin.SetString(theme.accent,Pink)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Pink-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Pink-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFE91E63)</onclick>
 							<onclick>Skin.SetString(color.900, FF880E4F)</onclick>
 							<onclick>Skin.SetString(color.400, FFEC407A)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Pink.png</thumb>
 						</item>
 						<item id="3">
 							<!--Purple-->
 							<label>31923</label>
+							<onclick>Skin.SetString(theme.accent,Purple)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Purple-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Purple-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF9C27B0)</onclick>
 							<onclick>Skin.SetString(color.900, FF5B1287)</onclick>
 							<onclick>Skin.SetString(color.400, FFAB47BC)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Purple.png</thumb>
 						</item>
 						<item id="4">
 							<!--Deep Purple-->
 							<label>31924</label>
+							<onclick>Skin.SetString(theme.accent,DeepPurple)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,DeepPurple-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,DeepPurple-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF673AB7)</onclick>
 							<onclick>Skin.SetString(color.900, FF341E96)</onclick>
 							<onclick>Skin.SetString(color.400, FF7E57C2)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Deep Purple.png</thumb>
 						</item>
 						<item id="5">
 							<!--Indigo-->
 							<label>31925</label>
+							<onclick>Skin.SetString(theme.accent,Indigo)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Indigo-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Indigo-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF3F51B5)</onclick>
 							<onclick>Skin.SetString(color.900, FF1C2688)</onclick>
 							<onclick>Skin.SetString(color.400, FF5C6BC0)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Indigo.png</thumb>
 						</item>
 						<item id="6">
 							<!--Blue-->
 							<label>31926</label>
+							<onclick>Skin.SetString(theme.accent,Blue)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Blue-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Blue-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF5677FC)</onclick>
 							<onclick>Skin.SetString(color.900, FF313EBC)</onclick>
 							<onclick>Skin.SetString(color.400, FF738FFE)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Blue.png</thumb>
 						</item>
 						<item id="7">
 							<!--Light Blue-->
 							<label>31927</label>
+							<onclick>Skin.SetString(theme.accent,LightBlue)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,LightBlue-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,LightBlue-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF03A9F4)</onclick>
 							<onclick>Skin.SetString(color.900, FF1275C4)</onclick>
 							<onclick>Skin.SetString(color.400, FF3EBCF5)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Light Blue.png</thumb>
 						</item>
 						<item id="8">
 							<!--Cyan-->
 							<label>31928</label>
+							<onclick>Skin.SetString(theme.accent,Cyan)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Cyan-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Cyan-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF00BCD4)</onclick>
 							<onclick>Skin.SetString(color.900, FF057A7F)</onclick>
 							<onclick>Skin.SetString(color.400, FF3FD8EB)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Cyan.png</thumb>
 						</item>
 						<item id="9">
 							<!--Teal-->
 							<label>31929</label>
+							<onclick>Skin.SetString(theme.accent,Teal)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Teal-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Teal-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF009688)</onclick>
 							<onclick>Skin.SetString(color.900, FF056857)</onclick>
 							<onclick>Skin.SetString(color.400, FF2EBEB0)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Teal.png</thumb>
 						</item>
 						<item id="10">
 							<!--Green-->
 							<label>31930</label>
+							<onclick>Skin.SetString(theme.accent,Green)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Green-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Green-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF259B24)</onclick>
 							<onclick>Skin.SetString(color.900, FF156808)</onclick>
 							<onclick>Skin.SetString(color.400, FF39C439)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Green.png</thumb>
 						</item>
 						<item id="11">
 							<!--Light Green-->
 							<label>31931</label>
+							<onclick>Skin.SetString(theme.accent,LightGreen)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,LightGreen-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,LightGreen-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF8BC34A)</onclick>
 							<onclick>Skin.SetString(color.900, FF4F9833)</onclick>
 							<onclick>Skin.SetString(color.400, FFA0D068)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Light Green.png</thumb>
 						</item>
 						<item id="12">
 							<!--Lime-->
 							<label>31932</label>
+							<onclick>Skin.SetString(theme.accent,Lime)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Lime-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Lime-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFCDDC39)</onclick>
 							<onclick>Skin.SetString(color.900, FFA89B26)</onclick>
 							<onclick>Skin.SetString(color.400, FFDDEA60)</onclick>
 							<onclick>Skin.SetString(color.alt, FFE51C23)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Lime.png</thumb>
 						</item>
 						<item id="13">
 							<!--Yellow-->
 							<label>31933</label>
+							<onclick>Skin.SetString(theme.accent,Yellow)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Yellow-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Yellow-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFF6E233)</onclick>
 							<onclick>Skin.SetString(color.900, FFEFB415)</onclick>
 							<onclick>Skin.SetString(color.400, FFFFEE58)</onclick>
 							<onclick>Skin.SetString(color.alt, FFE51C23)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Yellow.png</thumb>
 						</item>
 						<item id="14">
 							<!--Amber-->
 							<label>31934</label>
+							<onclick>Skin.SetString(theme.accent,Amber)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Amber-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Amber-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFF6B904)</onclick>
 							<onclick>Skin.SetString(color.900, FFFF8A00)</onclick>
 							<onclick>Skin.SetString(color.400, FFFBCB37)</onclick>
 							<onclick>Skin.SetString(color.alt, FFE51C23)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Amber.png</thumb>
 						</item>
 						<item id="15">
 							<!--Orange-->
 							<label>31935</label>
+							<onclick>Skin.SetString(theme.accent,Orange)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Orange-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Orange-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFFF9800)</onclick>
 							<onclick>Skin.SetString(color.900, FFE06603)</onclick>
 							<onclick>Skin.SetString(color.400, FFFAAC3A)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Orange.png</thumb>
 						</item>
 						<item id="16">
 							<!--Deep Orange-->
 							<label>31936</label>
+							<onclick>Skin.SetString(theme.accent,DeepOrange)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,DeepOrange-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,DeepOrange-light)</onclick>
 							<onclick>Skin.SetString(color.500, FFFF5722)</onclick>
 							<onclick>Skin.SetString(color.900, FFB9330A)</onclick>
 							<onclick>Skin.SetString(color.400, FFFB6536)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Deep Orange.png</thumb>
 						</item>
 						<item id="17">
 							<!--Brown-->
 							<label>31937</label>
+							<onclick>Skin.SetString(theme.accent,Brown)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Brown-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Brown-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF795548)</onclick>
 							<onclick>Skin.SetString(color.900, FF55322C)</onclick>
 							<onclick>Skin.SetString(color.400, FF8D6E63)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Brown.png</thumb>
 						</item>
 						<item id="18">
 							<!--Blue Grey-->
 							<label>31938</label>
+							<onclick>Skin.SetString(theme.accent,BlueGrey)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,BlueGrey-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,BlueGrey-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF587482)</onclick>
 							<onclick>Skin.SetString(color.900, FF3A4B5C)</onclick>
 							<onclick>Skin.SetString(color.400, FF78909C)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Blue Grey.png</thumb>
 						</item>
 						<item id="19">
 							<!--Grey-->
 							<label>31939</label>
+							<onclick>Skin.SetString(theme.accent,Grey)</onclick>
+							<onclick condition="String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Grey-dark)</onclick>
+							<onclick condition="!String.IsEqual(Skin.String(theme.surface),dark)">Skin.SetString(colors,Grey-light)</onclick>
 							<onclick>Skin.SetString(color.500, FF908E8E)</onclick>
 							<onclick>Skin.SetString(color.900, FF5D5C5C)</onclick>
 							<onclick>Skin.SetString(color.400, FFBDBDBD)</onclick>
 							<onclick>Skin.SetString(color.alt, FFFFEB3B)</onclick>
+							<onclick>ReloadSkin()</onclick>
 							<thumb>colours/Grey.png</thumb>
 						</item>
 						<item id="20">
@@ -348,7 +432,7 @@
 					<top>80</top>
 					<width>50</width>
 					<height>750</height>
-					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]" flipx="true">SideFade.png</texture>
+					<texture colordiffuse="surface.secondary" flipx="true">SideFade.png</texture>
 				</control>
 			</control>
 			<!--buttons-->

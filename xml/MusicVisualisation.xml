@@ -75,7 +75,7 @@
 				<control type="image">
 					<width>1140</width>
 					<height>190</height>
-					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/np info bg.png</texture>
+					<texture colordiffuse="surface.secondary">backgrounds/np info bg.png</texture>
 				</control>
 				<!--title bg-->
 				<control type="image">
@@ -83,7 +83,7 @@
 					<top>6</top>
 					<width>1120</width>
 					<height>70</height>
-					<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
+					<texture colordiffuse="accent">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -134,7 +134,7 @@
 								<width>120</width>
 								<height>30</height>
 								<aspectratio align="right">keep</aspectratio>
-								<texture colordiffuse="$INFO[Skin.String(color.500)]">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
+								<texture colordiffuse="accent">$INFO[MusicPlayer.Codec,flags/audio/,.png]</texture>
 							</control>
 						</control>
 						<control type="image">
@@ -142,7 +142,7 @@
 							<width>150</width>
 							<height>52</height>
 							<aspectratio align="center">keep</aspectratio>
-							<texture fallback="ratings/0.png" colordiffuse="$INFO[Skin.String(color.500)]">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
+							<texture fallback="ratings/0.png" colordiffuse="accent">$INFO[MusicPlayer.UserRating,ratings/,.png]</texture>
 						</control>
 					</control>
 					<control type="label">

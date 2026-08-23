@@ -86,8 +86,8 @@
 							<font>label</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -98,7 +98,7 @@
 							<top>0</top>
 							<width>850</width>
 							<height>60</height>
-							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
+							<texture colordiffuse="accent">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(10)">Conditional</animation>
 						</control>
 						<!--label-->
@@ -111,7 +111,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
+							<selectedcolor>accent.alt</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -176,7 +176,7 @@
 					<top>500r</top>
 					<width>1210</width>
 					<height>75</height>
-					<texture background="true" colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</texture>
+					<texture colordiffuse="accent.dark">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -218,10 +218,10 @@
 					<aligny>center</aligny>
 					<label></label>
 					<font>label</font>
-					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+					<textcolor>text.primary</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
-					<texturenofocus colordiffuse="$INFO[Skin.String(color.border)]">button-border-1110.png</texturenofocus>
+					<texturefocus colordiffuse="accent">backgrounds/white.png</texturefocus>
+					<texturenofocus colordiffuse="border">button-border-1110.png</texturenofocus>
 					<onup>10</onup>
 					<onleft>12</onleft>
 					<onright>19</onright>

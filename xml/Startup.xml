@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<include>CheckSkinColorsSet</include>
+	<!-- Seed default colour strings (data source for the custom colour picker) -->
+	<onload condition="String.IsEmpty(Skin.String(color.500))">Skin.SetString(color.500, FFE51C23)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.900))">Skin.SetString(color.900, FF850A04)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.400))">Skin.SetString(color.400, FFE84E40)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.alt))">Skin.SetString(color.alt, FFFFEB3B)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.text))">Skin.SetString(color.text, FF666666)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.disabled))">Skin.SetString(color.disabled, AABBBBBB)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.primary))">Skin.SetString(color.primary, FFFFFFFF)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.tertiary))">Skin.SetString(color.tertiary, FFF1F1F1)</onload>
+	<onload condition="String.IsEmpty(Skin.String(color.border))">Skin.SetString(color.border, FFCCCCCC)</onload>
+
+	<!-- Migration: existing installs with non-default colours switch to the dynamic custom theme -->
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.500),FFE51C23)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.900),FF850A04)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.400),FFE84E40)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.alt),FFFFEB3B)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.text),FF666666)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.disabled),AABBBBBB)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.primary),FFFFFFFF)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.tertiary),FFF1F1F1)">Skin.SetString(colors,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(colors)) + !String.IsEqual(Skin.String(color.border),FFCCCCCC)">Skin.SetString(colors,custom)</onload>
 	<controls>
 		<control type="button" id="10">
 			<description>trigger</description>

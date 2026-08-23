@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: Lime / dark. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FFCDDC39</color>
+	<color name="accent.dark">FFA89B26</color>
+	<color name="accent.light">FFDDEA60</color>
+	<color name="accent.alt">FFE51C23</color>
+	<color name="text.primary">FFEEEEEE</color>
+	<color name="text.disabled">AA606060</color>
+	<color name="surface.primary">FF4BBEFC</color>
+	<color name="surface.secondary">FF444444</color>
+	<color name="border">FF555555</color>
+</colors>

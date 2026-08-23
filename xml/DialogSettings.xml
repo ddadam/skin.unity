@@ -155,7 +155,7 @@
 			<top>0</top>
 			<height>60</height>
 			<font>button.bold</font>
-			<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+			<textcolor>accent</textcolor>
 			<textoffsetx>5</textoffsetx>
 			<aligny>center</aligny>
 		</control>

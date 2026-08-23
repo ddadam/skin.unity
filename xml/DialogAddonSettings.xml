@@ -71,7 +71,7 @@
 					<width>320</width>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+					<focusedcolor>accent.dark</focusedcolor>
 					<align>right</align>
 					<include>ButtonCommonValues</include>
 					<onleft>5</onleft>
@@ -101,7 +101,7 @@
 					<width>305</width>
 					<label>31142</label>
 					<font>button</font>
-					<textcolor>$INFO[Skin.String(color.900)]</textcolor>
+					<textcolor>accent.dark</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<visible>Control.HasFocus(20)</visible>
@@ -157,7 +157,7 @@
 					<width>320</width>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
-					<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
+					<focusedcolor>accent.dark</focusedcolor>
 					<include>ButtonCommonValues</include>
 				</control>
 				<!--seperator-->
@@ -181,7 +181,7 @@
 					<height>60</height>
 					<label></label>
 					<font>button.bold</font>
-					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+					<textcolor>accent</textcolor>
 					<textoffsetx>5</textoffsetx>
 					<aligny>center</aligny>
 				</control>

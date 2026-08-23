@@ -58,7 +58,7 @@
 							<font>kai.primary</font>
 							<aligny>center</aligny>
 							<align>center</align>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<selectedcolor>accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -72,8 +72,8 @@
 							<aligny>center</aligny>
 							<align>center</align>
 							<shadowcolor>black</shadowcolor>
-							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>accent</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!Control.HasFocus(110)</visible>
 						</control>
@@ -86,7 +86,7 @@
 							<aligny>center</aligny>
 							<align>center</align>
 							<shadowcolor>black</shadowcolor>
-							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+							<textcolor>accent</textcolor>
 							<label fallback="--">$INFO[ListItem.Label]</label>
 							<visible>Control.HasFocus(110)</visible>
 						</control>
@@ -101,10 +101,10 @@
 					<onright>110</onright>
 					<ondown>110</ondown>
 					<onup>110</onup>
-					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
-					<focusedcolor>$INFO[Skin.String(color.500)]</focusedcolor>
-					<textureupfocus colordiffuse="$INFO[Skin.String(color.500)]">scroll-up-2.png</textureupfocus>
-					<texturedownfocus colordiffuse="$INFO[Skin.String(color.500)]">scroll-down-2.png</texturedownfocus>
+					<textcolor>accent</textcolor>
+					<focusedcolor>accent</focusedcolor>
+					<textureupfocus colordiffuse="accent">scroll-up-2.png</textureupfocus>
+					<texturedownfocus colordiffuse="accent">scroll-down-2.png</texturedownfocus>
 					<showonepage>true</showonepage>
 					<visible>Control.IsVisible(110)</visible>
 				</control>

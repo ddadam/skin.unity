@@ -139,7 +139,7 @@
 							<font>button</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>$INFO[Skin.String(color.900)]</textcolor>
+							<textcolor>accent.dark</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
 							<visible>ListItem.Property(ActiveChannel)</visible>
@@ -201,7 +201,7 @@
 							<width>870</width>
 							<height>60</height>
 							<font>button.bold</font>
-							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+							<textcolor>accent</textcolor>
 							<textoffsetx>5</textoffsetx>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[31511]</label>
@@ -260,7 +260,7 @@
 							<width>870</width>
 							<height>60</height>
 							<font>button.bold</font>
-							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+							<textcolor>accent</textcolor>
 							<textoffsetx>5</textoffsetx>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[31026]</label>

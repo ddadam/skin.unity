@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: Amber / dark. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FFF6B904</color>
+	<color name="accent.dark">FFFF8A00</color>
+	<color name="accent.light">FFFBCB37</color>
+	<color name="accent.alt">FFE51C23</color>
+	<color name="text.primary">FFEEEEEE</color>
+	<color name="text.disabled">AA606060</color>
+	<color name="surface.primary">FF4BBEFC</color>
+	<color name="surface.secondary">FF444444</color>
+	<color name="border">FF555555</color>
+</colors>

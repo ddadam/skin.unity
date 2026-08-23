@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.unity"
-	version="0.21.2"
+	version="0.21.3"
 	name="Unity"
 	provider-name="Eddage, Bumpaneer, ddadam">
 	<requires>
@@ -23,9 +23,16 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
+		<news>
+			v0.21.3
+			- Colour system rewritten: named colours resolved at load time replace per-frame skin-string lookups; preset themes use native colour theme files
+			- Fixed missing poster shadow texture, Fanart_Fallback_Music_Small filename case mismatch (Linux), undefined font23_narrow and 28 missing UI strings
+			- OSD transport buttons consolidated into reusable includes; background loading flag tuned for static vs dynamic art
+			- Added tools/ maintenance scripts and CI skin validation
+		</news>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 		<forum>https://forum.kodi.tv/forumdisplay.php?fid=244</forum>
-		<source>https://github.com/bumpaneer/skin.unity/tree/Krypton</source>
+		<source>https://github.com/ddadam/skin.unity</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>

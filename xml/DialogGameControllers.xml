@@ -59,7 +59,7 @@
 					<top>580</top>
 					<width>1210</width>
 					<height>75</height>
-					<texture background="true" colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</texture>
+					<texture colordiffuse="accent.dark">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -128,7 +128,7 @@
 					<top>790</top>
 					<width>1210</width>
 					<height>75</height>
-					<texture background="true" colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</texture>
+					<texture colordiffuse="accent.dark">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -196,7 +196,7 @@
 					<width>auto</width>
 					<height>60</height>
 					<font>button.bold</font>
-					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+					<textcolor>accent</textcolor>
 					<aligny>center</aligny>
 				</control>
 				<!--separator-->

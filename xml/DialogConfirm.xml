@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<include>CheckSkinColorsSet</include>
-	<controls>
+		<controls>
 		<!--all content-->
 		<control type="group">
 			<height>340</height>
@@ -57,7 +56,7 @@
 				<aligny>center</aligny>
 				<label></label>
 				<font>label</font>
-				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+				<textcolor>text.primary</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<!--progress bar-->

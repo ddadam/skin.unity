@@ -20,4 +20,18 @@
 	<color name="green">FF00FF00</color>
 	<color name="pink">FFFA04DA</color>
 	<color name="orange">FFFAA604</color>
+
+	<!-- Unity theme colours.
+	     Defaults below match the "Red / Light" theme.
+	     Kodi loads colours/<value of the skin string "colors">.xml over these,
+	     allowing static (load-time resolved) theme switching - see colors/*.xml -->
+	<color name="accent">FFE51C23</color>
+	<color name="accent.dark">FF850A04</color>
+	<color name="accent.light">FFE84E40</color>
+	<color name="accent.alt">FFFFEB3B</color>
+	<color name="text.primary">FF666666</color>
+	<color name="text.disabled">AABBBBBB</color>
+	<color name="surface.primary">FFFFFFFF</color>
+	<color name="surface.secondary">FFF1F1F1</color>
+	<color name="border">FFCCCCCC</color>
 </colors>

@@ -111,8 +111,8 @@
 							<font>label</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -123,7 +123,7 @@
 							<top>0</top>
 							<width>1155</width>
 							<height>60</height>
-							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
+							<texture colordiffuse="accent">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(3)">Conditional</animation>
 						</control>
 						<!--label-->
@@ -136,7 +136,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
+							<selectedcolor>accent.alt</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -170,7 +170,7 @@
 							<top>5</top>
 							<width>115</width>
 							<height>115</height>
-							<texture colordiffuse="$INFO[Skin.String(color.text)]">$INFO[Listitem.Icon]</texture>
+							<texture colordiffuse="text.primary">$INFO[Listitem.Icon]</texture>
 							<visible>String.Contains(ListItem.Icon,Default)</visible>
 						</control>
 						<!--title-->
@@ -182,8 +182,8 @@
 							<font>label</font>
 							<align>left</align>
 							<aligny>top</aligny>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
 						<!--description-->
@@ -195,8 +195,8 @@
 							<font>label</font>
 							<align>left</align>
 							<aligny>top</aligny>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
@@ -207,7 +207,7 @@
 							<top>0</top>
 							<width>1155</width>
 							<height>125</height>
-							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
+							<texture colordiffuse="accent">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(6)">Conditional</animation>
 						</control>
 						<!--icon-->
@@ -228,7 +228,7 @@
 							<align>left</align>
 							<aligny>top</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
+							<selectedcolor>accent.alt</selectedcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
 						<!--description-->
@@ -281,7 +281,7 @@
 					<top>65r</top>
 					<width>1210</width>
 					<height>70</height>
-					<texture colordiffuse="$INFO[Skin.String(color.primary)]">backgrounds/white.png</texture>
+					<texture colordiffuse="surface.primary">backgrounds/white.png</texture>
 				</control>
 				<!--buttons shadow-->
 				<control type="image">
@@ -402,9 +402,9 @@
 							<top>0</top>
 							<width>233</width>
 							<height>233</height>
-							<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
+							<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 							<bordersize>5</bordersize>
-							<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/square shadow small.png</bordertexture>
+							<bordertexture colordiffuse="accent">backgrounds/square shadow small.png</bordertexture>
 						</control>
 						<control type="gamewindow">
 							<left>5</left>
@@ -421,7 +421,7 @@
 							<width>226</width>
 							<height>15</height>
 							<font>secondary.info.big</font>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<textcolor>text.primary</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -435,9 +435,9 @@
 							<top>0</top>
 							<width>233</width>
 							<height>233</height>
-							<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
+							<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 							<bordersize>5</bordersize>
-							<bordertexture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</bordertexture>
+							<bordertexture colordiffuse="accent">backgrounds/white.png</bordertexture>
 						</control>
 						<control type="gamewindow">
 							<left>5</left>
@@ -454,8 +454,8 @@
 							<width>226</width>
 							<height>15</height>
 							<font>secondary.info.big</font>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>accent</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>

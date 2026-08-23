@@ -1,3 +1,14 @@
+[B]08/22/2026 - 0.21.3 [/B]
+[EFFICIENCY] Colour system rewritten: named colours in colors/defaults.xml resolved once at load time replace 1,500+ per-frame $INFO[Skin.String(color.*)] lookups; preset themes now load via the native colours/<theme>.xml mechanism (40 new theme files); custom colour picker maps to a dynamic colors/custom.xml
+[EFFICIENCY] Removed background="true" from ~150 small static UI textures (async loading kept for dynamic art only)
+[CODED] New reusable OSDButton / OSDToggleButton includes; 23 uniform OSD transport buttons consolidated
+[CODED] Startup.xml now seeds colour strings and migrates existing installs to the custom theme automatically
+[FIXED] Missing media/overlays/shadow.png (poster fallback border) restored
+[FIXED] RDS info dialog fallbacks now use core string #161 like upstream
+[CODED] tools/lint_skin.py validates XML, texture paths/case, includes, fonts, colours and strings; GitHub Action runs it on every push
+[CODED] tools/: generate_color_themes.py, migrate_colors.py, phase2_background.py, phase3_osd.py, audit_media.py
+[FIXED] Fanart_Fallback_Music_Small.png filename case mismatch (texture failed to load on Linux/LibreELEC)
+
 [B]07/16/2022 - 0.21.2-Beta [/B]
 [Experimental] Bumped script.skinshortcuts to 2.0.3
 

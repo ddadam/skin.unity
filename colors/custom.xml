@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity custom colour theme: follows the user's colour-picker skin strings.
+     Only users of the "Custom" colour option pay any runtime lookup cost;
+     preset themes are fully static. -->
+<colors>
+	<color name="accent">$INFO[Skin.String(color.500)]</color>
+	<color name="accent.dark">$INFO[Skin.String(color.900)]</color>
+	<color name="accent.light">$INFO[Skin.String(color.400)]</color>
+	<color name="accent.alt">$INFO[Skin.String(color.alt)]</color>
+	<color name="text.primary">$INFO[Skin.String(color.text)]</color>
+	<color name="text.disabled">$INFO[Skin.String(color.disabled)]</color>
+	<color name="surface.primary">$INFO[Skin.String(color.primary)]</color>
+	<color name="surface.secondary">$INFO[Skin.String(color.tertiary)]</color>
+	<color name="border">$INFO[Skin.String(color.border)]</color>
+</colors>

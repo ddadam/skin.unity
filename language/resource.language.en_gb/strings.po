@@ -979,3 +979,116 @@ msgstr ""
 msgctxt "#31960"
 msgid "RADIO"
 msgstr ""
+
+msgctxt "#32004"
+msgid "Playlists"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Music playlists"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Add-ons"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Program add-ons"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Video add-ons"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Music add-ons"
+msgstr ""
+
+msgctxt "#32012"
+msgid "Picture add-ons"
+msgstr ""
+
+msgctxt "#32014"
+msgid "Videos"
+msgstr ""
+
+msgctxt "#32017"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#32019"
+msgid "Music"
+msgstr ""
+
+msgctxt "#32020"
+msgid "Pictures"
+msgstr ""
+
+msgctxt "#32021"
+msgid "Programs"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Video sources"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Music sources"
+msgstr ""
+
+msgctxt "#32034"
+msgid "General"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Submenu"
+msgstr ""
+
+msgctxt "#32087"
+msgid "Radio"
+msgstr ""
+
+msgctxt "#33022"
+msgid "Precipitation"
+msgstr ""
+
+msgctxt "#33027"
+msgid "Sunrise"
+msgstr ""
+
+msgctxt "#33028"
+msgid "Sunset"
+msgstr ""
+
+msgctxt "#33030"
+msgid "Outlook"
+msgstr ""
+
+msgctxt "#33050"
+msgid "Alerts"
+msgstr ""
+
+msgctxt "#33084"
+msgid "Auto login"
+msgstr ""
+
+msgctxt "#35226"
+msgid "Advanced settings"
+msgstr ""
+
+msgctxt "#35227"
+msgid "Rotation"
+msgstr ""
+
+msgctxt "#35233"
+msgid "Stretch mode"
+msgstr ""
+
+msgctxt "#35234"
+msgid "Controllers"
+msgstr ""
+
+msgctxt "#38023"
+msgid "Rating"
+msgstr ""
+

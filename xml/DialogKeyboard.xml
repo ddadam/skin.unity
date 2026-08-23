@@ -22,7 +22,7 @@
 				<top>90</top>
 				<width>100%</width>
 				<height>70</height>
-				<texture colordiffuse="$INFO[Skin.String(color.primary)]">backgrounds/white.png</texture>
+				<texture colordiffuse="surface.primary">backgrounds/white.png</texture>
 			</control>
 			<!--title shadow-->
 			<control type="image">
@@ -51,7 +51,7 @@
 					<top>-140</top>
 					<width>100%</width>
 					<height>140</height>
-					<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texture>
+					<texture colordiffuse="surface.secondary">backgrounds/white.png</texture>
 				</control>
 				<!--title bg-->
 				<control type="image">
@@ -59,7 +59,7 @@
 					<top>-140</top>
 					<width>100%</width>
 					<height>70</height>
-					<texture colordiffuse="$INFO[Skin.String(color.900)]">backgrounds/white.png</texture>
+					<texture colordiffuse="accent.dark">backgrounds/white.png</texture>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -165,7 +165,7 @@
 				<font>button.bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<focusedcolor>$INFO[Skin.String(color.text)]</focusedcolor>
+				<focusedcolor>text.primary</focusedcolor>
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
 			</control>
@@ -545,12 +545,12 @@
 						<label>20179</label>
 						<onup>161</onup>
 						<ondown>101</ondown>
-						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-						<focusedcolor>$INFO[Skin.String(color.500)]</focusedcolor>
+						<textcolor>text.primary</textcolor>
+						<focusedcolor>accent</focusedcolor>
 						<textureradioonfocus colordiffuse="white">keyboardcaps.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">keyboardcaps.png</textureradioonnofocus>
+						<textureradioonnofocus colordiffuse="surface.secondary">keyboardcaps.png</textureradioonnofocus>
 						<textureradioofffocus colordiffuse="white">keyboardcapsnf.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">keyboardcapsnf.png</textureradiooffnofocus>
+						<textureradiooffnofocus colordiffuse="surface.secondary">keyboardcapsnf.png</textureradiooffnofocus>
 						<radioposx>15</radioposx>
 						<radioposy>15</radioposy>
 						<radiowidth>45</radiowidth>
@@ -562,12 +562,12 @@
 						<label>20178</label>
 						<onup>162</onup>
 						<ondown>102</ondown>
-						<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-						<focusedcolor>$INFO[Skin.String(color.500)]</focusedcolor>
+						<textcolor>text.primary</textcolor>
+						<focusedcolor>accent</focusedcolor>
 						<textureradioonfocus colordiffuse="white">keyboardshift.png</textureradioonfocus>
-						<textureradioonnofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">keyboardshift.png</textureradioonnofocus>
+						<textureradioonnofocus colordiffuse="surface.secondary">keyboardshift.png</textureradioonnofocus>
 						<textureradioofffocus colordiffuse="white">keyboardshiftnf.png</textureradioofffocus>
-						<textureradiooffnofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">keyboardshiftnf.png</textureradiooffnofocus>
+						<textureradiooffnofocus colordiffuse="surface.secondary">keyboardshiftnf.png</textureradiooffnofocus>
 						<radioposx>15</radioposx>
 						<radioposy>15</radioposy>
 						<radiowidth>45</radiowidth>
@@ -606,14 +606,14 @@
 							<ondown>109</ondown>
 							<onleft>306</onleft>
 							<onright>95200</onright>
-							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-							<focusedcolor>$INFO[Skin.String(color.500)]</focusedcolor>
+							<textcolor>text.primary</textcolor>
+							<focusedcolor>accent</focusedcolor>
 							<include>KeyboardButton</include>
 						</control>
 						<control type="image">
 							<width>75</width>
 							<height>75</height>
-							<texture colordiffuse="$INFO[Skin.String(color.tertiary)]">keyboarddelete.png</texture>
+							<texture colordiffuse="surface.secondary">keyboarddelete.png</texture>
 							<visible>!Control.HasFocus(8)</visible>
 						</control>
 						<control type="image">

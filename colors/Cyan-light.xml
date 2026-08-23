@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: Cyan / light. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FF00BCD4</color>
+	<color name="accent.dark">FF057A7F</color>
+	<color name="accent.light">FF3FD8EB</color>
+	<color name="accent.alt">FFFFEB3B</color>
+	<color name="text.primary">FF666666</color>
+	<color name="text.disabled">AABBBBBB</color>
+	<color name="surface.primary">FFFFFFFF</color>
+	<color name="surface.secondary">FFF1F1F1</color>
+	<color name="border">FFCCCCCC</color>
+</colors>

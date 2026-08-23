@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: DeepOrange / light. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FFFF5722</color>
+	<color name="accent.dark">FFB9330A</color>
+	<color name="accent.light">FFFB6536</color>
+	<color name="accent.alt">FFFFEB3B</color>
+	<color name="text.primary">FF666666</color>
+	<color name="text.disabled">AABBBBBB</color>
+	<color name="surface.primary">FFFFFFFF</color>
+	<color name="surface.secondary">FFF1F1F1</color>
+	<color name="border">FFCCCCCC</color>
+</colors>

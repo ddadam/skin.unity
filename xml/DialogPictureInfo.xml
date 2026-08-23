@@ -75,7 +75,7 @@
 							<width>175</width>
 							<height>60</height>
 							<font>button</font>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<selectedcolor>accent</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -87,7 +87,7 @@
 							<height>60</height>
 							<font>button</font>
 							<aligny>center</aligny>
-							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
+							<selectedcolor>accent</selectedcolor>
 							<align>right</align>
 							<info>ListItem.Label2</info>
 						</control>
@@ -99,7 +99,7 @@
 							<top>0</top>
 							<width>600</width>
 							<height>60</height>
-							<texture colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texture>
+							<texture colordiffuse="accent">backgrounds/white.png</texture>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -109,7 +109,7 @@
 							<font>button</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
+							<selectedcolor>accent.alt</selectedcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
@@ -120,7 +120,7 @@
 							<font>button</font>
 							<aligny>center</aligny>
 							<textcolor>white</textcolor>
-							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
+							<selectedcolor>accent.alt</selectedcolor>
 							<align>right</align>
 							<info>ListItem.Label2</info>
 						</control>

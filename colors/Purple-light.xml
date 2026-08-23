@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: Purple / light. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FF9C27B0</color>
+	<color name="accent.dark">FF5B1287</color>
+	<color name="accent.light">FFAB47BC</color>
+	<color name="accent.alt">FFFFEB3B</color>
+	<color name="text.primary">FF666666</color>
+	<color name="text.disabled">AABBBBBB</color>
+	<color name="surface.primary">FFFFFFFF</color>
+	<color name="surface.secondary">FFF1F1F1</color>
+	<color name="border">FFCCCCCC</color>
+</colors>

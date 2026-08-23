@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unity colour theme: Orange / light. Selected via the skin string "colors". -->
+<colors>
+	<color name="accent">FFFF9800</color>
+	<color name="accent.dark">FFE06603</color>
+	<color name="accent.light">FFFAAC3A</color>
+	<color name="accent.alt">FFFFEB3B</color>
+	<color name="text.primary">FF666666</color>
+	<color name="text.disabled">AABBBBBB</color>
+	<color name="surface.primary">FFFFFFFF</color>
+	<color name="surface.secondary">FFF1F1F1</color>
+	<color name="border">FFCCCCCC</color>
+</colors>
