@@ -2,7 +2,6 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include>CheckSkinColorsSet</include>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>Clock</include>
@@ -603,6 +602,7 @@
 						<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
 						<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
 						<enable>!Skin.HasSetting(HideBackGroundFanart)</enable>
+						<visible>System.AddonIsEnabled(script.skin.helper.service)</visible>
 					</control>
 					<control type="radiobutton" id="303">
 						<width>995</width>

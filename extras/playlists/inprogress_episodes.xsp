@@ -6,5 +6,6 @@
         <value>2 weeks</value>
     </rule>
     <rule field="inprogress" operator="true" />
+    <limit>15</limit>
     <order direction="descending">lastplayed</order>
 </smartplaylist>

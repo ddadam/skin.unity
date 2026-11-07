@@ -751,7 +751,7 @@
 								<height>260</height>
 								<texture>DefaultMovies.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
+								<bordertexture border="8">ThumbShadow.png</bordertexture>
 								<bordersize>20</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
@@ -770,7 +770,7 @@
 								<top>210</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font23_narrow</font>
+								<font>secondary.info.small</font>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
@@ -795,7 +795,7 @@
 								<height>260</height>
 								<texture>DefaultMovies.png</texture>
 								<aspectratio aligny="center">scale</aspectratio>
-								<bordertexture border="21">overlays/shadow.png</bordertexture>
+								<bordertexture border="8">ThumbShadow.png</bordertexture>
 								<bordersize>20</bordersize>
 								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>
@@ -814,7 +814,7 @@
 								<top>210</top>
 								<align>center</align>
 								<aligny>center</aligny>
-								<font>font23_narrow</font>
+								<font>secondary.info.small</font>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 							</control>

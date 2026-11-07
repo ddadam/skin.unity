@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onload>
 	<onload condition="Skin.HasSetting(StopVideoOnBack) + !Player.HasAudio">PlayerControl(Stop)</onload>
-	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.helper.service) + !Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onunload>Skin.SetString(SkinShortcut.BackgroundPath,$INFO[Container(9000).ListItem.Property(background)])</onunload>
 	<include>CheckSkinColorsSet</include>
 	<controls>

@@ -1,3 +1,13 @@
+[B]11/07/2026 - 0.21.3 [/B]
+[FIXED] Seek offset label after a jump (replaced Player.DisplayAfterSeek, removed in Kodi 20)
+[FIXED] Seek bar now stays visible briefly after a seek
+[FIXED] Missing shadow texture and undefined font in the movie set list (video info)
+[ADDED] Missing overlay images for unwatched videos and zip archives
+[UPDATED] Limited in-progress, last played and random music video artist playlists to 15 items
+[UPDATED] Background uses the default image while fast-scrolling lists instead of loading every fanart
+[UPDATED] Extra fanart option only shown when Skin Helper Service is enabled
+[REMOVED] Duplicate Skin Shortcuts rebuild when leaving Skin Settings
+
 [B]07/16/2022 - 0.21.2-Beta [/B]
 [Experimental] Bumped script.skinshortcuts to 2.0.3
 

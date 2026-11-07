@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="BackgroundVar">
-		<!-- extrafanart background -->
-		<value condition="!Skin.HasSetting(HideBackGroundFanart) + Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
+		<!-- while a list is fast-scrolling, show the cached default instead of loading full-size fanart for every item passed -->
+		<value condition="Container.Scrolling + !Window.IsActive(Home) + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))">$INFO[Skin.String(CustomBackgroundPath)]</value>
+		<value condition="Container.Scrolling + !Window.IsActive(Home)">$INFO[Skin.CurrentTheme,special://skin/extras/backgrounds/,.jpg]</value>
+		<!-- extrafanart background (needs script.skin.helper.service, which has no official Kodi 19+ release) -->
+		<value condition="System.AddonIsEnabled(script.skin.helper.service) + !Skin.HasSetting(HideBackGroundFanart) + Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
 		<!-- normal fanart background -->
 		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
@@ -11,7 +14,7 @@
 		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(Container.Art(albumartist.fanart))">$INFO[Container.Art(albumartist.fanart)]</value>
 		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
 		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>
-		<value condition="!Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+		<value condition="System.AddonIsEnabled(script.skin.helper.service) + !Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="Control.HasFocus(9901) + !String.IsEmpty(Container(9901).ListItem.Property(background))">$INFO[Container(9901).ListItem.Property(background)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 		<value condition="!Window.IsActive(Home) + !String.IsEmpty(Skin.String(SkinShortcut.BackgroundPath))">$INFO[Skin.String(SkinShortcut.BackgroundPath)]</value>
