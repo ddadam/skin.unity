@@ -1,3 +1,16 @@
+[B]11/09/2026 - 0.21.5 [/B]
+[ADDED] Playback speed button in the video OSD (0.8x to 1.5x); shows the current speed while not at normal
+[ADDED] Skin Settings > Playback speed: choose the speeds in the menu (0.8x to 2.0x in 0.05 steps; default 0.8, 0.9, 1.0 to 1.5 in 0.1 steps)
+[ADDED] Speeds above 1.5x are locked until "This device allows speeds above 1.5x" is switched on (needs maxtempo in advancedsettings.xml)
+[ADDED] Playback speed settings show whether Kodi's "Sync playback to display" (required) is on, with a shortcut to Player settings
+[ADDED] Speed button explains why when speed control is unavailable; menu offers "Choose speeds in settings" when no speeds are chosen
+[FIXED] Default speeds now apply right after installing over a running Kodi (previously only after a restart)
+[FIXED] Speed menu closing while moving the mouse from the button into it
+
+[B]11/07/2026 - 0.21.4 [/B]
+[UPDATED] All skin animations run at half duration (effectslowdown 0.5) for snappier navigation
+[UPDATED] Background crossfade shortened from 450 to 200 ms
+
 [B]11/07/2026 - 0.21.3 [/B]
 [FIXED] Seek offset label after a jump (replaced Player.DisplayAfterSeek, removed in Kodi 20)
 [FIXED] Seek bar now stays visible briefly after a seek

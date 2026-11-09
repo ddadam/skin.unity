@@ -78,7 +78,7 @@
 			<height>100%</height>
 			<imagepath background="true" fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[BackgroundVar]</imagepath>
 			<aspectratio>scale</aspectratio>
-			<fadetime>450</fadetime>
+			<fadetime>200</fadetime>
 			<loop>yes</loop>
 			<include>fanartSpeed</include>
 			<include condition="Skin.HasSetting(RandomizeBackground)">RandomizeImages</include>
@@ -149,7 +149,7 @@
 					<height>100%</height>
 					<imagepath background="true" diffuse="backgrounds/$PARAM[diffuse-image]" fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[BackgroundVar]</imagepath>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<fadetime>450</fadetime>
+					<fadetime>200</fadetime>
 					<loop>yes</loop>
 					<include>fanartSpeed</include>
 					<include condition="Skin.HasSetting(RandomizeBackground)">RandomizeImages</include>

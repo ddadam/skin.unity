@@ -979,3 +979,67 @@ msgstr ""
 msgctxt "#31960"
 msgid "RADIO"
 msgstr ""
+
+msgctxt "#31961"
+msgid "Playback speed"
+msgstr ""
+
+msgctxt "#31962"
+msgid "Normal"
+msgstr ""
+
+msgctxt "#31963"
+msgid "This device allows speeds above 1.5x (maxtempo is set)"
+msgstr ""
+
+msgctxt "#31964"
+msgid "Choose which speeds appear in the playback speed menu."
+msgstr ""
+
+msgctxt "#31965"
+msgid "Reset speeds to defaults"
+msgstr ""
+
+msgctxt "#31966"
+msgid "always shown"
+msgstr ""
+
+msgctxt "#31967"
+msgid "Speeds in the menu"
+msgstr ""
+
+msgctxt "#31968"
+msgid "Speeds above 1.5x"
+msgstr ""
+
+msgctxt "#31969"
+msgid "Kodi only plays these if this device's advancedsettings.xml contains <maxtempo>2.1</maxtempo> inside its <video> section. Add that, restart Kodi, then switch on the option below."
+msgstr ""
+
+msgctxt "#31970"
+msgid "Locked - switch on the maxtempo option above"
+msgstr ""
+
+msgctxt "#31971"
+msgid "Requires Sync playback to display (Player > Videos)"
+msgstr ""
+
+msgctxt "#31972"
+msgid "Choose speeds in settings"
+msgstr ""
+
+msgctxt "#31973"
+msgid "On"
+msgstr ""
+
+msgctxt "#31974"
+msgid "Off - select to change"
+msgstr ""
+
+msgctxt "#31975"
+msgid "Needs Sync playback to display (Settings > Player)"
+msgstr ""
+
+msgctxt "#31976"
+msgid "Not available for this stream"
+msgstr ""

@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<include>CheckSkinColorsSet</include>
+	<include>OSDSpeedDefaults</include>
 	<controls>
 		<control type="button" id="10">
 			<description>trigger</description>

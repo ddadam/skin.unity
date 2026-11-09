@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.unity"
-	version="0.21.3"
+	version="0.21.5"
 	name="Unity"
 	provider-name="Eddage, Bumpaneer, ddadam">
 	<requires>
@@ -11,7 +11,7 @@
 	<extension
 		point="xbmc.gui.skin"
 		debugging="false"
-		effectslowdown="1.0">
+		effectslowdown="0.5">
 		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
 		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
 		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />

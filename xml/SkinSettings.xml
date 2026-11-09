@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<!-- opened from the OSD speed menu's "Choose speeds" row: start on Playback speed (list position 5 = item id 6) -->
+	<onload condition="!String.IsEmpty(Window(Home).Property(OpenSpeedSettings))">SetFocus(9000,5,absolute)</onload>
+	<onload>ClearProperty(OpenSpeedSettings,home)</onload>
 	<include>CheckSkinColorsSet</include>
 	<controls>
 		<include>CommonBackground</include>
@@ -129,6 +132,10 @@
 					</item>
 					<item id="5">
 						<label>31201</label>
+						<label2>31112</label2>
+					</item>
+					<item id="6">
+						<label>31961</label>
 						<label2>31112</label2>
 					</item>
 				</content>
@@ -746,6 +753,299 @@
 					<onright>9003</onright>
 					<visible>Container(9000).Hasfocus(5)</visible>
 				</control>
+				<!-- BEGIN generated: speed-settings (tools/gen_speed_menu.py) -->
+				<!-- playback speed options -->
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(6)</visible>
+					<left>385</left>
+					<top>120</top>
+					<width>995</width>
+					<height>645</height>
+					<itemgap>5</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<control type="label" id="600">
+						<width>995</width>
+						<height>60</height>
+						<font>button.bold</font>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<textoffsetx>5</textoffsetx>
+						<aligny>center</aligny>
+						<label>31961</label>
+					</control>
+					<control type="group" id="606">
+						<width>995</width>
+						<height>45</height>
+						<control type="textbox">
+							<left>5</left>
+							<width>985</width>
+							<height>45</height>
+							<font>font12</font>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<label>31964</label>
+						</control>
+					</control>
+					<control type="button" id="608">
+						<width>995</width>
+						<label>31971</label>
+						<label2>$VAR[OSDSyncStatusLabel]</label2>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
+					</control>
+					<control type="button" id="603">
+						<width>995</width>
+						<label>31965</label>
+						<onclick>Skin.Reset(OSDSpeed080)</onclick>
+						<onclick>Skin.Reset(OSDSpeed085)</onclick>
+						<onclick>Skin.Reset(OSDSpeed090)</onclick>
+						<onclick>Skin.Reset(OSDSpeed095)</onclick>
+						<onclick>Skin.Reset(OSDSpeed105)</onclick>
+						<onclick>Skin.Reset(OSDSpeed110)</onclick>
+						<onclick>Skin.Reset(OSDSpeed115)</onclick>
+						<onclick>Skin.Reset(OSDSpeed120)</onclick>
+						<onclick>Skin.Reset(OSDSpeed125)</onclick>
+						<onclick>Skin.Reset(OSDSpeed130)</onclick>
+						<onclick>Skin.Reset(OSDSpeed135)</onclick>
+						<onclick>Skin.Reset(OSDSpeed140)</onclick>
+						<onclick>Skin.Reset(OSDSpeed145)</onclick>
+						<onclick>Skin.Reset(OSDSpeed150)</onclick>
+						<onclick>Skin.Reset(OSDSpeed155)</onclick>
+						<onclick>Skin.Reset(OSDSpeed160)</onclick>
+						<onclick>Skin.Reset(OSDSpeed165)</onclick>
+						<onclick>Skin.Reset(OSDSpeed170)</onclick>
+						<onclick>Skin.Reset(OSDSpeed175)</onclick>
+						<onclick>Skin.Reset(OSDSpeed180)</onclick>
+						<onclick>Skin.Reset(OSDSpeed185)</onclick>
+						<onclick>Skin.Reset(OSDSpeed190)</onclick>
+						<onclick>Skin.Reset(OSDSpeed195)</onclick>
+						<onclick>Skin.Reset(OSDSpeed200)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed080)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed090)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed110)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed120)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed130)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed140)</onclick>
+						<onclick>Skin.SetBool(OSDSpeed150)</onclick>
+					</control>
+					<control type="label" id="604">
+						<width>995</width>
+						<height>60</height>
+						<font>button.bold</font>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<textoffsetx>5</textoffsetx>
+						<aligny>center</aligny>
+						<label>31967</label>
+					</control>
+					<control type="radiobutton" id="610">
+						<width>995</width>
+						<label>0.8×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed080)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed080)</selected>
+					</control>
+					<control type="radiobutton" id="611">
+						<width>995</width>
+						<label>0.85×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed085)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed085)</selected>
+					</control>
+					<control type="radiobutton" id="612">
+						<width>995</width>
+						<label>0.9×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed090)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed090)</selected>
+					</control>
+					<control type="radiobutton" id="613">
+						<width>995</width>
+						<label>0.95×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed095)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed095)</selected>
+					</control>
+					<control type="radiobutton" id="614">
+						<width>995</width>
+						<label>$LOCALIZE[31962] (1.0×) - $LOCALIZE[31966]</label>
+						<selected>true</selected>
+						<enable>false</enable>
+					</control>
+					<control type="radiobutton" id="615">
+						<width>995</width>
+						<label>1.05×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed105)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed105)</selected>
+					</control>
+					<control type="radiobutton" id="616">
+						<width>995</width>
+						<label>1.1×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed110)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed110)</selected>
+					</control>
+					<control type="radiobutton" id="617">
+						<width>995</width>
+						<label>1.15×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed115)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed115)</selected>
+					</control>
+					<control type="radiobutton" id="618">
+						<width>995</width>
+						<label>1.2×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed120)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed120)</selected>
+					</control>
+					<control type="radiobutton" id="619">
+						<width>995</width>
+						<label>1.25×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed125)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed125)</selected>
+					</control>
+					<control type="radiobutton" id="620">
+						<width>995</width>
+						<label>1.3×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed130)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed130)</selected>
+					</control>
+					<control type="radiobutton" id="621">
+						<width>995</width>
+						<label>1.35×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed135)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed135)</selected>
+					</control>
+					<control type="radiobutton" id="622">
+						<width>995</width>
+						<label>1.4×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed140)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed140)</selected>
+					</control>
+					<control type="radiobutton" id="623">
+						<width>995</width>
+						<label>1.45×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed145)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed145)</selected>
+					</control>
+					<control type="radiobutton" id="624">
+						<width>995</width>
+						<label>1.5×</label>
+						<onclick>Skin.ToggleSetting(OSDSpeed150)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed150)</selected>
+					</control>
+					<control type="label" id="605">
+						<width>995</width>
+						<height>60</height>
+						<font>button.bold</font>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
+						<textoffsetx>5</textoffsetx>
+						<aligny>center</aligny>
+						<label>31968</label>
+					</control>
+					<control type="group" id="607">
+						<width>995</width>
+						<height>100</height>
+						<control type="textbox">
+							<left>5</left>
+							<width>985</width>
+							<height>100</height>
+							<font>font12</font>
+							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+							<label>31969</label>
+						</control>
+					</control>
+					<control type="radiobutton" id="602">
+						<width>995</width>
+						<label>31963</label>
+						<onclick>Skin.ToggleSetting(OSDShowHighSpeeds)</onclick>
+						<selected>Skin.HasSetting(OSDShowHighSpeeds)</selected>
+					</control>
+					<control type="radiobutton" id="625">
+						<width>995</width>
+						<label>1.55×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed155)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed155)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="626">
+						<width>995</width>
+						<label>1.6×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed160)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed160)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="627">
+						<width>995</width>
+						<label>1.65×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed165)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed165)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="628">
+						<width>995</width>
+						<label>1.7×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed170)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed170)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="629">
+						<width>995</width>
+						<label>1.75×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed175)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed175)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="630">
+						<width>995</width>
+						<label>1.8×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed180)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed180)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="631">
+						<width>995</width>
+						<label>1.85×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed185)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed185)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="632">
+						<width>995</width>
+						<label>1.9×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed190)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed190)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="633">
+						<width>995</width>
+						<label>1.95×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed195)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed195)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="634">
+						<width>995</width>
+						<label>2.0×</label>
+						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed200)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<selected>Skin.HasSetting(OSDSpeed200)</selected>
+						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
+					</control>
+				</control>
+				<!--scrollbar-->
+				<control type="scrollbar" id="60">
+					<left>1395</left>
+					<top>110</top>
+					<height>673</height>
+					<onleft>9005</onleft>
+					<onright>9005</onright>
+					<visible>Container(9000).Hasfocus(6)</visible>
+				</control>
+				<!-- END generated: speed-settings -->
 			</control>
 		</control>
 		<include>BehindDialogFadeOut</include>
