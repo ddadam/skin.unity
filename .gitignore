@@ -42,3 +42,7 @@ debug/*
 
 # Skin shortcuts menu
 */script-skinshortcuts-includes.xml
+
+# generator scripts
+__pycache__/
+*.pyc

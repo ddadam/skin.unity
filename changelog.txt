@@ -6,6 +6,18 @@
 [ADDED] Speed button explains why when speed control is unavailable; menu offers "Choose speeds in settings" when no speeds are chosen
 [FIXED] Default speeds now apply right after installing over a running Kodi (previously only after a restart)
 [FIXED] Speed menu closing while moving the mouse from the button into it
+[ADDED] Choosing a speed while paused: it's kept and applied when playback resumes (Kodi ignores speed changes while paused); the button and menu show the current speed while paused
+[FIXED] Speed menu reopening without a click when the mouse returned to the speed button
+[FIXED] Speed menu ticking 2.0x during 2x fast-forward
+[UPDATED] "Reset speeds to defaults" only changes the speeds that differ (each change rewrites the skin settings file)
+[ADDED] Frame rate badge in the playback info row: a tick when the display refresh rate is a whole multiple of it, "@ xx Hz" when not
+[ADDED] Icons on the frame rate, resolution and audio channel badges
+[UPDATED] Playback info badges are now text in Roboto Condensed Bold Italic (bundled, OFL) with uniform padding, instead of pre-drawn images
+[UPDATED] Audio and subtitle languages shown as two-letter codes (EN, DE); unknown audio language shows "?"
+[ADDED] Codec labels for AV1, VP9, VP8, Opus, ALAC, PCM variants and more (previously "?")
+[FIXED] avc1 (H.264) streams were labelled VC-1
+[FIXED] Rounded left edge missing on the playback info row when the frame rate is unknown
+[FIXED] Long movie taglines overlapping the playback info badges
 
 [B]11/07/2026 - 0.21.4 [/B]
 [UPDATED] All skin animations run at half duration (effectslowdown 0.5) for snappier navigation
