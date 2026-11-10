@@ -16,3 +16,11 @@ limitations under the License.
 
 This directory contains the fonts for the platform. They are licensed
 under the Apache 2 license.
+
+##########
+
+RobotoCondensed-BoldItalic.ttf: static Bold (700) Italic instance of Roboto
+Condensed (google/fonts, ofl/robotocondensed), made with fontTools varLib.instancer.
+Copyright 2011 The Roboto Project Authors. Licensed under the SIL Open
+Font License 1.1 - see OFL-RobotoCondensed.txt. Used for the media-flag text,
+matching the pre-drawn flag artwork.

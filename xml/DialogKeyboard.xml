@@ -642,7 +642,7 @@
 					<param name="button-width" value="330" />
 					<param name="button-texture" value="yesbutton" />
 					<param name="button-label" value="$LOCALIZE[12321]" />
-					<param name="button-onup" value="307" />
+					<param name="button-onup" value="310" />
 					<param name="button-ondown" value="301" />
 					<param name="button-onleft" value="78500" />
 					<param name="button-onright" value="140" />
@@ -676,6 +676,17 @@
 					<param name="button-texture" value="settingsbutton" />
 					<param name="button-label" value="$LOCALIZE[1006]" />
 					<param name="button-onup" value="309" />
+					<param name="button-ondown" value="310" />
+					<param name="button-onleft" value="78500" />
+					<param name="button-onright" value="140" />
+				</include>
+				<!--show/hide password button (Kodi shows it for password input only and sets its label)-->
+				<include content="AnimatedCircleButtonGroup">
+					<param name="button-id" value="310" />
+					<param name="button-width" value="330" />
+					<param name="button-texture" value="passwordbutton" />
+					<param name="button-label" value="$LOCALIZE[12308]" />
+					<param name="button-onup" value="307" />
 					<param name="button-ondown" value="300" />
 					<param name="button-onleft" value="78500" />
 					<param name="button-onright" value="140" />

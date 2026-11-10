@@ -118,6 +118,7 @@
 			</control>
 			<!--controls-->
 			<control type="grouplist" id="5">
+				<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 				<left>385</left>
 				<top>120</top>
 				<width>995</width>
@@ -198,6 +199,11 @@
 			<height>1</height>
 			<aspectratio>stretch</aspectratio>
 			<texture colordiffuse="$INFO[Skin.String(color.disabled)]">backgrounds/white.png</texture>
+		</control>
+		<!--colour button (Kodi 20+: without it Kodi hides colour settings)-->
+		<control type="colorbutton" id="15">
+			<left>0</left>
+			<top>0</top>
 		</control>
 		<!--label-->
 		<control type="label" id="14">

@@ -1016,12 +1016,13 @@ msgctxt "#31969"
 msgid "Kodi only plays these if this device's advancedsettings.xml contains <maxtempo>2.1</maxtempo> inside its <video> section. Add that, restart Kodi, then switch on the option below."
 msgstr ""
 
+#. Shown in a notification: no double quotes
 msgctxt "#31970"
 msgid "Locked - switch on the maxtempo option above"
 msgstr ""
 
 msgctxt "#31971"
-msgid "Requires Sync playback to display (Player > Videos)"
+msgid "Requires Sync playback to display (Settings > Player > Videos)"
 msgstr ""
 
 msgctxt "#31972"
@@ -1036,10 +1037,16 @@ msgctxt "#31974"
 msgid "Off - select to change"
 msgstr ""
 
+#. Shown in a notification: no double quotes
 msgctxt "#31975"
-msgid "Needs Sync playback to display (Settings > Player)"
+msgid "Needs Sync playback to display (Settings > Player > Videos)"
 msgstr ""
 
+#. Shown in a notification: no double quotes
 msgctxt "#31976"
 msgid "Not available for this stream"
+msgstr ""
+
+msgctxt "#31977"
+msgid "Hide the playback controls after 5 seconds without input"
 msgstr ""

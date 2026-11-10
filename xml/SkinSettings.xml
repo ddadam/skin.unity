@@ -144,6 +144,7 @@
 			<control type="group" id="9010">
 				<!--general settings-->
 				<control type="grouplist" id="9001">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(1)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -192,6 +193,13 @@
 						<label>31178</label>
 						<onclick>Skin.ToggleSetting(StopVideoOnBack)</onclick>
 						<selected>Skin.HasSetting(StopVideoOnBack)</selected>
+					</control>
+					<!--on by default: the stored setting is the opt-out (Timers.xml: osdautoclose)-->
+					<control type="radiobutton" id="116">
+						<width>995</width>
+						<label>31977</label>
+						<onclick>Skin.ToggleSetting(OSDAutoCloseOff)</onclick>
+						<selected>!Skin.HasSetting(OSDAutoCloseOff)</selected>
 					</control>
 					<control type="radiobutton" id="110">
 						<width>995</width>
@@ -278,6 +286,7 @@
 				</control>
 				<!--home window options-->
 				<control type="grouplist" id="9002">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(2)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -524,6 +533,7 @@
 				</control>
 				<!--background options-->
 				<control type="grouplist" id="9003">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -641,6 +651,7 @@
 				</control>
 				<!--add-on options-->
 				<control type="grouplist" id="9004">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(4)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -717,6 +728,7 @@
 				</control>
 				<!--background options-->
 				<control type="grouplist" id="9003">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(5)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -756,6 +768,7 @@
 				<!-- BEGIN generated: speed-settings (tools/gen_speed_menu.py) -->
 				<!-- playback speed options -->
 				<control type="grouplist" id="9005">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(6)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -797,37 +810,30 @@
 					<control type="button" id="603">
 						<width>995</width>
 						<label>31965</label>
-						<onclick>Skin.Reset(OSDSpeed080)</onclick>
-						<onclick>Skin.Reset(OSDSpeed085)</onclick>
-						<onclick>Skin.Reset(OSDSpeed090)</onclick>
-						<onclick>Skin.Reset(OSDSpeed095)</onclick>
-						<onclick>Skin.Reset(OSDSpeed105)</onclick>
-						<onclick>Skin.Reset(OSDSpeed110)</onclick>
-						<onclick>Skin.Reset(OSDSpeed115)</onclick>
-						<onclick>Skin.Reset(OSDSpeed120)</onclick>
-						<onclick>Skin.Reset(OSDSpeed125)</onclick>
-						<onclick>Skin.Reset(OSDSpeed130)</onclick>
-						<onclick>Skin.Reset(OSDSpeed135)</onclick>
-						<onclick>Skin.Reset(OSDSpeed140)</onclick>
-						<onclick>Skin.Reset(OSDSpeed145)</onclick>
-						<onclick>Skin.Reset(OSDSpeed150)</onclick>
-						<onclick>Skin.Reset(OSDSpeed155)</onclick>
-						<onclick>Skin.Reset(OSDSpeed160)</onclick>
-						<onclick>Skin.Reset(OSDSpeed165)</onclick>
-						<onclick>Skin.Reset(OSDSpeed170)</onclick>
-						<onclick>Skin.Reset(OSDSpeed175)</onclick>
-						<onclick>Skin.Reset(OSDSpeed180)</onclick>
-						<onclick>Skin.Reset(OSDSpeed185)</onclick>
-						<onclick>Skin.Reset(OSDSpeed190)</onclick>
-						<onclick>Skin.Reset(OSDSpeed195)</onclick>
-						<onclick>Skin.Reset(OSDSpeed200)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed080)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed090)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed110)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed120)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed130)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed140)</onclick>
-						<onclick>Skin.SetBool(OSDSpeed150)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed085)">Skin.Reset(OSDSpeed085)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed095)">Skin.Reset(OSDSpeed095)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed105)">Skin.Reset(OSDSpeed105)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed115)">Skin.Reset(OSDSpeed115)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed125)">Skin.Reset(OSDSpeed125)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed135)">Skin.Reset(OSDSpeed135)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed145)">Skin.Reset(OSDSpeed145)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed155)">Skin.Reset(OSDSpeed155)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed160)">Skin.Reset(OSDSpeed160)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed165)">Skin.Reset(OSDSpeed165)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed170)">Skin.Reset(OSDSpeed170)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed175)">Skin.Reset(OSDSpeed175)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed180)">Skin.Reset(OSDSpeed180)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed185)">Skin.Reset(OSDSpeed185)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed190)">Skin.Reset(OSDSpeed190)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed195)">Skin.Reset(OSDSpeed195)</onclick>
+						<onclick condition="Skin.HasSetting(OSDSpeed200)">Skin.Reset(OSDSpeed200)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed080)">Skin.SetBool(OSDSpeed080)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed090)">Skin.SetBool(OSDSpeed090)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed110)">Skin.SetBool(OSDSpeed110)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed120)">Skin.SetBool(OSDSpeed120)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed130)">Skin.SetBool(OSDSpeed130)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed140)">Skin.SetBool(OSDSpeed140)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDSpeed150)">Skin.SetBool(OSDSpeed150)</onclick>
 					</control>
 					<control type="label" id="604">
 						<width>995</width>
@@ -959,7 +965,7 @@
 						<width>995</width>
 						<label>1.55×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed155)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed155)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -967,7 +973,7 @@
 						<width>995</width>
 						<label>1.6×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed160)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed160)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -975,7 +981,7 @@
 						<width>995</width>
 						<label>1.65×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed165)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed165)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -983,7 +989,7 @@
 						<width>995</width>
 						<label>1.7×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed170)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed170)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -991,7 +997,7 @@
 						<width>995</width>
 						<label>1.75×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed175)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed175)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -999,7 +1005,7 @@
 						<width>995</width>
 						<label>1.8×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed180)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed180)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -1007,7 +1013,7 @@
 						<width>995</width>
 						<label>1.85×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed185)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed185)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -1015,7 +1021,7 @@
 						<width>995</width>
 						<label>1.9×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed190)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed190)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -1023,7 +1029,7 @@
 						<width>995</width>
 						<label>1.95×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed195)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed195)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>
@@ -1031,7 +1037,7 @@
 						<width>995</width>
 						<label>2.0×</label>
 						<onclick condition="Skin.HasSetting(OSDShowHighSpeeds)">Skin.ToggleSetting(OSDSpeed200)</onclick>
-						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],$LOCALIZE[31970],6000)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDShowHighSpeeds)">Notification($LOCALIZE[31961],"$LOCALIZE[31970]",6000)</onclick>
 						<selected>Skin.HasSetting(OSDSpeed200)</selected>
 						<animation effect="fade" start="100" end="40" time="0" condition="!Skin.HasSetting(OSDShowHighSpeeds)">Conditional</animation>
 					</control>

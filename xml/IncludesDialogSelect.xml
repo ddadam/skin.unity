@@ -184,7 +184,7 @@
 							<aligny>top</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<label>[B]$VAR[DialogSelectItemTitle][/B]</label>
 						</control>
 						<!--description-->
 						<control type="textbox">
@@ -229,7 +229,7 @@
 							<aligny>top</aligny>
 							<textcolor>white</textcolor>
 							<selectedcolor>$INFO[Skin.String(color.alt)]</selectedcolor>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<label>[B]$VAR[DialogSelectItemTitle][/B]</label>
 						</control>
 						<!--description-->
 						<control type="textbox">

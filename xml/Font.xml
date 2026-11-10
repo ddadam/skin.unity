@@ -173,6 +173,28 @@
 			<filename>Roboto-Bold.ttf</filename>
 			<size>120</size>
 		</font>
+		<!--media-flag text (Roboto Condensed Bold Italic, as in the flag artwork)-->
+		<font>
+			<name>flag.text</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>flag.text.caps</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
+		</font>
 	</fontset>
 	<fontset id="RobotoBold" idloc="31393">
 		<!--Unity Fonts-->
@@ -346,6 +368,28 @@
 			<name>WeatherTemp</name>
 			<filename>Roboto-Black.ttf</filename>
 			<size>120</size>
+		</font>
+		<!--media-flag text (Roboto Condensed Bold Italic, as in the flag artwork)-->
+		<font>
+			<name>flag.text</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>flag.text.caps</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 	<fontset id="RobotoBlack" idloc="31394">
@@ -521,6 +565,28 @@
 			<filename>Roboto-Black.ttf</filename>
 			<size>120</size>
 		</font>
+		<!--media-flag text (Roboto Condensed Bold Italic, as in the flag artwork)-->
+		<font>
+			<name>flag.text</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>flag.text.caps</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
+		</font>
 	</fontset>
 	<fontset id="DefaultNoCaps" idloc="31391">
 		<!-- Normal Fonts -->
@@ -604,6 +670,28 @@
 			<name>WeatherTemp</name>
 			<filename>Roboto-Bold.ttf</filename>
 			<size>120</size>
+		</font>
+		<!--media-flag text (Roboto Condensed Bold Italic, as in the flag artwork)-->
+		<font>
+			<name>flag.text</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>flag.text.caps</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 	<fontset id="Arial" idloc="31392">
@@ -787,6 +875,28 @@
 			<filename>arial.ttf</filename>
 			<size>120</size>
 			<style>bold</style>
+		</font>
+		<!--media-flag text (Roboto Condensed Bold Italic, as in the flag artwork)-->
+		<font>
+			<name>flag.text</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>flag.text.caps</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 </fonts>
