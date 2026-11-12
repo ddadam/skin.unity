@@ -456,7 +456,11 @@
 					<left>600</left>
 					<top>615</top>
 					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
-					<include>media.flags.small</include>
+					<include content="media.flags.small">
+						<param name="width" value="740" />
+						<param name="align" value="left" />
+						<param name="aspect" value="$VAR[FlagLibAspectLong]" />
+					</include>
 				</control>
 				<control type="group">
 					<left>65</left>

@@ -44,7 +44,9 @@
 					<top>0</top>
 					<width>984</width>
 					<height>402</height>
-					<texture fallback="special://skin/extras/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+					<!--preview area when nothing is playing: the default wallpaper (previously a stock photo, tv.jpg)-->
+					<texture background="true">special://skin/extras/backgrounds/SKINDEFAULT.jpg</texture>
+					<aspectratio>scale</aspectratio>
 					<include>VisibleFadeEffect</include>
 					<visible>!Player.HasVideo</visible>
 				</control>

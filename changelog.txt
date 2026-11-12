@@ -1,4 +1,4 @@
-[B]11/09/2026 - 0.21.6 (in progress)[/B]
+[B]11/11/2026 - 0.21.6[/B]
 [ADDED] Frame rate badge in the playback info row: a tick when the display refresh rate is a whole multiple of it, "@ xx Hz" when not
 [ADDED] Icons on the frame rate, resolution and audio channel badges
 [ADDED] HDR type in the resolution badge: "4K HDR10", "4K HLG", Dolby Vision as a two-line DOLBY / VISION (and HDR10+ on Kodi 22)
@@ -22,6 +22,10 @@
 [ADDED] Chapter markers: gaps in the playback progress bar at each chapter boundary
 [ADDED] Show/hide password button on the on-screen keyboard (shown for password input only)
 [ADDED] Playback controls (video OSD) close by themselves 5 seconds after the last input; not while the speed menu or a dialog such as audio/subtitle settings is open. On by default, Skin Settings > General
+[ADDED] Aspect ratio badge in the playback bar and the library ("2.40"); the info screen also shows the exact ratio ("12:5 (2.40)")
+[UPDATED] Library views, info screen and search: media badges now match the playback row (text badges, HDR type, two-line Dolby badges, two-letter audio/subtitle languages) instead of the old images, right-aligned in the library views
+[UPDATED] Home screen: the profile name next to "Welcome" only shows when there are several profiles (no more "Master user")
+[REMOVED] Stock photo in the TV channels preview area (unknown origin); it shows the default wallpaper instead
 
 [B]11/09/2026 - 0.21.5 [/B]
 [ADDED] Playback speed button in the video OSD (0.8x to 1.5x); shows the current speed while not at normal

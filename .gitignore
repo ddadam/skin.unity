@@ -46,3 +46,6 @@ debug/*
 # generator scripts
 __pycache__/
 *.pyc
+
+# Release Files
+releases/

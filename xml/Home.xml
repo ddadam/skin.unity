@@ -858,7 +858,8 @@
 			<param name="breadcrumb-font" value="breadcrumb.secondary" />
 			<param name="breadcrumb1-label" value="$LOCALIZE[31940]" />
 			<param name="breadcrumb2-label" value="$INFO[System.ProfileName]" />
-			<param name="breadcrumb2-visible" value="true" />
+			<!--profile name only when there are several profiles (Kodi calls the only/main one "Master user")-->
+			<param name="breadcrumb2-visible" value="Integer.IsGreater(System.ProfileCount,1)" />
 		</include>
 		<control type="group">
 			<left>60</left>

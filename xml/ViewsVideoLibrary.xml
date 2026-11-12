@@ -932,7 +932,9 @@
 				<control type="group">
 					<left>30</left>
 					<top>328r</top>
-					<include>media.flags.small</include>
+					<include content="media.flags.small">
+						<param name="width" value="1424" />
+					</include>
 					<animation effect="zoom" start="100" end="80" time="0" condition="true">Conditional</animation>
 				</control>
 			</control>
@@ -1263,8 +1265,10 @@
 				<control type="group">
 					<left>10</left>
 					<top>640</top>
-					<include>media.flags.small</include>
-					<animation effect="zoom" start="100" end="96" center="10,600" time="0" condition="true">Conditional</animation>
+					<include content="media.flags.small">
+						<param name="width" value="568" />
+					</include>
+					<animation effect="zoom" start="100" end="86" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
 			</control>
 		</control>
@@ -1959,8 +1963,10 @@
 					<control type="group">
 						<left>485</left>
 						<top>650</top>
-						<include>media.flags.small</include>
-						<animation effect="zoom" start="100" end="84" center="485,600" time="0" condition="true">Conditional</animation>
+						<include content="media.flags.small">
+							<param name="width" value="572" />
+						</include>
+						<animation effect="zoom" start="100" end="75" center="485,600" time="0" condition="true">Conditional</animation>
 					</control>
 				</control>
 			</control>
@@ -2312,7 +2318,9 @@
 				<control type="group">
 					<left>10</left>
 					<top>650</top>
-					<include>media.flags.small</include>
+					<include content="media.flags.small">
+						<param name="width" value="1070" />
+					</include>
 					<animation effect="zoom" start="100" end="90" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
 			</control>
