@@ -121,6 +121,24 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
+	<!--colour setting (Kodi 20+): swatch tinted with the chosen colour, where the radio circle sits on toggle rows-->
+	<default type="colorbutton">
+		<width>450</width>
+		<height>60</height>
+		<colorwidth>72</colorwidth>
+		<colorheight>36</colorheight>
+		<texturecolormask>colorbutton-swatch.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="$INFO[Skin.String(color.disabled)]">colorbutton-swatch.png</texturecolordisabledmask>
+		<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<font>button</font>
+		<textcolor>$INFO[Skin.String(color.text)]</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>$INFO[Skin.String(color.disabled)]</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>no</pulseonselect>
+	</default>
 	<default type="slider">
 		<controloffsetx>75</controloffsetx>
 		<controloffsety>0</controloffsety>

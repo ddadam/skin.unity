@@ -51,6 +51,7 @@
 				</control>
 				<!--left buttons-->
 				<control type="grouplist" id="3">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<description>button area</description>
 					<left>10</left>
 					<top>120</top>
@@ -115,6 +116,7 @@
 					<onright>3</onright>
 				</control>
 				<control type="grouplist" id="5">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<description>control area</description>
 					<left>350</left>
 					<top>120</top>
@@ -177,6 +179,11 @@
 					<top>0</top>
 				</control>
 				<!--label-->
+				<!--colour button (Kodi 20+: without it Kodi hides colour settings)-->
+				<control type="colorbutton" id="15">
+					<left>0</left>
+					<top>0</top>
+				</control>
 				<control type="label" id="14">
 					<height>60</height>
 					<label></label>

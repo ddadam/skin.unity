@@ -185,4 +185,17 @@
 		<onstart>ClearProperty(SpeedMenuOpen,videoosd)</onstart>
 	</timer>
 	<!-- END generated: speed-timers -->
+	<!-- Close the video OSD 5 seconds after the last input (Skin Settings > General, on by default).
+	     The count restarts on any input, and also while another dialog is on top of the OSD
+	     (audio/subtitle/video settings, bookmarks, a select list...) or the speed menu is open.
+	     It only starts once there has been no input for 1 s, so 4 here = 5 s after the last button press.
+	     10099 is the mouse pointer, itself a dialog on top while it shows (it has no window name).
+	     Timer names must be lower case: Kodi lowercases them inside conditions. -->
+	<timer>
+		<name>osdautoclose</name>
+		<start reset="true">Window.IsActive(videoosd) + !Skin.HasSetting(OSDAutoCloseOff)</start>
+		<reset>!System.IdleTime(1) | [!Window.IsDialogTopmost(videoosd) + !Window.IsDialogTopmost(10099)] | !String.IsEmpty(Window(videoosd).Property(SpeedMenuOpen))</reset>
+		<stop>!Window.IsActive(videoosd) | Skin.HasSetting(OSDAutoCloseOff) | Integer.IsGreaterOrEqual(Skin.TimerElapsedSecs(osdautoclose),4)</stop>
+		<onstop condition="Window.IsActive(videoosd) + !Skin.HasSetting(OSDAutoCloseOff)">Dialog.Close(videoosd)</onstop>
+	</timer>
 </timers>

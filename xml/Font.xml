@@ -185,6 +185,16 @@
 			<size>18</size>
 			<style>uppercase</style>
 		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
+		</font>
 	</fontset>
 	<fontset id="RobotoBold" idloc="31393">
 		<!--Unity Fonts-->
@@ -370,6 +380,16 @@
 			<filename>RobotoCondensed-BoldItalic.ttf</filename>
 			<size>18</size>
 			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 	<fontset id="RobotoBlack" idloc="31394">
@@ -557,6 +577,16 @@
 			<size>18</size>
 			<style>uppercase</style>
 		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
+		</font>
 	</fontset>
 	<fontset id="DefaultNoCaps" idloc="31391">
 		<!-- Normal Fonts -->
@@ -652,6 +682,16 @@
 			<filename>RobotoCondensed-BoldItalic.ttf</filename>
 			<size>18</size>
 			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 	<fontset id="Arial" idloc="31392">
@@ -847,6 +887,16 @@
 			<filename>RobotoCondensed-BoldItalic.ttf</filename>
 			<size>18</size>
 			<style>uppercase</style>
+		</font>
+		<font>
+			<name>flag.stack.top</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>13</size>
+		</font>
+		<font>
+			<name>flag.stack.bottom</name>
+			<filename>RobotoCondensed-BoldItalic.ttf</filename>
+			<size>10</size>
 		</font>
 	</fontset>
 </fonts>

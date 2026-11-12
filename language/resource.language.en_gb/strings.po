@@ -1046,3 +1046,7 @@ msgstr ""
 msgctxt "#31976"
 msgid "Not available for this stream"
 msgstr ""
+
+msgctxt "#31977"
+msgid "Hide the playback controls after 5 seconds without input"
+msgstr ""

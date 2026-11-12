@@ -144,6 +144,7 @@
 			<control type="group" id="9010">
 				<!--general settings-->
 				<control type="grouplist" id="9001">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(1)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -192,6 +193,13 @@
 						<label>31178</label>
 						<onclick>Skin.ToggleSetting(StopVideoOnBack)</onclick>
 						<selected>Skin.HasSetting(StopVideoOnBack)</selected>
+					</control>
+					<!--on by default: the stored setting is the opt-out (Timers.xml: osdautoclose)-->
+					<control type="radiobutton" id="116">
+						<width>995</width>
+						<label>31977</label>
+						<onclick>Skin.ToggleSetting(OSDAutoCloseOff)</onclick>
+						<selected>!Skin.HasSetting(OSDAutoCloseOff)</selected>
 					</control>
 					<control type="radiobutton" id="110">
 						<width>995</width>
@@ -278,6 +286,7 @@
 				</control>
 				<!--home window options-->
 				<control type="grouplist" id="9002">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(2)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -524,6 +533,7 @@
 				</control>
 				<!--background options-->
 				<control type="grouplist" id="9003">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -641,6 +651,7 @@
 				</control>
 				<!--add-on options-->
 				<control type="grouplist" id="9004">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(4)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -717,6 +728,7 @@
 				</control>
 				<!--background options-->
 				<control type="grouplist" id="9003">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(5)</visible>
 					<left>385</left>
 					<top>120</top>
@@ -756,6 +768,7 @@
 				<!-- BEGIN generated: speed-settings (tools/gen_speed_menu.py) -->
 				<!-- playback speed options -->
 				<control type="grouplist" id="9005">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(6)</visible>
 					<left>385</left>
 					<top>120</top>

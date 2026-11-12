@@ -199,6 +199,7 @@
 			</control>
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
+					<include condition="$EXP[MouseScrollNoAnimation]">GroupListMouseScroll</include>
 					<visible>Container(9000).Hasfocus(1)</visible>
 					<left>385</left>
 					<top>120</top>

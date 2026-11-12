@@ -494,8 +494,10 @@
 							<left>10</left>
 							<top>640</top>
 							<visible>Container.Content(Movies)</visible>
-							<include>media.flags.small</include>
-							<animation effect="zoom" start="100" end="96" center="10,600" time="0" condition="true">Conditional</animation>
+							<include content="media.flags.small">
+								<param name="width" value="568" />
+							</include>
+							<animation effect="zoom" start="100" end="86" center="10,600" time="0" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<!--episodes info-->
@@ -600,8 +602,10 @@
 						<control type="group">
 							<left>10</left>
 							<top>640</top>
-							<include>media.flags.small</include>
-							<animation effect="zoom" start="100" end="96" center="10,600" time="0" condition="true">Conditional</animation>
+							<include content="media.flags.small">
+								<param name="width" value="568" />
+							</include>
+							<animation effect="zoom" start="100" end="86" center="10,600" time="0" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<!--songs / album info -->
