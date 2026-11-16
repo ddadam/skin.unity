@@ -11,6 +11,7 @@
 		<value condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">$LOCALIZE[19138]</value>
 		<value condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">$LOCALIZE[19040]</value>
 		<value condition="Window.IsActive(MyPVRSearch.xml)">$LOCALIZE[137]</value>
+		<value condition="Window.IsActive(TVProviders) | Window.IsActive(RadioProviders)">$LOCALIZE[19334]</value>
 	</variable>
 	<variable name="PVRBreadcrumb3">
 		<value condition="!String.IsEmpty(Control.GetLabel(29))">$INFO[Control.GetLabel(29)]</value>

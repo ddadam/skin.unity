@@ -47,5 +47,6 @@ debug/*
 __pycache__/
 *.pyc
 
-# Release Files
+# local notes and release zips (not part of the repo)
+TODO.md
 releases/

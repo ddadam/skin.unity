@@ -197,7 +197,7 @@
 							<aligny>top</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>$INFO[Skin.String(color.500)]</selectedcolor>
-							<label>$INFO[ListItem.Label2]</label>
+							<label>$VAR[DialogSelectItemDetails]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="135">
@@ -241,7 +241,7 @@
 							<align>left</align>
 							<aligny>top</aligny>
 							<textcolor>white</textcolor>
-							<label>$INFO[ListItem.Label2]</label>
+							<label>$VAR[DialogSelectItemDetails]</label>
 						</control>
 					</focusedlayout>
 				</control>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.unity"
-	version="0.21.6"
+	version="0.22.0"
 	name="Unity"
 	provider-name="Eddage, Bumpaneer, ddadam">
 	<requires>
-		<import addon="xbmc.gui" version="5.17.0"/>
+		<import addon="xbmc.gui" version="5.18.0"/>
 		<import addon="script.skinshortcuts" version="2.0.3"/>
 	</requires>
 	<extension
