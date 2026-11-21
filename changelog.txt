@@ -1,3 +1,6 @@
+[B]11/21/2026 - 0.21.8[/B]
+[FIXED] "Default (no caps)" font option: 16 fonts were missing, so titles, menus, buttons and info labels fell back to a stand-in font and the wrong sizes
+
 [B]11/19/2026 - 0.21.7[/B]
 [FIXED] Live TV play/pause button in the playback controls was always greyed out
 [FIXED] Add-on list: status column (e.g. update available) was always empty
