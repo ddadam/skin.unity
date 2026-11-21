@@ -332,7 +332,6 @@
 					<ondown>200</ondown>
 					<onclick>PlayerControl(Play)</onclick>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<enable>false</enable>
 					<enable>Player.PauseEnabled</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="true">Conditional</animation>
 				</control>

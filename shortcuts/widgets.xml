@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Widget picker (button 309). Types map to a layout through the widgetLayout fallbacks in
+	 properties.xml. -->
+<widgets>
+	<widget name="submenu" label="$LOCALIZE[31133]" type="none" target="include" icon="DefaultFile.png">
+		<path>skinshortcuts-mainmenu-submenu</path>
+	</widget>
+	<widget name="weather" label="$LOCALIZE[12600]" type="weather" target="videos" icon="DefaultAddonWeather.png" visible="!String.IsEmpty(Weather.Plugin)">
+		<path>weather</path>
+	</widget>
+
+	<group name="playlists" label="$LOCALIZE[136]" icon="DefaultPlaylist.png" source="playlist">
+		<content source="playlists" target="video" folder="$ADDON[script.skinshortcuts 32004]" />
+		<content source="playlists" target="music" folder="$ADDON[script.skinshortcuts 32005]" />
+	</group>
+
+	<group name="video-library" label="$ADDON[script.skinshortcuts 32030]" icon="DefaultVideo.png" source="library">
+		<content source="nodes" target="videos" />
+		<content source="sources" target="video" folder="$ADDON[script.skinshortcuts 32074]" />
+	</group>
+
+	<group name="music-library" label="$ADDON[script.skinshortcuts 32031]" icon="DefaultMusicAlbums.png" source="library">
+		<content source="nodes" target="music" />
+		<content source="sources" target="music" folder="$ADDON[script.skinshortcuts 32074]" />
+	</group>
+
+	<group name="pictures" label="$ADDON[script.skinshortcuts 32020]" icon="DefaultPicture.png">
+		<content source="sources" target="pictures" />
+	</group>
+
+	<group name="addons" label="$ADDON[script.skinshortcuts 32007]" icon="DefaultAddon.png" source="addon">
+		<content source="addons" target="video" folder="$ADDON[script.skinshortcuts 32010]" />
+		<content source="addons" target="music" folder="$ADDON[script.skinshortcuts 32011]" />
+		<content source="addons" target="pictures" folder="$ADDON[script.skinshortcuts 32012]" />
+		<content source="addons" target="programs" folder="$ADDON[script.skinshortcuts 32009]" />
+		<widget name="addons-programs" label="$LOCALIZE[10001]" type="addon" target="programs" icon="DefaultAddonProgram.png">
+			<path>addons://sources/executable</path>
+		</widget>
+		<widget name="addons-video" label="$LOCALIZE[1037]" type="addon" target="videos" icon="DefaultAddonVideo.png">
+			<path>addons://sources/video</path>
+		</widget>
+		<widget name="addons-music" label="$LOCALIZE[1038]" type="addon" target="music" icon="DefaultAddonMusic.png">
+			<path>addons://sources/audio</path>
+		</widget>
+		<widget name="addons-pictures" label="$LOCALIZE[1039]" type="addon" target="pictures" icon="DefaultAddonPicture.png">
+			<path>addons://sources/image</path>
+		</widget>
+	</group>
+</widgets>

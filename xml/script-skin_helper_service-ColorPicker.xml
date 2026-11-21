@@ -27,7 +27,7 @@
 				<height>25</height>
 				<label></label>
 				<font></font>
-				<onclick>Dialog.Close(1103)</onclick>
+				<onclick>Action(Back)</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
 				<onleft>2</onleft>
@@ -60,7 +60,7 @@
 				<ondown>3032</ondown>
 				<!--color palette-->
 				<control type="button" id="3030">
-					<visible>!IsEmpty(Window.Property(palettename))</visible>
+					<visible>!String.IsEmpty(Window.Property(palettename))</visible>
 					<width>320</width>
 					<label>$ADDON[script.skin.helper.colorpicker 32141]</label>
 					<align>center</align>
@@ -151,14 +151,14 @@
 				<ondown>3032</ondown>
 				<preloaditems>4</preloaditems>
 				<pagecontrol>60</pagecontrol>
-				<itemlayout height="45" width="58" condition="!StringCompare(Window.Property(palettename),basic) + !StringCompare(Window.Property(palettename),material-design)">
+				<itemlayout height="45" width="58" condition="!String.IsEqual(Window.Property(palettename),basic) + !String.IsEqual(Window.Property(palettename),material-design)">
 					<control type="image">
 						<width>92%</width>
 						<height>92%</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="45" width="58" condition="!StringCompare(Window.Property(palettename),basic) + !StringCompare(Window.Property(palettename),material-design)">
+				<focusedlayout height="45" width="58" condition="!String.IsEqual(Window.Property(palettename),basic) + !String.IsEqual(Window.Property(palettename),material-design)">
 					<control type="group">
 						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="300" center="auto">Focus</animation>
 						<control type="image">
@@ -168,14 +168,14 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="76" width="128" condition="StringCompare(Window.Property(palettename),basic)">
+				<itemlayout height="76" width="128" condition="String.IsEqual(Window.Property(palettename),basic)">
 					<control type="image">
 						<width>92%</width>
 						<height>92%</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="76" width="128" condition="StringCompare(Window.Property(palettename),basic)">
+				<focusedlayout height="76" width="128" condition="String.IsEqual(Window.Property(palettename),basic)">
 					<control type="group">
 						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="164" center="auto">Focus</animation>
 						<control type="image">
@@ -185,14 +185,14 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<itemlayout height="40" width="125" condition="StringCompare(Window.Property(palettename),material-design)">
+				<itemlayout height="40" width="125" condition="String.IsEqual(Window.Property(palettename),material-design)">
 					<control type="image">
 						<width>92%</width>
 						<height>92%</height>
 						<texture border="5">$INFO[ListItem.Icon]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40" width="125" condition="StringCompare(Window.Property(palettename),material-design)">
+				<focusedlayout height="40" width="125" condition="String.IsEqual(Window.Property(palettename),material-design)">
 					<control type="group">
 						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="164" center="auto">Focus</animation>
 						<control type="image">
@@ -227,7 +227,7 @@
 					<param name="button-width" value="160" />
 					<param name="button-texture" value="nobutton" />
 					<param name="button-label" value="222" />
-					<param name="button-onclick" value="Dialog.Close(1103)" />
+					<param name="button-onclick" value="Action(Back)" />
 					<param name="button-onup" value="3110" />
 					<param name="button-ondown" value="3110" />
 					<param name="button-onleft" value="3012" />

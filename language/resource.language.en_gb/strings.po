@@ -1050,3 +1050,23 @@ msgstr ""
 msgctxt "#31977"
 msgid "Hide the playback controls after 5 seconds without input"
 msgstr ""
+
+#. Track picker (Kodi 22): stream flag
+msgctxt "#31978"
+msgid "Forced"
+msgstr ""
+
+#. Track picker (Kodi 22): stream flag
+msgctxt "#31979"
+msgid "Original"
+msgstr ""
+
+#. Track picker (Kodi 22): stream flag
+msgctxt "#31980"
+msgid "Hearing impaired"
+msgstr ""
+
+#. Track picker (Kodi 22): stream flag
+msgctxt "#31981"
+msgid "Visually impaired"
+msgstr ""

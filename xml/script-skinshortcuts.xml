@@ -53,7 +53,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<label></label>
+					<label>$VAR[ShortcutsDialogTitle]</label>
 				</control>
 				<!--shortcuts-->
 				<control type="list" id="211">
@@ -65,7 +65,7 @@
 					<onleft>31</onleft>
 					<onright>300</onright>
 					<onup>211</onup>
-					<ondown>308</ondown>
+					<ondown>311</ondown>
 					<itemlayout width="585" height="65">
 						<control type="label">
 							<left>15</left>
@@ -198,7 +198,7 @@
 					<control type="button" id="307">
 						<width>995</width>
 						<label>$ADDON[script.skinshortcuts 32027]</label>
-						<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+						<label2>$INFO[Container(211).ListItem.Label2]</label2>
 						<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</enable>
 					</control>
 					<!--background-->
@@ -209,11 +209,11 @@
 						<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</enable>
 					</control>
 					<!--change widget-->
-					<control type="button" id="312">
+					<control type="button" id="309">
 						<width>995</width>
 						<label>$ADDON[script.skinshortcuts 32044]</label>
-						<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-						<visible>String.IsEqual(Window.Property(groupname), mainmenu)</visible>
+						<label2>$INFO[Container(211).ListItem.Property(widgetLabel)]</label2>
+						<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 						<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</enable>
 					</control>
 					<!--change widget layout-->
@@ -228,7 +228,7 @@
 					<control type="button" id="405">
 						<width>995</width>
 						<label>$ADDON[script.skinshortcuts 32072]</label>
-						<visible>String.IsEqual(Window.Property("groupname"),mainmenu)</visible>
+						<visible>String.IsEqual(Window.Property(menuname),mainmenu)</visible>
 						<enable>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</enable>
 					</control>
 				</control>
@@ -246,7 +246,7 @@
 					<ondown>401</ondown>
 					<!--reset button-->
 					<include content="AnimatedCircleButtonGroup">
-						<param name="button-id" value="308" />
+						<param name="button-id" value="311" />
 						<param name="button-width" value="275" />
 						<param name="button-texture" value="refreshbutton" />
 						<param name="button-label" value="$ADDON[script.skinshortcuts 32028]" />
@@ -264,8 +264,8 @@
 						<param name="button-onclick" value="Close" />
 						<param name="button-onup" value="300" />
 						<param name="button-ondown" value="401" />
-						<param name="button-onleft" value="308" />
-						<param name="button-onright" value="308" />
+						<param name="button-onleft" value="311" />
+						<param name="button-onright" value="311" />
 					</include>
 				</control>
 			</control>

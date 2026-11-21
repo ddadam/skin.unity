@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Skin Shortcuts 3 configuration. Item names match the v2 defaultIDs, so the home screen can keep
+	 keying on them through ListItem.Property(name). -->
+<menus>
+
+	<menu name="mainmenu" container="9000">
+		<item name="weather">
+			<label>$LOCALIZE[8]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(Weather)</action>
+			<visible>!String.IsEmpty(Weather.Plugin)</visible>
+		</item>
+		<item name="pictures" submenu="pictures">
+			<label>$LOCALIZE[1]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultPicture.png</icon>
+			<action>ActivateWindow(Pictures)</action>
+		</item>
+		<item name="games">
+			<label>$LOCALIZE[31001]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(Games)</action>
+		</item>
+		<item name="radio" submenu="radio">
+			<label>$LOCALIZE[19021]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioChannels)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="livetv" submenu="livetv">
+			<label>$LOCALIZE[19020]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVChannels)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="videos" submenu="videos">
+			<label>$LOCALIZE[3]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultVideo.png</icon>
+			<action>ActivateWindow(Videos)</action>
+		</item>
+		<item name="movies" submenu="movies">
+			<label>$LOCALIZE[342]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultMovies.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+			<visible>Library.HasContent(Movies)</visible>
+		</item>
+		<item name="tvshows" submenu="tvshows">
+			<label>$LOCALIZE[20343]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+			<visible>Library.HasContent(TVShows)</visible>
+		</item>
+		<item name="music" submenu="music">
+			<label>$LOCALIZE[2]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<action>ActivateWindow(Music)</action>
+		</item>
+		<item name="programs">
+			<label>$LOCALIZE[0]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultProgram.png</icon>
+			<action>ActivateWindow(Programs,Addons,return)</action>
+		</item>
+		<item name="dvd" submenu="dvd">
+			<label>$LOCALIZE[341]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultDVDFull.png</icon>
+			<action>PlayDVD()</action>
+		</item>
+		<item name="settings" submenu="settings">
+			<label>$LOCALIZE[13000]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(Settings)</action>
+		</item>
+	</menu>
+
+	<!-- Submenus. A shortcut picked from the groupings below with the same name gets the matching
+		 submenu attached. -->
+	<submenu name="pictures" standalone="false">
+		<item name="pictures-addons">
+			<label>$LOCALIZE[24001]</label>
+			<label2>$ADDON[script.skinshortcuts 32020]</label2>
+			<icon>DefaultAddonPicture.png</icon>
+			<action>ActivateWindow(Pictures,Addons,return)</action>
+		</item>
+	</submenu>
+
+	<submenu name="radio" standalone="false">
+		<item name="radio-channels">
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioChannels)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="radio-guide">
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioGuide)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="radio-recordings">
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioRecordings)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="radio-timerrules">
+			<label>$LOCALIZE[19138]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioTimerRules)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="radio-timers">
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioTimers)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="radio-search">
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32087]</label2>
+			<icon>DefaultAudio.png</icon>
+			<action>ActivateWindow(RadioSearch)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+	</submenu>
+
+	<submenu name="livetv" standalone="false">
+		<item name="tv-channels">
+			<label>$LOCALIZE[19019]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVChannels)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="tv-guide">
+			<label>$LOCALIZE[22020]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVGuide)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="tv-recordings">
+			<label>$LOCALIZE[19163]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVRecordings)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="tv-timerrules">
+			<label>$LOCALIZE[19138]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVTimerRules)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="tv-timers">
+			<label>$LOCALIZE[19040]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVTimers)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+		<item name="tv-search">
+			<label>$LOCALIZE[137]</label>
+			<label2>$ADDON[script.skinshortcuts 32017]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(TVSearch)</action>
+			<visible>System.HasPVRAddon</visible>
+		</item>
+	</submenu>
+
+	<submenu name="videos" standalone="false">
+		<item name="videos-movies">
+			<label>$LOCALIZE[342]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultMovies.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+			<visible>Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)</visible>
+		</item>
+		<item name="videos-tvshows">
+			<label>$LOCALIZE[20343]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultTVShows.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+			<visible>Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
+		</item>
+		<item name="videos-musicvideos">
+			<label>$LOCALIZE[20389]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultMusicVideos.png</icon>
+			<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+			<visible>Library.HasContent(MusicVideos)</visible>
+		</item>
+		<item name="videos-files">
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(Videos,Files,return)</action>
+		</item>
+		<item name="videos-library">
+			<label>$LOCALIZE[14022]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(Videos,Root)</action>
+			<visible>Library.HasContent(Video)</visible>
+		</item>
+		<item name="videos-addons">
+			<label>$LOCALIZE[24001]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultAddonVideo.png</icon>
+			<action>ActivateWindow(Videos,Addons,return)</action>
+		</item>
+	</submenu>
+
+	<submenu name="movies" standalone="false">
+		<item name="movies-recent">
+			<label>$LOCALIZE[31328]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultRecentlyAddedMovies.png</icon>
+			<action>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</action>
+		</item>
+		<item name="movies-sets">
+			<label>$LOCALIZE[20434]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultSets.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/sets/,return)</action>
+			<visible>Library.HasContent(MovieSets)</visible>
+		</item>
+		<item name="movies-titles">
+			<label>$LOCALIZE[369]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultMovieTitle.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+			<visible>Library.HasContent(Movies)</visible>
+		</item>
+		<item name="movies-genres">
+			<label>$LOCALIZE[135]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultGenre.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/genres/,return)</action>
+			<visible>Library.HasContent(Movies)</visible>
+		</item>
+		<item name="movies-years">
+			<label>$LOCALIZE[652]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultYear.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/years/,return)</action>
+			<visible>Library.HasContent(Movies)</visible>
+		</item>
+		<item name="movies-actors">
+			<label>$LOCALIZE[344]</label>
+			<label2>$LOCALIZE[342]</label2>
+			<icon>DefaultActor.png</icon>
+			<action>ActivateWindow(Videos,videodb://movies/actors/,return)</action>
+			<visible>Library.HasContent(Movies)</visible>
+		</item>
+	</submenu>
+
+	<submenu name="tvshows" standalone="false">
+		<item name="tvshows-recent">
+			<label>$LOCALIZE[31328]</label>
+			<label2>$ADDON[script.skinshortcuts 32014]</label2>
+			<icon>DefaultRecentlyAddedEpisodes.png</icon>
+			<action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action>
+		</item>
+		<item name="tvshows-titles">
+			<label>$LOCALIZE[369]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultTVShowTitle.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+			<visible>Library.HasContent(TVShows)</visible>
+		</item>
+		<item name="tvshows-genres">
+			<label>$LOCALIZE[135]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultGenre.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/genres/,return)</action>
+			<visible>Library.HasContent(TVShows)</visible>
+		</item>
+		<item name="tvshows-years">
+			<label>$LOCALIZE[652]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultYear.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/years/,return)</action>
+			<visible>Library.HasContent(TVShows)</visible>
+		</item>
+		<item name="tvshows-actors">
+			<label>$LOCALIZE[344]</label>
+			<label2>$LOCALIZE[20343]</label2>
+			<icon>DefaultActor.png</icon>
+			<action>ActivateWindow(Videos,videodb://tvshows/actors/,return)</action>
+			<visible>Library.HasContent(TVShows)</visible>
+		</item>
+	</submenu>
+
+	<submenu name="music" standalone="false">
+		<item name="music-artists">
+			<label>$LOCALIZE[133]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultMusicArtists.png</icon>
+			<action>ActivateWindow(Music,Artists,return)</action>
+			<visible>Library.HasContent(Music)</visible>
+		</item>
+		<item name="music-albums">
+			<label>$LOCALIZE[132]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultMusicAlbums.png</icon>
+			<action>ActivateWindow(Music,Albums,return)</action>
+			<visible>Library.HasContent(Music)</visible>
+		</item>
+		<item name="music-songs">
+			<label>$LOCALIZE[134]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultMusicSongs.png</icon>
+			<action>ActivateWindow(Music,Songs,return)</action>
+			<visible>Library.HasContent(Music)</visible>
+		</item>
+		<item name="music-files">
+			<label>$LOCALIZE[744]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(Music,Files,return)</action>
+		</item>
+		<item name="music-library">
+			<label>$LOCALIZE[14022]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(Music,Root)</action>
+			<visible>Library.HasContent(Music)</visible>
+		</item>
+		<item name="music-addons">
+			<label>$LOCALIZE[24001]</label>
+			<label2>$ADDON[script.skinshortcuts 32019]</label2>
+			<icon>DefaultAddonMusic.png</icon>
+			<action>ActivateWindow(Music,Addons,return)</action>
+		</item>
+	</submenu>
+
+	<submenu name="dvd" standalone="false">
+		<item name="dvd-eject">
+			<label>$LOCALIZE[13391]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultDVDFull.png</icon>
+			<action>EjectTray()</action>
+		</item>
+	</submenu>
+
+	<submenu name="settings" standalone="false">
+		<item name="settings-skin">
+			<label>$LOCALIZE[166]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(SkinSettings)</action>
+		</item>
+		<item name="settings-filemanager">
+			<label>$LOCALIZE[7]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultFolder.png</icon>
+			<action>ActivateWindow(FileManager)</action>
+		</item>
+		<item name="settings-profiles">
+			<label>$LOCALIZE[13200]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(Profiles)</action>
+		</item>
+		<item name="settings-systeminfo">
+			<label>$LOCALIZE[130]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(SystemInfo)</action>
+		</item>
+		<item name="settings-eventlog">
+			<label>$LOCALIZE[14111]</label>
+			<label2>$ADDON[script.skinshortcuts 32034]</label2>
+			<icon>DefaultShortcut.png</icon>
+			<action>ActivateWindow(EventLog,events://,return)</action>
+			<visible>system.getbool(eventlog.enabled)</visible>
+		</item>
+	</submenu>
+
+	<!-- Shortcut picker (button 401). Shortcut names match the submenus above. -->
+	<groupings>
+		<group name="common" label="$ADDON[script.skinshortcuts 32029]" icon="DefaultFolder.png">
+			<shortcut name="videos" label="$LOCALIZE[3]" icon="DefaultVideo.png">
+				<action>ActivateWindow(Videos)</action>
+			</shortcut>
+			<shortcut name="movies" label="$LOCALIZE[342]" icon="DefaultMovies.png" visible="Library.HasContent(Movies)">
+				<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+				<visible>Library.HasContent(Movies)</visible>
+			</shortcut>
+			<shortcut name="tvshows" label="$LOCALIZE[20343]" icon="DefaultTVShows.png" visible="Library.HasContent(TVShows)">
+				<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+				<visible>Library.HasContent(TVShows)</visible>
+			</shortcut>
+			<shortcut name="musicvideos" label="$LOCALIZE[20389]" icon="DefaultMusicVideos.png" visible="Library.HasContent(MusicVideos)">
+				<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+				<visible>Library.HasContent(MusicVideos)</visible>
+			</shortcut>
+			<shortcut name="music" label="$LOCALIZE[2]" icon="DefaultMusicAlbums.png">
+				<action>ActivateWindow(Music)</action>
+			</shortcut>
+			<shortcut name="pictures" label="$LOCALIZE[1]" icon="DefaultPicture.png">
+				<action>ActivateWindow(Pictures)</action>
+			</shortcut>
+			<shortcut name="programs" label="$LOCALIZE[0]" icon="DefaultProgram.png">
+				<action>ActivateWindow(Programs,Addons,return)</action>
+			</shortcut>
+			<shortcut name="games" label="$LOCALIZE[31001]" icon="DefaultAddonGame.png">
+				<action>ActivateWindow(Games)</action>
+			</shortcut>
+			<shortcut name="livetv" label="$LOCALIZE[19020]" icon="DefaultTVShows.png" visible="System.HasPVRAddon">
+				<action>ActivateWindow(TVChannels)</action>
+				<visible>System.HasPVRAddon</visible>
+			</shortcut>
+			<shortcut name="radio" label="$LOCALIZE[19021]" icon="DefaultAudio.png" visible="System.HasPVRAddon">
+				<action>ActivateWindow(RadioChannels)</action>
+				<visible>System.HasPVRAddon</visible>
+			</shortcut>
+			<shortcut name="weather" label="$LOCALIZE[8]" icon="DefaultAddonWeather.png">
+				<action>ActivateWindow(Weather)</action>
+				<visible>!String.IsEmpty(Weather.Plugin)</visible>
+			</shortcut>
+			<shortcut name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
+				<action>ActivateWindow(favouritesbrowser)</action>
+			</shortcut>
+			<shortcut name="dvd" label="$LOCALIZE[341]" icon="DefaultDVDFull.png">
+				<action>PlayDVD()</action>
+			</shortcut>
+			<shortcut name="filemanager" label="$LOCALIZE[7]" icon="DefaultFolder.png">
+				<action>ActivateWindow(FileManager)</action>
+			</shortcut>
+			<shortcut name="settings" label="$LOCALIZE[13000]" icon="DefaultShortcut.png">
+				<action>ActivateWindow(Settings)</action>
+			</shortcut>
+		</group>
+
+		<group name="livetv-group" label="$LOCALIZE[19020]" icon="DefaultTVShows.png" visible="PVR.HasTVChannels">
+			<shortcut name="tv-guide" label="$LOCALIZE[22020]" icon="DefaultTVShows.png">
+				<action>ActivateWindow(TVGuide)</action>
+			</shortcut>
+			<shortcut name="tv-recordings" label="$LOCALIZE[19163]" icon="DefaultTVShows.png">
+				<action>ActivateWindow(TVRecordings)</action>
+			</shortcut>
+			<shortcut name="tv-timers" label="$LOCALIZE[19040]" icon="DefaultTVShows.png">
+				<action>ActivateWindow(TVTimers)</action>
+			</shortcut>
+			<shortcut name="tv-search" label="$LOCALIZE[137]" icon="DefaultTVShows.png">
+				<action>ActivateWindow(TVSearch)</action>
+			</shortcut>
+			<content source="pvr" target="tv" folder="$LOCALIZE[19019]" />
+		</group>
+
+		<group name="radio-group" label="$LOCALIZE[19021]" icon="DefaultAudio.png" visible="PVR.HasRadioChannels">
+			<shortcut name="radio-guide" label="$LOCALIZE[22020]" icon="DefaultAudio.png">
+				<action>ActivateWindow(RadioGuide)</action>
+			</shortcut>
+			<shortcut name="radio-recordings" label="$LOCALIZE[19163]" icon="DefaultAudio.png">
+				<action>ActivateWindow(RadioRecordings)</action>
+			</shortcut>
+			<shortcut name="radio-timers" label="$LOCALIZE[19040]" icon="DefaultAudio.png">
+				<action>ActivateWindow(RadioTimers)</action>
+			</shortcut>
+			<shortcut name="radio-search" label="$LOCALIZE[137]" icon="DefaultAudio.png">
+				<action>ActivateWindow(RadioSearch)</action>
+			</shortcut>
+			<content source="pvr" target="radio" folder="$LOCALIZE[19019]" />
+		</group>
+
+		<group name="video-library" label="$ADDON[script.skinshortcuts 32030]" icon="DefaultVideo.png">
+			<content source="nodes" target="video" />
+		</group>
+
+		<group name="music-library" label="$ADDON[script.skinshortcuts 32031]" icon="DefaultMusicAlbums.png">
+			<content source="nodes" target="music" />
+		</group>
+
+		<group name="sources" label="$ADDON[script.skinshortcuts 32074]" icon="DefaultFolder.png">
+			<content source="sources" target="video" folder="$LOCALIZE[3]" />
+			<content source="sources" target="music" folder="$LOCALIZE[2]" />
+			<content source="sources" target="pictures" folder="$LOCALIZE[1]" />
+		</group>
+
+		<group name="playlists" label="$LOCALIZE[136]" icon="DefaultPlaylist.png">
+			<content source="playlists" target="video" folder="$ADDON[script.skinshortcuts 32004]" />
+			<content source="playlists" target="music" folder="$ADDON[script.skinshortcuts 32005]" />
+		</group>
+
+		<group name="addons" label="$LOCALIZE[24001]" icon="DefaultAddon.png">
+			<group name="addons-video" label="$LOCALIZE[1037]" icon="DefaultAddonVideo.png">
+				<content source="addons" target="video" label="$LOCALIZE[1037]" />
+			</group>
+			<group name="addons-music" label="$LOCALIZE[1038]" icon="DefaultAddonMusic.png">
+				<content source="addons" target="music" label="$LOCALIZE[1038]" />
+			</group>
+			<group name="addons-pictures" label="$LOCALIZE[1039]" icon="DefaultAddonPicture.png">
+				<content source="addons" target="pictures" label="$LOCALIZE[1039]" />
+			</group>
+			<group name="addons-programs" label="$LOCALIZE[10001]" icon="DefaultAddonProgram.png">
+				<content source="addons" target="programs" label="$LOCALIZE[10001]" />
+			</group>
+			<group name="addons-games" label="$LOCALIZE[35049]" icon="DefaultAddonGame.png">
+				<content source="addons" target="games" label="$LOCALIZE[35049]" />
+			</group>
+		</group>
+
+		<group name="favourites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png">
+			<content source="favourites" />
+		</group>
+
+		<group name="settings-group" label="$LOCALIZE[5]" icon="DefaultAddonService.png">
+			<content source="settings" />
+		</group>
+
+		<group name="commands" label="$ADDON[script.skinshortcuts 32057]" icon="DefaultAddonNone.png">
+			<content source="commands" />
+			<input label="$ADDON[script.skinshortcuts 32024]" type="text" for="action" />
+		</group>
+	</groupings>
+
+	<contextmenu enableOn="211">
+		<button id="301" label="$ADDON[script.skinshortcuts 32000]" />
+		<button id="302" label="$ADDON[script.skinshortcuts 32001]" />
+		<button id="313" label="$LOCALIZE[24021]" condition="disabled=False" />
+		<button id="313" label="$LOCALIZE[24022]" condition="disabled=True" />
+		<button id="303" label="$ADDON[script.skinshortcuts 32002]" />
+		<button id="304" label="$ADDON[script.skinshortcuts 32003]" />
+		<button id="311" label="$ADDON[script.skinshortcuts 32028]" />
+	</contextmenu>
+
+	<overrides>
+		<action replace="ActivateWindow(Favourites)">ActivateWindow(favouritesbrowser)</action>
+		<action replace="ActivateWindow(Favorites)">ActivateWindow(favouritesbrowser)</action>
+	</overrides>
+
+</menus>

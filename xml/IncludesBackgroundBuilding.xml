@@ -60,15 +60,6 @@
 		<include condition="skin.string(BackgroundSwitchDelay, 60)">fanartSpeed60</include>
 		<include condition="!skin.string(BackgroundSwitchDelay)">fanartSpeed30</include>
 	</include>
-	<variable name="fanartBackground">
-		<value condition="Container.Scrolling"></value>
-		<!-- normal fanart backgrounds -->
-		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Container.Art(tvshow.fanart))">$INFO[Container.Art(tvshow.fanart)]</value>
-		<value condition="!String.IsEmpty(Container.Art(artist.fanart))">$INFO[Container.Art(artist.fanart)]</value>
-		<value condition="!String.IsEmpty(Container.Art(albumartist.fanart))">$INFO[Container.Art(albumartist.fanart)]</value>
-	</variable>
 	<include name="CommonBackground">
 		<!-- global background -->
 		<control type="multiimage">

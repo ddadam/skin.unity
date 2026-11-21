@@ -262,7 +262,7 @@
 				<control type="button" id="29">
 					<width>300</width>
 					<label>40046</label>
-					<visible>Window.IsVisible(managevideoversions) + !String.StartsWith(System.BuildVersionCode,21.)</visible>
+					<visible>Window.IsVisible(managevideoversions)</visible>
 				</control>
 				<control type="button" id="26">
 					<width>300</width>

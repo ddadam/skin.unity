@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Background picker (button 310): a single image or a folder, stored as the item's background path. -->
+<backgrounds>
+	<background name="single-image" label="$ADDON[script.skinshortcuts 32051]" type="browse">
+		<icon>DefaultFile.png</icon>
+	</background>
+	<background name="multi-image" label="$ADDON[script.skinshortcuts 32052]" type="multi">
+		<icon>DefaultFolder.png</icon>
+	</background>
+</backgrounds>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+	<property name="widget" type="widget" />
+	<property name="background" type="background" />
+
+	<property name="widgetLayout" type="options" requires="widget">
+		<options>
+			<option value="Wide" label="$LOCALIZE[31613]" condition="widgetType=system | custom" />
+			<option value="Weather" label="$LOCALIZE[31614]" condition="widgetType=weather" />
+			<option value="Poster" label="$LOCALIZE[31611]" />
+			<option value="Square" label="$LOCALIZE[31612]" condition="!widgetType=people" />
+		</options>
+	</property>
+
+	<buttons>
+		<button id="309" property="widget" rename="true" />
+		<button id="310" property="background" />
+		<button id="3001" property="widgetLayout" heading="$LOCALIZE[31610]" showNone="false" />
+	</buttons>
+
+	<fallbacks>
+		<fallback property="widgetLayout">
+			<when condition="widgetType=weather">Weather</when>
+			<when condition="widgetType=musicvideos | songs | albums | artists | singles | favourite | addon | pvr">Square</when>
+			<when condition="widgetType=system | custom">Wide</when>
+			<when condition="widgetType=movies | tvshows | episodes | seasons">Poster</when>
+			<default>Square</default>
+		</fallback>
+	</fallbacks>
+</properties>

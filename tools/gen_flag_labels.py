@@ -2,7 +2,7 @@
 """Generate the playback info row's media badges for the Unity skin.
 
 Writes:
-  xml/includes.xml               region "flag-labels": label lookups
+  xml/Includes.xml               region "flag-labels": label lookups
   xml/IncludesCodecFlagging.xml  region "flag-row":    the badge row in playback (video.flags.info)
                                  region "flag-row-library": the same row for the focused library
                                  item (media.flags.small: library views, info screen, search)
@@ -36,14 +36,14 @@ import sys
 # ---------------------------------------------------------------- lookups
 # Labels follow the old flag artwork (media/flags/...) unless noted.
 VIDEO_CODECS = {
-    'H.264': ['h264', 'avc1', 'x264', 'hdmv'],          # avc1 showed "VC-1" in the old art: fixed
+    'H.264': ['h264', 'avc1', 'avc', 'x264', 'hdmv'],          # avc1 showed "VC-1" in the old art: fixed
     'H.265': ['hevc', 'hev1', 'hvc1'],
     'H.266': ['vvc'],                                    # new
     'AV1': ['av1', 'libdav1d', 'av01'],                  # new
     'VP9': ['vp9', 'vp09'],                              # new
     'VP8': ['vp8'],                                      # new
     'VP6': ['vp6', 'vp6f', 'vp6a'],                      # old art said FLV
-    'MPEG-1': ['mpeg1video'],
+    'MPEG-1': ['mpeg1video', 'mpeg1'],
     'MPEG-2': ['mpeg2video', 'mpeg2', 'h262', 'v_mpeg2', 'hdv'],
     'MPEG-4': ['mpeg4', 'mp4v', 'fmp4', 'mpg4', 'msmpeg4v1', 'msmpeg4v2', 'msmpeg4v3', 'msmpeg4', 'mpeg-4 visual', 'mpeg4video'],
     'MPEG': ['mpeg video'],
@@ -62,7 +62,8 @@ VIDEO_CODECS = {
     'DNXHD': ['dnxhd'],                                  # new
 }
 AUDIO_CODECS = {
-    'AAC': ['aac', 'aac_latm'],
+    'AAC': ['aac', 'aac_latm', 'aac_lc', 'aac_ltp', 'aac_ssr'],   # Kodi 22 reports the profile (aac_lc ...)
+    'HE-AAC': ['he_aac', 'he_aac_v2'],
     'DOLBY': ['ac3', 'dolbydigital'],
     'DOLBY +': ['eac3', 'dolbydigitalplus'],
     'DOLBY HD': ['truehd', 'dolbytruehd'],
@@ -71,6 +72,12 @@ AUDIO_CODECS = {
     'DTS:X': ['dtshd_ma_x'],                             # Kodi 22 (Blu-ray stream parsing)
     'DTS:X IMAX': ['dtshd_ma_x_imax'],                   # Kodi 22
     'FLAC': ['flac'],
+    'AIFF': ['aif', 'aifc', 'aiff'],
+    'APE': ['ape'],
+    'WAVPACK': ['wavpack'],
+    'WAV': ['wav'],
+    'CDDA': ['cdda'],
+    'OGG': ['ogg'],
     'ALAC': ['alac'],                                    # new
     'OPUS': ['opus'],                                    # new
     'VORBIS': ['vorbis'],                                # old art said OGG
@@ -94,6 +101,10 @@ STACKED_AUDIO = {'eac3_ddp_atmos': ('DOLBY +', 'ATMOS'),            # Kodi 22 (B
 STACK_FONTS = (('flag.stack.top', 13), ('flag.stack.bottom', 10))   # must match xml/Font.xml
 FONT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'fonts', 'RobotoCondensed-BoldItalic.ttf')
 AUDIO_PREFIXES = {'PCM': 'pcm'}                          # pcm_s16le, pcm_s24le, pcm_bluray ... (was "?")
+# Subtitle formats, for the Kodi 22 track picker's details line (not a badge)
+SUBTITLE_CODECS = {'SRT': ['subrip', 'srt', 'text', 'microdvd', 'mpl2', 'vplayer', 'realtext', 'sami'],
+                   'ASS': ['ass', 'ssa'], 'PGS': ['hdmv_pgs_subtitle', 'pgssub'], 'VOBSUB': ['dvd_subtitle', 'dvdsub'],
+                   'DVB': ['dvb_subtitle', 'dvb_teletext'], 'WEBVTT': ['webvtt'], 'TX3G': ['mov_text'], 'TTML': ['ttml'], 'XSUB': ['xsub']}
 CHANNELS = {'1': '1.0', '2': '2.0', '3': '2.1', '4': '4.0', '5': '4.1', '6': '5.1',
             '7': '6.1', '8': '7.1', '10': '9.1'}         # count only: 3 and 5 are ambiguous, kept as the old art
 RESOLUTIONS = ['480', '540', '576', '720', '1080', '4K', '8K']
@@ -124,9 +135,29 @@ def _value(cond, text):
     return '\t<value condition="%s">%s</value>' % (cond, text)
 
 
-def lookup_variable(name, info, mapping, fallback, prefixes=None, extra=()):
+# Kodi 22 (xbmc.gui 5.18) skin maps: $MAP[name, infolabel] looks the value up in a <map> and
+# returns it unchanged when there is no entry. One lookup instead of a String.IsEqual chain
+# per label (~390 comparisons for a language). False = Kodi 21 output (the 0.21.x branch).
+USE_MAPS = True
+MAPS = {}                    # map name -> {key: label}, written next to the variables
+
+
+def lookup_variable(name, info, mapping, fallback, prefixes=None, extra=(), map_name=None):
     lines = ['<variable name="%s">' % name]
     lines += list(extra)
+    if USE_MAPS and map_name:
+        # map lookups are exact (case-sensitive), String.IsEqual wasn't: keep both cases
+        entries = MAPS.setdefault(map_name, {})
+        for label, ids in mapping.items():
+            for i in ids:
+                entries.setdefault(i.lower(), label)
+                entries.setdefault(i.upper(), label)
+        for label, prefix in (prefixes or {}).items():
+            lines.append(_value('String.StartsWith(%s,%s)' % (info, prefix), label))
+        # an unmapped value comes back unchanged: same as the old $INFO fallback
+        assert fallback == '$INFO[%s]' % info, (name, fallback)
+        lines += ['\t<value>$MAP[%s, %s]</value>' % (map_name, info), '</variable>']
+        return lines
     for label, ids in mapping.items():
         cond = ' | '.join('String.IsEqual(%s,%s)' % (info, i) for i in ids)
         lines.append(_value(cond, label))
@@ -134,6 +165,15 @@ def lookup_variable(name, info, mapping, fallback, prefixes=None, extra=()):
         lines.append(_value('String.StartsWith(%s,%s)' % (info, prefix), label))
     lines += ['\t<value>%s</value>' % fallback, '</variable>']
     return lines
+
+
+def map_elements():
+    out = []
+    for name, entries in MAPS.items():
+        out.append('<map name="%s">' % name)
+        out += ['\t<entry key="%s">%s</entry>' % (k, v) for k, v in entries.items()]
+        out.append('</map>')
+    return out
 
 
 # Where the badge values come from: the playing video, or the focused library item
@@ -154,22 +194,22 @@ def labels_for(src, langs):
     s, v = src, src.var
     out = []
     out += lookup_variable(v + 'VideoCodec', s('VideoCodec'), VIDEO_CODECS,
-                           '$INFO[%s]' % s('VideoCodec'),
+                           '$INFO[%s]' % s('VideoCodec'), map_name='FlagVideoCodecMap',
                            extra=[_value('String.IsEmpty(%s)' % s('VideoCodec'), '?')])
     out += lookup_variable(v + 'AudioCodec', s('AudioCodec'), AUDIO_CODECS,
-                           '$INFO[%s]' % s('AudioCodec'), prefixes=AUDIO_PREFIXES,
+                           '$INFO[%s]' % s('AudioCodec'), prefixes=AUDIO_PREFIXES, map_name='FlagAudioCodecMap',
                            extra=[_value('String.IsEmpty(%s)' % s('AudioCodec'), '?')])
     out += lookup_variable(v + 'AudioChannels', s('AudioChannels'),
-                           {c: [k] for k, c in CHANNELS.items()}, '$INFO[%s]' % s('AudioChannels'),
+                           {c: [k] for k, c in CHANNELS.items()}, '$INFO[%s]' % s('AudioChannels'), map_name='FlagAudioChannelsMap',
                            extra=[_value('String.IsEmpty(%s)' % s('AudioChannels'), '?')])
-    out += lookup_variable(v + 'Hdr', s('HdrType'), HDR_TYPES, '$INFO[%s]' % s('HdrType'))
+    out += lookup_variable(v + 'Hdr', s('HdrType'), HDR_TYPES, '$INFO[%s]' % s('HdrType'), map_name='FlagHdrMap')
     out += ['<variable name="%sAspect">' % v,
             _value('String.IsEmpty(%s)' % s('VideoAspect'), '?'),
             '\t<value>$INFO[%s]</value>' % s('VideoAspect'), '</variable>']
     if src is LIBRARY:     # info screen: "16:9 (1.78)"
         out += lookup_variable(v + 'AspectLong', s('VideoAspect'),
                                {'%s (%s)' % (r, k): [k] for k, r in ASPECT_RATIOS.items()},
-                               '$INFO[%s]' % s('VideoAspect'),
+                               '$INFO[%s]' % s('VideoAspect'), map_name='FlagAspectRatioMap',
                                extra=[_value('String.IsEmpty(%s)' % s('VideoAspect'), '?')])
     # stacked HDR types get their own segment; the label only carries the single-line ones
     hdr = '!String.IsEmpty(%s)' % s('HdrType') + ''.join(' + !String.IsEqual(%s,%s)' % (s('HdrType'), k) for k in STACKED_HDR)
@@ -183,7 +223,7 @@ def labels_for(src, langs):
         for code, a2 in sorted(langs.items()):
             by_code.setdefault(a2, []).append(code)
         und = [_value(' | '.join(['String.IsEmpty(%s)' % info] + ['String.IsEqual(%s,%s)' % (info, c) for c in UNDETERMINED]), '?')]
-        out += lookup_variable(name, info, by_code, '$INFO[%s]' % info, extra=und)
+        out += lookup_variable(name, info, by_code, '$INFO[%s]' % info, extra=und, map_name='FlagLanguageMap')
     return out
 
 
@@ -191,6 +231,9 @@ def labels(ind):
     langs = language_table()
     out = ['<!-- playback: the playing video -->'] + labels_for(PLAYER, langs)
     out += ['<!-- library views and info screen: the focused item -->'] + labels_for(LIBRARY, langs)
+    if USE_MAPS:
+        MAPS['FlagSubtitleCodecMap'] = {k: label for label, ids in SUBTITLE_CODECS.items() for i in ids for k in (i.lower(), i.upper())}
+        out += ['<!-- lookup tables for $MAP[] (Kodi 22) -->'] + map_elements()
     return ''.join(ind + l + '\n' for l in out)
 
 
@@ -404,6 +447,6 @@ if __name__ == '__main__':
                     sys.exit('duplicate codec id %s' % i)
                 seen[(id(table), i)] = label
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'xml')
-    fill(os.path.join(root, 'includes.xml'), 'flag-labels', labels)
+    fill(os.path.join(root, 'Includes.xml'), 'flag-labels', labels)
     fill(os.path.join(root, 'IncludesCodecFlagging.xml'), 'flag-row', row)
     fill(os.path.join(root, 'IncludesCodecFlagging.xml'), 'flag-row-library', library_row)

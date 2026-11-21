@@ -349,7 +349,7 @@
 					<control type="button" id="232">
 						<width>995</width>
 						<label>$ADDON[script.skinshortcuts 32035]</label>
-						<onclick>RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</onclick>
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;menu=mainmenu)</onclick>
 						<enable>System.AddonIsEnabled(script.skinshortcuts)</enable>
 					</control>
 					<!--reset skin shortcuts menu-->

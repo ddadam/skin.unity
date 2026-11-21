@@ -138,7 +138,7 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<include>skinshortcuts-submenu</include>
+					<include>skinshortcuts-mainmenu-submenu</include>
 				</content>
 			</control>
 			<control type="group">

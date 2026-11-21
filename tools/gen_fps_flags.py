@@ -3,7 +3,7 @@
 
 Writes variables and expressions between
     <!-- BEGIN generated: fps-match ... -->   and   <!-- END generated: fps-match -->
-in xml/includes.xml. Run from anywhere:  python3 tools/gen_fps_flags.py
+in xml/Includes.xml. Run from anywhere:  python3 tools/gen_fps_flags.py
 
 A skin can only compare strings, so the arithmetic is done here:
 
@@ -145,4 +145,4 @@ if __name__ == '__main__':
             print('%-7s fps -> %s' % (fname, ' '.join(h for h, hv in REFRESH_RATES if matches(fv, hv))))
         sys.exit()
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'xml')
-    fill(os.path.join(root, 'includes.xml'), 'fps-match', generate)
+    fill(os.path.join(root, 'Includes.xml'), 'fps-match', generate)

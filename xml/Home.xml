@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml)</onload>
 	<onload condition="Skin.HasSetting(StopVideoOnBack) + !Player.HasAudio">PlayerControl(Stop)</onload>
 	<onload condition="System.AddonIsEnabled(script.skin.helper.service) + !Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<include>OSDSpeedDefaults</include>
@@ -788,7 +788,7 @@
 					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(700).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(700).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(700).NumItems,1)">conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),videos) | String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),videos) | String.IsEqual(Container(9000).ListItem.Property(name),movies) | String.IsEqual(Container(9000).ListItem.Property(name),tvshows)</visible>
 					<onleft>700</onleft>
 					<onright>700</onright>
 					<onup>9901</onup>
@@ -803,7 +803,7 @@
 					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(703).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(703).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(703).NumItems,1)">conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),music)</visible>
 					<onleft>703</onleft>
 					<onright>703</onright>
 					<onup>9901</onup>
@@ -818,7 +818,7 @@
 					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(704).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(704).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(704).NumItems,1)">conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),pictures)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),pictures)</visible>
 					<onleft>704</onleft>
 					<onright>704</onright>
 					<onup>9901</onup>
@@ -833,7 +833,7 @@
 					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(705).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(705).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(705).NumItems,1)">conditional</animation>
-					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),programs)</visible>
+					<visible>String.IsEqual(Container(9000).ListItem.Property(name),programs)</visible>
 					<onleft>705</onleft>
 					<onright>705</onright>
 					<onup>9901</onup>
@@ -900,7 +900,7 @@
 		<control type="group">
 			<left>795r</left>
 			<top>200</top>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(name),livetv) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,140" time="0" condition="PVR.IsRecording">conditional</animation>
 				<visible>PVR.HasNonRecordingTimer</visible>
