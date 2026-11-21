@@ -2,7 +2,7 @@
 """Generate the playback info row's media badges for the Unity skin.
 
 Writes:
-  xml/includes.xml               region "flag-labels": label lookups
+  xml/Includes.xml               region "flag-labels": label lookups
   xml/IncludesCodecFlagging.xml  region "flag-row":    the badge row in playback (video.flags.info)
                                  region "flag-row-library": the same row for the focused library
                                  item (media.flags.small: library views, info screen, search)
@@ -404,6 +404,6 @@ if __name__ == '__main__':
                     sys.exit('duplicate codec id %s' % i)
                 seen[(id(table), i)] = label
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'xml')
-    fill(os.path.join(root, 'includes.xml'), 'flag-labels', labels)
+    fill(os.path.join(root, 'Includes.xml'), 'flag-labels', labels)
     fill(os.path.join(root, 'IncludesCodecFlagging.xml'), 'flag-row', row)
     fill(os.path.join(root, 'IncludesCodecFlagging.xml'), 'flag-row-library', library_row)

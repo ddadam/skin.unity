@@ -79,7 +79,6 @@
 			<top>12%</top>
 			<width>1050</width>
 			<height>380</height>
-			<visible>!Window.IsVisible(Favourites)</visible>
 			<animation effect="fade" time="300" delay="500">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="label">
@@ -323,7 +322,6 @@
 			<top>15%</top>
 			<width>984</width>
 			<height>316</height>
-			<visible>!Window.IsVisible(Favourites)</visible>
 			<animation effect="fade" time="300" delay="500">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="label">
@@ -441,7 +439,6 @@
 			<top>15%</top>
 			<width>1020</width>
 			<height>312</height>
-			<visible>!Window.IsVisible(Favourites)</visible>
 			<animation effect="fade" time="300" delay="500">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="label">
@@ -573,7 +570,6 @@
 			<top>12%</top>
 			<width>1050</width>
 			<height>380</height>
-			<visible>!Window.IsVisible(Favourites)</visible>
 			<animation effect="fade" time="300" delay="500">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="label">

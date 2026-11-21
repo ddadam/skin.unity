@@ -3,7 +3,7 @@
 
 Rewrites the regions between
     <!-- BEGIN generated: NAME ... -->   and   <!-- END generated: NAME -->
-in xml/VideoOSD.xml, xml/SkinSettings.xml, xml/includes.xml and xml/Timers.xml.
+in xml/VideoOSD.xml, xml/SkinSettings.xml, xml/Includes.xml and xml/Timers.xml.
 (Startup.xml, Home.xml and VideoOSD.xml use <include>OSDSpeedDefaults</include>.)
 
 Edit SPEEDS / DEFAULTS / HIGH_LIMIT below, then run:
@@ -504,6 +504,6 @@ if __name__ == '__main__':
     fill(os.path.join(root, 'VideoOSD.xml'), 'speed-onup', osd_onup)
     fill(os.path.join(root, 'VideoOSD.xml'), 'speed-menu', osd_menu)
     fill(os.path.join(root, 'SkinSettings.xml'), 'speed-settings', settings_panel)
-    fill(os.path.join(root, 'includes.xml'), 'speed-defaults', defaults_include)
-    fill(os.path.join(root, 'includes.xml'), 'speed-label', speed_label)
+    fill(os.path.join(root, 'Includes.xml'), 'speed-defaults', defaults_include)
+    fill(os.path.join(root, 'Includes.xml'), 'speed-label', speed_label)
     fill(os.path.join(root, 'Timers.xml'), 'speed-timers', timers)

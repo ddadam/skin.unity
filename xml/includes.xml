@@ -72,10 +72,6 @@
 		<value condition="Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
 		<value condition="[Window.IsActive(Music) | Window.IsActive(Music)] + !String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
 	</variable>
-	<variable name="SelectBack">
-		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
-		<value condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">DialogBack2.png</value>
-	</variable>
 	<variable name="VideoPlayerForwardRewindVar">
 		<value condition="Player.Forwarding2x | Player.Rewinding2x">2x</value>
 		<value condition="Player.Forwarding4x | Player.Rewinding4x">4x</value>
@@ -132,12 +128,6 @@
 		<onload condition="String.IsEmpty(Skin.String(color.tertiary))">Skin.SetString(color.tertiary, FFF1F1F1)</onload>
 		<onload condition="String.IsEmpty(Skin.String(color.border))">Skin.SetString(color.border, FFCCCCCC)</onload>
 	</include>
-	<include name="WindowID">
-		<textcolor>pink</textcolor>
-	</include>
-	<include name="DialogID">
-		<textcolor>orange</textcolor>
-	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
 			<left>0</left>
@@ -150,28 +140,6 @@
 			<visible>ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999) | Window.IsVisible(AddonInformation) | Window.IsVisible(ShutdownMenu) | Window.IsVisible(ContextMenu) | Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation) | Window.IsVisible(SongInformation) | Window.IsVisible(FileBrowser) | Window.IsVisible(TextViewer) | Window.IsVisible(AddonSettings) | Window.IsVisible(ContentSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(MediaSource) | Window.IsVisible(PictureInfo) | Window.IsVisible(PlayerControls) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(NumericInput) | Window.IsVisible(ProfileSettings) | Window.IsVisible(LockSettings) | Window.IsVisible(SmartPlaylistEditor) | Window.IsVisible(SmartPlaylistRule) |
 			Window.IsVisible(AddonInformation) | Window.IsVisible(PeripheralSettings) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(PVRChannelManager) | Window.IsVisible(PVRGroupManager) | Window.IsVisible(MediaFilter) | Window.IsVisible(OKDialog) | Window.IsVisible(YesNoDialog) | Window.IsVisible(ProgressDialog) | Window.IsVisible(MediaSource) | Window.IsVisible(1100) | Window.IsVisible(GameControllers)</visible>
 		</control>
-	</include>
-	<include name="WindowTitleCommons">
-		<left>0</left>
-		<top>0</top>
-		<width min="0" max="150">auto</width>
-		<height>45</height>
-		<font>breadcrumb</font>
-		<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-		<scroll>false</scroll>
-		<align>left</align>
-		<aligny>center</aligny>
-	</include>
-	<include name="WindowTitleCommons2">
-		<left>0</left>
-		<top>0</top>
-		<width min="0" max="385">auto</width>
-		<height>45</height>
-		<font>breadcrumb</font>
-		<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-		<scroll>false</scroll>
-		<align>left</align>
-		<aligny>center</aligny>
 	</include>
 	<!-- BEGIN generated: flag-labels (tools/gen_flag_labels.py) -->
 	<!-- playback: the playing video -->
@@ -1297,45 +1265,6 @@
 		<selectedcolor>$INFO[Skin.String(color.900)]</selectedcolor>
 		<focusedcolor>$INFO[Skin.String(color.900)]</focusedcolor>
 		<disabledcolor>$INFO[Skin.String(color.disabled)]</disabledcolor>
-	</include>
-	<include name="ButtonHomeSubCommonValues">
-		<height>60</height>
-		<width>270</width>
-		<textwidth>292</textwidth>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>button</font>
-		<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-		<focusedcolor>white</focusedcolor>
-		<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
-		<texturenofocus colordiffuse="$INFO[Skin.String(color.tertiary)]">backgrounds/white.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
-	</include>
-	<include name="HomeSubMenuCommonValues">
-		<left>0</left>
-		<top>13</top>
-		<width>1920</width>
-		<height>70</height>
-		<align>center</align>
-		<onup>9000</onup>
-		<ondown>9002</ondown>
-		<itemgap>0</itemgap>
-		<orientation>Horizontal</orientation>
-		<animation effect="slide" start="0,-60" end="0,0" delay="200" time="200" tween="quadratic" easing="out">Visible</animation>
-		<animation effect="slide" start="0,0" end="0,-60" time="200" tween="quadratic" easing="out">Hidden</animation>
-	</include>
-	<include name="ButtonInfoDialogsCommonValues">
-		<height>60</height>
-		<width>180</width>
-		<textoffsetx>15</textoffsetx>
-		<align>center</align>
-		<aligny>center</aligny>
-		<font>button</font>
-		<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-		<focusedcolor>white</focusedcolor>
-		<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">backgrounds/white.png</texturefocus>
-		<texturenofocus colordiffuse="$INFO[Skin.String(color.border)]">button-border-180.png</texturenofocus>
-		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="LeftBreadcrumbCommonValues">
 		<enable>false</enable>
