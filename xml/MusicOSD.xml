@@ -21,7 +21,6 @@
 				<width>1090</width>
 				<height>7</height>
 				<onup>702</onup>
-				<ondown>26</ondown>
 				<action>seek</action>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
@@ -29,8 +28,6 @@
 			<control type="grouplist" id="100">
 				<left>30</left>
 				<top>23</top>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
 				<onleft>704</onleft>
 				<onright>705</onright>
 				<orientation>horizontal</orientation>
@@ -163,8 +160,6 @@
 						<onclick>PlayerControl(Repeat)</onclick>
 						<onleft>605</onleft>
 						<onright>607</onright>
-						<onup>1000</onup>
-						<ondown>1000</ondown>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -241,16 +236,12 @@
 						<visible>!MusicPlayer.Content(LiveTV)</visible>
 						<onleft>606</onleft>
 						<onright>705</onright>
-						<onup>1000</onup>
-						<ondown>1000</ondown>
 					</control>
 				</control>
 			</control>
 			<control type="grouplist" id="101">
 				<right>30</right>
 				<top>23</top>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
 				<onleft>607</onleft>
 				<onright>300</onright>
 				<align>right</align>
@@ -308,7 +299,7 @@
 					<font></font>
 					<texturefocus colordiffuse="$INFO[Skin.String(color.500)]">OSDPreNF.png</texturefocus>
 					<texturenofocus colordiffuse="$INFO[Skin.String(color.text)]">OSDPreNF.png</texturenofocus>
-					<onclick>ActivateWindow(122)</onclick>
+					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 					<enable>Visualisation.HasPresets</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.HasPresets">Conditional</animation>
 				</control>

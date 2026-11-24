@@ -1050,3 +1050,7 @@ msgstr ""
 msgctxt "#31977"
 msgid "Hide the playback controls after 5 seconds without input"
 msgstr ""
+
+msgctxt "#31982"
+msgid "Global Search"
+msgstr ""

@@ -2093,8 +2093,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[Player.Title] - ($INFO[Player.Time] / $INFO[Player.Duration,])</label>
 			</control>
 			<!--line 2 (music)-->
@@ -2107,8 +2105,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 			</control>
 			<!--line 2 (movies)-->
@@ -2121,8 +2117,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[VideoPlayer.Studio]</label>
 				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
 			</control>
@@ -2136,8 +2130,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
 			</control>
@@ -2151,8 +2143,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[VideoPlayer.Artist]</label>
 				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 			</control>
@@ -2166,8 +2156,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
 				<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
 			</control>

@@ -49,10 +49,10 @@
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>3</onleft>
-				<onright>3</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
+				<onleft>9</onleft>
+				<onright>9</onright>
+				<onup>9</onup>
+				<ondown>9</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<!--main content-->

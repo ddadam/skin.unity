@@ -258,11 +258,11 @@
 					<label>40023</label>
 					<visible>Window.IsVisible(managevideoversions)</visible>
 				</control>
-				<!--ungroup: Kodi 22 only (Kodi 21 has neither the action nor the label)-->
+				<!--ungroup: Kodi 22 only (Kodi 21 has neither the action nor the label). BuildVersion, not BuildVersionCode: Kodi 22 betas and RCs report code 21.90.x-->
 				<control type="button" id="29">
 					<width>300</width>
 					<label>40046</label>
-					<visible>Window.IsVisible(managevideoversions) + !String.StartsWith(System.BuildVersionCode,21.)</visible>
+					<visible>Window.IsVisible(managevideoversions) + !String.StartsWith(System.BuildVersion,21.)</visible>
 				</control>
 				<control type="button" id="26">
 					<width>300</width>

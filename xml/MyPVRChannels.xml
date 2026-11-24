@@ -299,8 +299,6 @@
 							<top>1</top>
 							<width>80</width>
 							<height>80</height>
-							<align>right</align>
-							<aligny>center</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
@@ -407,8 +405,6 @@
 							<top>1</top>
 							<width>80</width>
 							<height>80</height>
-							<align>right</align>
-							<aligny>center</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>

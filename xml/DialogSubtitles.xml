@@ -58,10 +58,10 @@
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>101</onleft>
-				<onright>101</onright>
-				<onup>101</onup>
-				<ondown>101</ondown>
+				<onleft>150</onleft>
+				<onright>150</onright>
+				<onup>150</onup>
+				<ondown>150</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="group">

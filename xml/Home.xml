@@ -792,7 +792,6 @@
 					<onleft>700</onleft>
 					<onright>700</onright>
 					<onup>9901</onup>
-					<ondown>20</ondown>
 					<include>HomeAddonsCommonLayout</include>
 					<content>
 						<include>HomeAddonItemsVideos</include>
@@ -807,7 +806,6 @@
 					<onleft>703</onleft>
 					<onright>703</onright>
 					<onup>9901</onup>
-					<ondown>20</ondown>
 					<include>HomeAddonsCommonLayout</include>
 					<content>
 						<include>HomeAddonItemsMusic</include>
@@ -822,7 +820,6 @@
 					<onleft>704</onleft>
 					<onright>704</onright>
 					<onup>9901</onup>
-					<ondown>20</ondown>
 					<include>HomeAddonsCommonLayout</include>
 					<content>
 						<include>HomeAddonItemsPictures</include>
@@ -837,7 +834,6 @@
 					<onleft>705</onleft>
 					<onright>705</onright>
 					<onup>9901</onup>
-					<ondown>20</ondown>
 					<include>HomeAddonsCommonLayout</include>
 					<content>
 						<include>HomeAddonItemsPrograms</include>

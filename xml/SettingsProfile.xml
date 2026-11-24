@@ -63,7 +63,6 @@
 				<top>120</top>
 				<width>390</width>
 				<height>650</height>
-				<itemgap>0</itemgap>
 				<onleft>60</onleft>
 				<onright>9001</onright>
 				<onup>9000</onup>

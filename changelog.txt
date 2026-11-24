@@ -1,3 +1,12 @@
+[B]11/22/2026 - 0.21.9[/B]
+[FIXED] Event log: focus is lost after choosing a colour
+[FIXED] Versions manager: Ungroup button hidden on Kodi 22 betas and release candidates
+[FIXED] Music info: fallback fanart missing on Linux and Android (file name case)
+[FIXED] Keyboard: up from the two rightmost keys of the bottom row now moves to the keys above
+[UPDATED] Close buttons (mouse) in 23 dialogs: arrow keys lead to the dialog's main control
+[UPDATED] "Global Search" title can be translated
+[REMOVED] Navigation links to controls that don't exist, and tags Kodi doesn't read (no visible change)
+
 [B]11/21/2026 - 0.21.8[/B]
 [FIXED] "Default (no caps)" font option: 16 fonts were missing, so titles, menus, buttons and info labels fell back to a stand-in font and the wrong sizes
 

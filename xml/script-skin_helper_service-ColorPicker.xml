@@ -30,10 +30,10 @@
 				<onclick>Action(Back)</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>2</onleft>
-				<onright>13</onright>
-				<onup>13</onup>
-				<ondown>2</ondown>
+				<onleft>3031</onleft>
+				<onright>3031</onright>
+				<onup>3031</onup>
+				<ondown>3031</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<!--header-->
@@ -113,8 +113,6 @@
 					<!-- opacity slider -->
 					<height>30</height>
 					<width>300</width>
-					<texturefocus></texturefocus>
-					<texturenofocus></texturenofocus>
 					<texturesliderbar colordiffuse="$INFO[Skin.String(color.text)]">osd_slider_bg_3.png</texturesliderbar>
 					<textureslidernib colordiffuse="$INFO[Skin.String(color.500)]">osd_slider_nibNF.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$INFO[Skin.String(color.500)]">osd_slider_nib.png</textureslidernibfocus>

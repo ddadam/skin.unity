@@ -469,8 +469,6 @@
 				<pagecontrol></pagecontrol>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<focusposition>1</focusposition>
-				<movement>2</movement>
 				<itemlayout height="242" width="340">
 					<control type="image">
 						<left>0</left>

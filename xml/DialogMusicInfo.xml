@@ -69,7 +69,7 @@
 							<description>No Fanart Back</description>
 							<width>1310</width>
 							<height>460</height>
-							<texture>Fanart_Fallback_Music_Small.png</texture>
+							<texture>fanart_fallback_music_small.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>88FFFFFF</colordiffuse>
 						</control>

@@ -432,7 +432,6 @@
 							<include>ButtonCommonValues</include>
 							<onleft>50</onleft>
 							<onright>50</onright>
-							<onup>200</onup>
 							<ondown>302</ondown>
 							<onback>50</onback>
 						</control>

@@ -96,7 +96,7 @@
 						<control type="button" id="32">
 							<label>$LOCALIZE[31919]</label>
 							<include>ButtonCommonValues</include>
-							<onclick>SetFocus(50)</onclick>
+							<onclick>SetFocus(570)</onclick>
 							<onclick>ActivateWindow(1100)</onclick>
 						</control>
 						<!--now playing controls-->

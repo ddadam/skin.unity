@@ -46,9 +46,6 @@
 					<top>110</top>
 					<width>630</width>
 					<height>30</height>
-					<aligny>center</aligny>
-					<texturefocus></texturefocus>
-					<texturenofocus></texturenofocus>
 					<texturesliderbar colordiffuse="$INFO[Skin.String(color.text)]">osd_slider_bg_3.png</texturesliderbar>
 					<textureslidernib colordiffuse="$INFO[Skin.String(color.500)]">osd_slider_nibNF.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="$INFO[Skin.String(color.500)]">osd_slider_nib.png</textureslidernibfocus>

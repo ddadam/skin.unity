@@ -51,8 +51,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="label" id="31">
 				<left>10</left>
@@ -63,8 +61,6 @@
 				<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<scrollout>false</scrollout>
-				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="progress" id="32">
 				<description>progress control</description>

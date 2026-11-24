@@ -2,7 +2,6 @@
 <includes>
 	<default type="image">
 		<texture></texture>
-		<colorkey>0</colorkey>
 	</default>
 	<default type="label">
 		<label></label>
@@ -75,7 +74,6 @@
 		<subtype>text</subtype>
 		<textoffsetx>-8</textoffsetx>
 		<textoffsety>0</textoffsety>
-		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="spincontrolex">
 		<width>450</width>
@@ -140,8 +138,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="slider">
-		<controloffsetx>75</controloffsetx>
-		<controloffsety>0</controloffsety>
 		<orientation>horizontal</orientation>
 	</default>
 	<default type="sliderex">

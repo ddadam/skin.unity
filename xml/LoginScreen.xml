@@ -42,8 +42,6 @@
 				<top>170</top>
 				<bottom>160</bottom>
 				<width>790</width>
-				<onleft>20</onleft>
-				<onright>20</onright>
 				<onup>52</onup>
 				<ondown>52</ondown>
 				<viewtype label="535">list</viewtype>

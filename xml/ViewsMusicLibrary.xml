@@ -384,8 +384,6 @@
 					<viewtype label="31029">wrap</viewtype>
 					<pagecontrol>609</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<focusposition>5</focusposition>
-					<movement>3</movement>
 					<orientation>horizontal</orientation>
 					<preloaditems>4</preloaditems>
 					<itemlayout height="300" width="258">

@@ -20,10 +20,10 @@
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>2</onleft>
-				<onright>13</onright>
-				<onup>13</onup>
-				<ondown>2</ondown>
+				<onleft>1000</onleft>
+				<onright>1000</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<!--title-->

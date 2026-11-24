@@ -45,7 +45,7 @@
 					<top>15</top>
 					<width>360</width>
 					<height>60</height>
-					<label>Global Search</label>
+					<label>$LOCALIZE[31982]</label>
 					<font>menu.title</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
